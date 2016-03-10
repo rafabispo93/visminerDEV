@@ -1,0 +1,20 @@
+#slider {
+	margin-right: 15px;
+	margin-left: 15px;
+	margin-top: 20px;
+	margin-bottom: 10px;
+}
+#slider .ui-rangeSlider-bar {
+	background-color: #74A5C1;
+	border-radius: 15px;
+}
+#slider .ui-rangeSlider-handle {
+	width: 15px;
+	background-color: #3C8DBC;
+}
+#slider .ui-rangeSlider-leftHandle {
+	border-radius: 5px 0 0 5px;
+}
+#slider .ui-rangeSlider-rightHandle {
+	border-radius: 0 5px 5px 0;
+}

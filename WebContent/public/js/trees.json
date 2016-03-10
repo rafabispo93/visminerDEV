@@ -1,0 +1,3702 @@
+[
+    {
+        "id": "56d37dd2f09b020fa42e62c7", 
+        "repository" : "c12152e2172786191e3f51eb1f524d8418a03a85", 
+        "lastUpdate" : "2016-02-20T06:08:19.000+0000", 
+        "name" : "master", 
+        "fullName" : "refs/heads/master", 
+        "type" : "BRANCH", 
+        "commits" : [
+            {
+                "uid" : "2c0dada2cd62026c9e2bb3bcad6f4d4c233a3508", 
+                "date" : "2016-02-20T06:08:19.000+0000", 
+                "name" : "2c0dada2cd62026c9e2bb3bcad6f4d4c233a3508", 
+                "message" : "MySQL lib removed\n\nWe are now using MongoDb!"
+            }, 
+            {
+                "uid" : "b3099e6de70bcd2c89f457f2bb7625b643ec843f", 
+                "date" : "2016-02-20T06:07:18.000+0000", 
+                "name" : "b3099e6de70bcd2c89f457f2bb7625b643ec843f", 
+                "message" : "indentation"
+            }, 
+            {
+                "uid" : "1f7998a60124533f9d16d4cf9ec7b2707fc23c22", 
+                "date" : "2016-02-20T06:06:56.000+0000", 
+                "name" : "1f7998a60124533f9d16d4cf9ec7b2707fc23c22", 
+                "message" : "+ detection of antipatterns"
+            }, 
+            {
+                "uid" : "0dc8beef687e0cad43152a33d51d3b53b426e1db", 
+                "date" : "2016-02-20T06:06:13.000+0000", 
+                "name" : "0dc8beef687e0cad43152a33d51d3b53b426e1db", 
+                "message" : "Retrievers have been disabled\n\nThese retrievers must be excluded from the build path until further\nrefactoring to support retrieval of data"
+            }, 
+            {
+                "uid" : "59edd540705ff15e18a74691567ca1c789933e35", 
+                "date" : "2016-02-20T06:03:45.000+0000", 
+                "name" : "59edd540705ff15e18a74691567ca1c789933e35", 
+                "message" : "indentation"
+            }, 
+            {
+                "uid" : "3bd3f5e5b94ef8b09061d0caa790ad2d6a39a5f9", 
+                "date" : "2016-02-20T06:03:02.000+0000", 
+                "name" : "3bd3f5e5b94ef8b09061d0caa790ad2d6a39a5f9", 
+                "message" : "+ number of attributes metric\n\nIt sums the total number of attributes under a given class"
+            }, 
+            {
+                "uid" : "3041cc94562ba74220077f4f34b962cb3834747c", 
+                "date" : "2016-02-20T06:02:25.000+0000", 
+                "name" : "3041cc94562ba74220077f4f34b962cb3834747c", 
+                "message" : "adapted for antipattern detection\n\nMetrics are used to detect antipatterns. Modified classes were must give\nfunctional support to calculate if a given class can be classified as an\nantipattern."
+            }, 
+            {
+                "uid" : "0f13b58124971117728c4d22457d65e47c1f9b11", 
+                "date" : "2016-02-20T05:58:47.000+0000", 
+                "name" : "0f13b58124971117728c4d22457d65e47c1f9b11", 
+                "message" : "+ support for antipattern detection"
+            }, 
+            {
+                "uid" : "6968234773af0bec8be588295c5d8d85f5ea7699", 
+                "date" : "2016-02-20T05:57:20.000+0000", 
+                "name" : "6968234773af0bec8be588295c5d8d85f5ea7699", 
+                "message" : "+ support for antipattern detection"
+            }, 
+            {
+                "uid" : "dccbbc1f306a7a937837fda0a25567d3c992e28a", 
+                "date" : "2016-02-20T05:56:46.000+0000", 
+                "name" : "dccbbc1f306a7a937837fda0a25567d3c992e28a", 
+                "message" : "indentation format updated"
+            }, 
+            {
+                "uid" : "b2026bb33d843a8555e09883260e3d98301c50cf", 
+                "date" : "2016-02-20T05:54:36.000+0000", 
+                "name" : "b2026bb33d843a8555e09883260e3d98301c50cf", 
+                "message" : "+ antipattern detection"
+            }, 
+            {
+                "uid" : "24e86bd801a87156f8792756f116e1e88fbcdf6a", 
+                "date" : "2016-02-20T05:53:11.000+0000", 
+                "name" : "24e86bd801a87156f8792756f116e1e88fbcdf6a", 
+                "message" : "Formatted code"
+            }, 
+            {
+                "uid" : "28a533707d5b3a852ee22e17b61be175ea0d9315", 
+                "date" : "2016-02-20T05:52:12.000+0000", 
+                "name" : "28a533707d5b3a852ee22e17b61be175ea0d9315", 
+                "message" : "replaced by SourceAnalyzer.java. \n\nMore suitable name since Visminer is also detecting antipatterns"
+            }, 
+            {
+                "uid" : "78ea6db284fbdc1482e79f0aa61d0b577fdc949d", 
+                "date" : "2015-12-22T21:07:00.000+0000", 
+                "name" : "78ea6db284fbdc1482e79f0aa61d0b577fdc949d", 
+                "message" : "+ referencias a componentes de acesso ao MONGODB"
+            }, 
+            {
+                "uid" : "a8095130d7cc1be58166a28ff60eb865d3bc134f", 
+                "date" : "2015-12-22T20:47:00.000+0000", 
+                "name" : "a8095130d7cc1be58166a28ff60eb865d3bc134f", 
+                "message" : "+ support of non-relational db"
+            }, 
+            {
+                "uid" : "d8c1e4896186c7c2ddf6253b576732034fbf579b", 
+                "date" : "2015-12-22T20:46:48.000+0000", 
+                "name" : "d8c1e4896186c7c2ddf6253b576732034fbf579b", 
+                "message" : "+ support of non-relational db"
+            }, 
+            {
+                "uid" : "8144647767a9b7eae8b0a4a4c7d5436c9dbc4bb1", 
+                "date" : "2015-12-22T20:46:37.000+0000", 
+                "name" : "8144647767a9b7eae8b0a4a4c7d5436c9dbc4bb1", 
+                "message" : "+ support of non-relational db"
+            }, 
+            {
+                "uid" : "a44dcf9191b2d36c51a6afa208f580f53357f671", 
+                "date" : "2015-12-22T20:46:12.000+0000", 
+                "name" : "a44dcf9191b2d36c51a6afa208f580f53357f671", 
+                "message" : "+ support of non-relational db"
+            }, 
+            {
+                "uid" : "e84f9222122dcf1f54fbfb7f3b32e019b5923d68", 
+                "date" : "2015-12-22T20:45:56.000+0000", 
+                "name" : "e84f9222122dcf1f54fbfb7f3b32e019b5923d68", 
+                "message" : "+ support of non-relational db"
+            }, 
+            {
+                "uid" : "0538b905cd45f8282b51d2d8268047481e4c15d6", 
+                "date" : "2015-12-22T20:45:45.000+0000", 
+                "name" : "0538b905cd45f8282b51d2d8268047481e4c15d6", 
+                "message" : "+ support of non-relational db"
+            }, 
+            {
+                "uid" : "1a6c971e294cf435e55fc5b03ea81e36e250533d", 
+                "date" : "2015-12-22T20:45:35.000+0000", 
+                "name" : "1a6c971e294cf435e55fc5b03ea81e36e250533d", 
+                "message" : "+ support of non-relational db"
+            }, 
+            {
+                "uid" : "574e25c57815839133ca7d48f04199b07b2dc2c2", 
+                "date" : "2015-12-22T20:45:16.000+0000", 
+                "name" : "574e25c57815839133ca7d48f04199b07b2dc2c2", 
+                "message" : "+ support of non-relational db"
+            }, 
+            {
+                "uid" : "213052e17841ed36dc26448ab23e6a75d76f9e65", 
+                "date" : "2015-12-22T20:45:01.000+0000", 
+                "name" : "213052e17841ed36dc26448ab23e6a75d76f9e65", 
+                "message" : "+ support of non-relational db (III)"
+            }, 
+            {
+                "uid" : "2dbaeae671b7fabffc435184eef6ed3bf8fd1a67", 
+                "date" : "2015-12-22T20:44:47.000+0000", 
+                "name" : "2dbaeae671b7fabffc435184eef6ed3bf8fd1a67", 
+                "message" : "+ support of non-relational db (II)"
+            }, 
+            {
+                "uid" : "c94dfdfa6bca20be710083b10f08d1e48f3d9404", 
+                "date" : "2015-12-22T20:44:22.000+0000", 
+                "name" : "c94dfdfa6bca20be710083b10f08d1e48f3d9404", 
+                "message" : "+ support of non-relational db"
+            }, 
+            {
+                "uid" : "d53d0f7d345c74c40b21e4594805e8b444045da0", 
+                "date" : "2015-12-22T20:39:11.000+0000", 
+                "name" : "d53d0f7d345c74c40b21e4594805e8b444045da0", 
+                "message" : "removal of classes to ease the effort in migrating to MONGODB (VII)\n\nAs for the refactoring of visminer to adopt a non-relational DB, I have\nreduced source-code items to minimum to lessen the number of \"broken\"\nfiles/classes. \n\nThey might return with future commits as other refactoring steps take\nplace."
+            }, 
+            {
+                "uid" : "78419958cdfa535c80ac96ac1b02412675de3ff8", 
+                "date" : "2015-10-23T16:20:03.000+0000", 
+                "name" : "78419958cdfa535c80ac96ac1b02412675de3ff8", 
+                "message" : "Error caused by JPA validator solved."
+            }, 
+            {
+                "uid" : "592254285ee9149ff04bcbdf9c555b80d8d14e43", 
+                "date" : "2015-10-10T04:00:21.000+0000", 
+                "name" : "592254285ee9149ff04bcbdf9c555b80d8d14e43", 
+                "message" : "Check null is not need anymore for lists from db."
+            }, 
+            {
+                "uid" : "2121cefc0ea356c7c131482c62025a0818090cf4", 
+                "date" : "2015-10-08T01:47:57.000+0000", 
+                "name" : "2121cefc0ea356c7c131482c62025a0818090cf4", 
+                "message" : "it seems one cannot push a file collection to a new repository if the\ndatabase's been newly added (possibly a bug?)\n+ verification if file uids collection is null/empty to avoid the issue!"
+            }, 
+            {
+                "uid" : "bd3d7235e3ad9812b320ce50de4d5f28a52956eb", 
+                "date" : "2015-10-08T01:44:45.000+0000", 
+                "name" : "bd3d7235e3ad9812b320ce50de4d5f28a52956eb", 
+                "message" : "+ conversion from db entities (namely, tree & committer) to\ntheir biz format in the retrieval of biz repository collections"
+            }, 
+            {
+                "uid" : "0114a3c470e7f8fe0f5473a32c593524e64bd3ab", 
+                "date" : "2015-10-06T17:59:35.000+0000", 
+                "name" : "0114a3c470e7f8fe0f5473a32c593524e64bd3ab", 
+                "message" : "Repository.explore() method call added in Visminer-Test"
+            }, 
+            {
+                "uid" : "e55c640817a7a004bc0e6285710d733c13910f30", 
+                "date" : "2015-10-06T14:03:06.000+0000", 
+                "name" : "e55c640817a7a004bc0e6285710d733c13910f30", 
+                "message" : "Navigation through issues, milestones enabled.\n\nBugs solved. \n\n"
+            }, 
+            {
+                "uid" : "fdd7ff302c1c1a9aaa18af04c59fd1398bdb9a34", 
+                "date" : "2015-10-04T22:46:22.000+0000", 
+                "name" : "fdd7ff302c1c1a9aaa18af04c59fd1398bdb9a34", 
+                "message" : "Tests updated"
+            }, 
+            {
+                "uid" : "be2084fd84c31a3c090df1a98b2afbe97305112d", 
+                "date" : "2015-10-04T21:27:18.000+0000", 
+                "name" : "be2084fd84c31a3c090df1a98b2afbe97305112d", 
+                "message" : "Solving problems."
+            }, 
+            {
+                "uid" : "c6ed103b811840afd94667e1e3f3859a3588933d", 
+                "date" : "2015-10-03T18:09:30.000+0000", 
+                "name" : "c6ed103b811840afd94667e1e3f3859a3588933d", 
+                "message" : "close #72\nclose #71\nclose #68"
+            }, 
+            {
+                "uid" : "24abbf24127668d2f73ed2c034a28c4d39eca539", 
+                "date" : "2015-10-02T18:48:21.000+0000", 
+                "name" : "24abbf24127668d2f73ed2c034a28c4d39eca539", 
+                "message" : "close #67"
+            }, 
+            {
+                "uid" : "9cb23d99e7c478cbc8b4960114b751383e6b678e", 
+                "date" : "2015-10-02T02:03:47.000+0000", 
+                "name" : "9cb23d99e7c478cbc8b4960114b751383e6b678e", 
+                "message" : "Git access improved.\nAutomated tests added."
+            }, 
+            {
+                "uid" : "19a26f27c6a68951c73f9a74e5d1ea567877b9a0", 
+                "date" : "2015-09-30T16:16:32.000+0000", 
+                "name" : "19a26f27c6a68951c73f9a74e5d1ea567877b9a0", 
+                "message" : "correct a bug that only happen in Windows OS."
+            }, 
+            {
+                "uid" : "fec94fe0f49cb66cc778d97cd5ba517a21241126", 
+                "date" : "2015-09-30T09:21:30.000+0000", 
+                "name" : "fec94fe0f49cb66cc778d97cd5ba517a21241126", 
+                "message" : "Merge pull request #66 from visminer/desenvolvimento\n\nDesenvolvimento"
+            }, 
+            {
+                "uid" : "93cfb1cc13248fd711546f9c079aaaebc5ad4972", 
+                "date" : "2015-09-29T20:30:29.000+0000", 
+                "name" : "93cfb1cc13248fd711546f9c079aaaebc5ad4972", 
+                "message" : "Changes in classes signatures.\nGit installed is no more necessary.\nSLOC metric refactored.\nBugs corrections;"
+            }, 
+            {
+                "uid" : "9d9213a12c4ebd51948e1f8e8049381487d0e2bb", 
+                "date" : "2015-09-28T05:30:07.000+0000", 
+                "name" : "9d9213a12c4ebd51948e1f8e8049381487d0e2bb", 
+                "message" : "Git installed is no longer necessary.\nSome changes in classes annotations."
+            }, 
+            {
+                "uid" : "3bf28edaf05f444dfc48be3f5464f3815ffe11c1", 
+                "date" : "2015-09-25T06:16:23.000+0000", 
+                "name" : "3bf28edaf05f444dfc48be3f5464f3815ffe11c1", 
+                "message" : "Problem that all software units are retrieved independently of the\ncommit.\nBugs solved.\nSaveAST improved.\n "
+            }, 
+            {
+                "uid" : "17c7842ad72bc661fa694999e25af80bb035d28d", 
+                "date" : "2015-09-23T02:59:05.000+0000", 
+                "name" : "17c7842ad72bc661fa694999e25af80bb035d28d", 
+                "message" : "Bugs solved in software units saving process.\nBugs solved in Project class."
+            }, 
+            {
+                "uid" : "c006ff991d746acab0edcb419ba85a845beb9a6a", 
+                "date" : "2015-09-21T15:39:04.000+0000", 
+                "name" : "c006ff991d746acab0edcb419ba85a845beb9a6a", 
+                "message" : "Problem in Windows OS solved.\nNow committers are always returned in ascendent order of the their first\ncommit.\nAnother small changes."
+            }, 
+            {
+                "uid" : "9302827ff1664afa548140cc112d1667627e4e4d", 
+                "date" : "2015-09-18T19:07:01.000+0000", 
+                "name" : "9302827ff1664afa548140cc112d1667627e4e4d", 
+                "message" : "Problem with repository path normalization solved."
+            }, 
+            {
+                "uid" : "ad3960ec99940b03e656a2dd42f4fc72fe0ad339", 
+                "date" : "2015-09-18T17:42:38.000+0000", 
+                "name" : "ad3960ec99940b03e656a2dd42f4fc72fe0ad339", 
+                "message" : "Update MetricCalculator.java\n\nBug in MetricCalculatorsolved solved."
+            }, 
+            {
+                "uid" : "fe0699cac9aef222862bebc888ee4e8039ea9c64", 
+                "date" : "2015-09-18T08:46:22.000+0000", 
+                "name" : "fe0699cac9aef222862bebc888ee4e8039ea9c64", 
+                "message" : "Merge pull request #65 from visminer/issue-45\n\nThis commit is an emergency solution, I did not intend to merge branch issue-45 right now, but was needed. A bug that stops metric calculation in some cases was solved. Only the resolution of this bug was pulled, the others pieces of code about #45 will be merged soon as possible."
+            }, 
+            {
+                "uid" : "2f2945a51f794682316a724f7ebff94ae6398a0d", 
+                "date" : "2015-09-18T08:39:58.000+0000", 
+                "name" : "2f2945a51f794682316a724f7ebff94ae6398a0d", 
+                "message" : "Solved bug in when files were retrieved in MetricCalculator."
+            }, 
+            {
+                "uid" : "939b66c9fcbe2b10a600fc748f7d79b6e01f5821", 
+                "date" : "2015-09-17T02:52:15.000+0000", 
+                "name" : "939b66c9fcbe2b10a600fc748f7d79b6e01f5821", 
+                "message" : "Merge pull request #64 from visminer/issue-45\n\nShortcut to check if repository exists added in Visminer class."
+            }, 
+            {
+                "uid" : "cd39828ca44909735af87234e895ca15d01303c6", 
+                "date" : "2015-09-17T02:51:56.000+0000", 
+                "name" : "cd39828ca44909735af87234e895ca15d01303c6", 
+                "message" : "Shortcut to check if repository exists added in Visminer class."
+            }, 
+            {
+                "uid" : "346064fe09e9abc75c36c86012201a543eade5ba", 
+                "date" : "2015-09-17T02:43:33.000+0000", 
+                "name" : "346064fe09e9abc75c36c86012201a543eade5ba", 
+                "message" : "Method for process repository path added. Add \"./git\" in repository path\nis optional now."
+            }, 
+            {
+                "uid" : "c745b684dbb9412892ff482a66abe07b5a9c2009", 
+                "date" : "2015-09-17T02:05:43.000+0000", 
+                "name" : "c745b684dbb9412892ff482a66abe07b5a9c2009", 
+                "message" : "Merge pull request #63 from DavidPinho/ATFDMetric\n\nAtfd metric"
+            }, 
+            {
+                "uid" : "5e860e894414c5d3c351a5b622369bb8112d8cee", 
+                "date" : "2015-09-17T02:02:14.000+0000", 
+                "name" : "5e860e894414c5d3c351a5b622369bb8112d8cee", 
+                "message" : "Few changes at TCC Metric\n"
+            }, 
+            {
+                "uid" : "6ccd8b2fc2849e9ab8ad64ec42b2f174444acb05", 
+                "date" : "2015-09-15T03:09:24.000+0000", 
+                "name" : "6ccd8b2fc2849e9ab8ad64ec42b2f174444acb05", 
+                "message" : "Adding ATFD Metric\n"
+            }, 
+            {
+                "uid" : "090e59dbe10adc07d655fd4b0c6cac80b5bf66e0", 
+                "date" : "2015-09-09T07:20:43.000+0000", 
+                "name" : "090e59dbe10adc07d655fd4b0c6cac80b5bf66e0", 
+                "message" : "Merge pull request #62 from visminer/DavidPinho-TccMetric\n\nDavid pinho tcc metric"
+            }, 
+            {
+                "uid" : "826d57a2a1bf5671871c83bd66196cfa59151845", 
+                "date" : "2015-09-09T07:15:15.000+0000", 
+                "name" : "826d57a2a1bf5671871c83bd66196cfa59151845", 
+                "message" : "Merge branch 'TccMetric' of https://github.com/DavidPinho/Visminer into\nDavidPinho-TccMetric\n\nConflicts:\n\tsrc/main/java/br/edu/ufba/softvis/visminer/analyzer/MetricCalculator.java\n"
+            }, 
+            {
+                "uid" : "d5a0d1b54773f1988f2de9014471b75bdfac1652", 
+                "date" : "2015-09-09T05:13:50.000+0000", 
+                "name" : "d5a0d1b54773f1988f2de9014471b75bdfac1652", 
+                "message" : "Merge pull request #61 from visminer/feat\n\nclosed #46"
+            }, 
+            {
+                "uid" : "a3fa5708607e871384767be7b4f3296f893edeb6", 
+                "date" : "2015-09-09T05:09:26.000+0000", 
+                "name" : "a3fa5708607e871384767be7b4f3296f893edeb6", 
+                "message" : "closed #46"
+            }, 
+            {
+                "uid" : "36606246db0cf1fb7adede4db3ec1513ff6bf756", 
+                "date" : "2015-08-31T04:50:14.000+0000", 
+                "name" : "36606246db0cf1fb7adede4db3ec1513ff6bf756", 
+                "message" : "Few changes to calculate TCC Metric\n"
+            }, 
+            {
+                "uid" : "48d873a16ac245938cd94d3f7a8920304e55239e", 
+                "date" : "2015-08-31T03:42:11.000+0000", 
+                "name" : "48d873a16ac245938cd94d3f7a8920304e55239e", 
+                "message" : "Adding TCC Metric\n"
+            }, 
+            {
+                "uid" : "dabeac209bf8b60d927e5aadf79a88e36b1e52a8", 
+                "date" : "2015-08-31T03:34:46.000+0000", 
+                "name" : "dabeac209bf8b60d927e5aadf79a88e36b1e52a8", 
+                "message" : "Detecting MethodInvocation and Field Access on MethodVisitor\n"
+            }, 
+            {
+                "uid" : "8117eb76bbaa127e5539f49ac81a31f9721bfeff", 
+                "date" : "2015-08-31T03:26:35.000+0000", 
+                "name" : "8117eb76bbaa127e5539f49ac81a31f9721bfeff", 
+                "message" : "Setting JavaASTGenerator to resolve Binding\n"
+            }, 
+            {
+                "uid" : "e9e225e676f003c596ebf58baa3d4d325c5b9b89", 
+                "date" : "2015-08-31T03:16:38.000+0000", 
+                "name" : "e9e225e676f003c596ebf58baa3d4d325c5b9b89", 
+                "message" : "Setting the field modifiers in MethodDeclaration to be a List<String>\n"
+            }, 
+            {
+                "uid" : "2a7b33c7e40f2b10e5a43081c7f608cf454e824f", 
+                "date" : "2015-08-17T23:45:57.000+0000", 
+                "name" : "2a7b33c7e40f2b10e5a43081c7f608cf454e824f", 
+                "message" : "Changes:\n1 - Examples added\n2 - Bug in tag access in git repositories solved"
+            }, 
+            {
+                "uid" : "83959666947b76ec584e3ae45a1c8d0fe9546c14", 
+                "date" : "2015-08-17T18:52:09.000+0000", 
+                "name" : "83959666947b76ec584e3ae45a1c8d0fe9546c14", 
+                "message" : "Changes:\n1 - Checkout support added to git repositories\n2 - Metric calculation improved, support for others AST generators\nenabled and issue about recalculate metrics for shared commits between\ntrees fixed."
+            }, 
+            {
+                "uid" : "c024a887b981731fe0422166fb29eec771c2e95c", 
+                "date" : "2015-08-15T10:08:13.000+0000", 
+                "name" : "c024a887b981731fe0422166fb29eec771c2e95c", 
+                "message" : "Error in configuration fixed."
+            }, 
+            {
+                "uid" : "ceff374c8bd26509c38add65e481adc1d0259259", 
+                "date" : "2015-08-13T23:51:19.000+0000", 
+                "name" : "ceff374c8bd26509c38add65e481adc1d0259259", 
+                "message" : "+ gitigone settings ???"
+            }, 
+            {
+                "uid" : "e8c5851b19e1f502595e7b4cb7a07926672ca1a6", 
+                "date" : "2015-08-13T02:48:16.000+0000", 
+                "name" : "e8c5851b19e1f502595e7b4cb7a07926672ca1a6", 
+                "message" : "+ ignoring settings"
+            }, 
+            {
+                "uid" : "c76b4fefe131c7de667aeb2c053535ee29edea51", 
+                "date" : "2015-08-13T02:46:55.000+0000", 
+                "name" : "c76b4fefe131c7de667aeb2c053535ee29edea51", 
+                "message" : "+ adapting to serve as component to Visminer Web"
+            }, 
+            {
+                "uid" : "ee9655625101ee6ba3d9c5b84517f25c5d25fe5c", 
+                "date" : "2015-08-13T02:39:53.000+0000", 
+                "name" : "ee9655625101ee6ba3d9c5b84517f25c5d25fe5c", 
+                "message" : "EntityManage was closing in a nested private function causing error in\nthe upper caller"
+            }, 
+            {
+                "uid" : "482b345117200bbbccbf3aa9f6ae2d87dc638770", 
+                "date" : "2015-08-13T02:34:56.000+0000", 
+                "name" : "482b345117200bbbccbf3aa9f6ae2d87dc638770", 
+                "message" : "+ retrieve function to fetch Commits from tree\n\nFrom an instance of Tree class. "
+            }, 
+            {
+                "uid" : "321a8fc40a2e62aee70f1ac4d111069a39c11142", 
+                "date" : "2015-08-13T02:30:31.000+0000", 
+                "name" : "321a8fc40a2e62aee70f1ac4d111069a39c11142", 
+                "message" : "enabling the return of Tree's \"name\" ONLY\n\nA better way to get the Tree printed out to a visualization"
+            }, 
+            {
+                "uid" : "393ebb721c0ca597b9158415d5139b0a18f4b8df", 
+                "date" : "2015-08-13T02:27:39.000+0000", 
+                "name" : "393ebb721c0ca597b9158415d5139b0a18f4b8df", 
+                "message" : "also affected by change: from Language to LanguageType"
+            }, 
+            {
+                "uid" : "3f957d1fe5ddb23a57c6aec07b5ff4b331423d73", 
+                "date" : "2015-08-13T02:26:06.000+0000", 
+                "name" : "3f957d1fe5ddb23a57c6aec07b5ff4b331423d73", 
+                "message" : "affected by change: from language to LanguageType "
+            }, 
+            {
+                "uid" : "12365f2c4b50ffafaf5d72853915264c4b2e1ba4", 
+                "date" : "2015-08-13T02:21:48.000+0000", 
+                "name" : "12365f2c4b50ffafaf5d72853915264c4b2e1ba4", 
+                "message" : "from Language to LanguageType\n\nAdopting predominant sufix in Constant package"
+            }, 
+            {
+                "uid" : "f4338b29cda64ead3039538bea69c6531c6de3b4", 
+                "date" : "2015-08-12T21:02:32.000+0000", 
+                "name" : "f4338b29cda64ead3039538bea69c6531c6de3b4", 
+                "message" : "Method to verify if repository already exists added in VisMiner"
+            }, 
+            {
+                "uid" : "52a21640d65194740bb5f851f41201b4e647b655", 
+                "date" : "2015-08-12T20:10:24.000+0000", 
+                "name" : "52a21640d65194740bb5f851f41201b4e647b655", 
+                "message" : "MetricRetriever.java added."
+            }, 
+            {
+                "uid" : "c8cd3c821ea07cba8fa8e5a438a842199283466c", 
+                "date" : "2015-08-12T17:35:23.000+0000", 
+                "name" : "c8cd3c821ea07cba8fa8e5a438a842199283466c", 
+                "message" : "pull request #59 merged. "
+            }, 
+            {
+                "uid" : "a4ebea924f30dc5d51d391020b3364ed526a7102", 
+                "date" : "2015-08-09T21:33:21.000+0000", 
+                "name" : "a4ebea924f30dc5d51d391020b3364ed526a7102", 
+                "message" : "JavaASTGenerator fixed."
+            }, 
+            {
+                "uid" : "ee62e36c6aa1cccceae285185ce6b0a3979e6b71", 
+                "date" : "2015-08-09T01:58:15.000+0000", 
+                "name" : "ee62e36c6aa1cccceae285185ce6b0a3979e6b71", 
+                "message" : "CC metric was corrected (before this commit \"throwns\" were considered in\nthe calculus).\npom.xml modified.\nSmall changes made in persistence."
+            }, 
+            {
+                "uid" : "fcc919cbcbba286ebb511915261afda9c1210165", 
+                "date" : "2015-08-04T16:58:00.000+0000", 
+                "name" : "fcc919cbcbba286ebb511915261afda9c1210165", 
+                "message" : "1 - CCMetric was refactored.\n2 - NOCMetric renamed to NOCAIMetric.\n3 - Some new nodes added to NodeType Enum.\n4 - MethodVisitor in ast.generator.java was refactored.\n5 - Metric Requisites feature added.\n"
+            }, 
+            {
+                "uid" : "4b3bfeb7e6d1d224b5ad6de0c52e2b873bc41a14", 
+                "date" : "2015-08-01T18:08:51.000+0000", 
+                "name" : "4b3bfeb7e6d1d224b5ad6de0c52e2b873bc41a14", 
+                "message" : "The AST was upgraded."
+            }, 
+            {
+                "uid" : "7fbdea2638e8e62642af09a6d38645151e9716b6", 
+                "date" : "2015-07-30T15:44:20.000+0000", 
+                "name" : "7fbdea2638e8e62642af09a6d38645151e9716b6", 
+                "message" : "Merge pull request #57 from DavidPinho/master\n\nAdding FieldDeclaration to the AST"
+            }, 
+            {
+                "uid" : "eadebe0c82873caac2268845371bfc1e4466c7fc", 
+                "date" : "2015-07-30T05:01:59.000+0000", 
+                "name" : "eadebe0c82873caac2268845371bfc1e4466c7fc", 
+                "message" : "FieldDeclaration added to the AST\n"
+            }, 
+            {
+                "uid" : "571b16a513e7d00c2edbcc12fe6125b49907bb8f", 
+                "date" : "2015-07-30T04:58:52.000+0000", 
+                "name" : "571b16a513e7d00c2edbcc12fe6125b49907bb8f", 
+                "message" : "FieldDeclaration added to the AST\n"
+            }, 
+            {
+                "uid" : "ca7bc65ee8cf19f729d92442258f54762082dc6a", 
+                "date" : "2015-07-22T06:08:41.000+0000", 
+                "name" : "ca7bc65ee8cf19f729d92442258f54762082dc6a", 
+                "message" : "Issues with charset fixed."
+            }, 
+            {
+                "uid" : "81303f5de4547376550e9e483895b11f7f2a277e", 
+                "date" : "2015-07-21T21:30:31.000+0000", 
+                "name" : "81303f5de4547376550e9e483895b11f7f2a277e", 
+                "message" : "Problems with ORM fixed."
+            }, 
+            {
+                "uid" : "94a5f79abd5b35d7b149f76f659e23add027f6d0", 
+                "date" : "2015-07-16T06:13:32.000+0000", 
+                "name" : "94a5f79abd5b35d7b149f76f659e23add027f6d0", 
+                "message" : "Merge pull request #55 from visminer/revert-54-master\n\nRevert \"Template Method + Iterating through expression tree\""
+            }, 
+            {
+                "uid" : "21a2b3064e8bb5cc66b99c43571af4eafe8d9977", 
+                "date" : "2015-07-16T06:12:06.000+0000", 
+                "name" : "21a2b3064e8bb5cc66b99c43571af4eafe8d9977", 
+                "message" : "Merge pull request #54 from luispscarvalho/master\n\nTemplate Method + Iterating through expression tree"
+            }, 
+            {
+                "uid" : "4dc4ecc028c64f756a59beb002c6498795233ccc", 
+                "date" : "2015-07-16T04:49:04.000+0000", 
+                "name" : "4dc4ecc028c64f756a59beb002c6498795233ccc", 
+                "message" : "inspectExpression -> extractExpression"
+            }, 
+            {
+                "uid" : "05a864746bcc3ebbd9719b1486bafd7d1d76c2f5", 
+                "date" : "2015-07-16T03:23:54.000+0000", 
+                "name" : "05a864746bcc3ebbd9719b1486bafd7d1d76c2f5", 
+                "message" : "+ template method pattern to avoid injection of repeated code \n\n"
+            }, 
+            {
+                "uid" : "a842e84b36441f8526c69a282113b8e98578e5f2", 
+                "date" : "2015-07-16T03:22:13.000+0000", 
+                "name" : "a842e84b36441f8526c69a282113b8e98578e5f2", 
+                "message" : "+ recovery of conditional expressions from source code"
+            }, 
+            {
+                "uid" : "666f08e8350f62a66c00ee524a25e2c4f8a6d73c", 
+                "date" : "2015-07-16T03:21:34.000+0000", 
+                "name" : "666f08e8350f62a66c00ee524a25e2c4f8a6d73c", 
+                "message" : "+ attribute to keep track of conditional expressions"
+            }, 
+            {
+                "uid" : "353983dfb9a6f68a04eeba193421433f3c6df5b1", 
+                "date" : "2015-07-16T03:13:03.000+0000", 
+                "name" : "353983dfb9a6f68a04eeba193421433f3c6df5b1", 
+                "message" : "Revert \"Template Method + Iterating through expression tree\"\n"
+            }, 
+            {
+                "uid" : "154eef072e9a501993bf26c06e845bceb53e0a35", 
+                "date" : "2015-07-15T18:48:12.000+0000", 
+                "name" : "154eef072e9a501993bf26c06e845bceb53e0a35", 
+                "message" : "Merge pull request #53 from visminer/feat\n\nFeat"
+            }, 
+            {
+                "uid" : "cf27de0290e0bf2dd85da96f689ee31e8c3342a9", 
+                "date" : "2015-07-15T18:45:46.000+0000", 
+                "name" : "cf27de0290e0bf2dd85da96f689ee31e8c3342a9", 
+                "message" : "Bugs solved.\nMetric WMC added."
+            }, 
+            {
+                "uid" : "ed19ac8fb3a3d0290a20d28b87fa0d85b649da8c", 
+                "date" : "2015-07-14T02:46:03.000+0000", 
+                "name" : "ed19ac8fb3a3d0290a20d28b87fa0d85b649da8c", 
+                "message" : "#49 merged.\nCC per class removed."
+            }, 
+            {
+                "uid" : "67d58016cd40eec340b8a719bf4a9376d0985682", 
+                "date" : "2015-07-11T19:08:03.000+0000", 
+                "name" : "67d58016cd40eec340b8a719bf4a9376d0985682", 
+                "message" : "Merge pull request #48 from visminer/feat\n\nFeat"
+            }, 
+            {
+                "uid" : "df33a8027d748df15d44a11e0a9794b154d71201", 
+                "date" : "2015-07-11T19:07:08.000+0000", 
+                "name" : "df33a8027d748df15d44a11e0a9794b154d71201", 
+                "message" : "New Metrics added:\nNOE, NOM\n\naverage CC of class added in CC metric calculation.\n\npom.xml modified."
+            }, 
+            {
+                "uid" : "f0dbeae4fc7c16c570abd98a7f16e764551e1fd8", 
+                "date" : "2015-07-08T20:37:08.000+0000", 
+                "name" : "f0dbeae4fc7c16c570abd98a7f16e764551e1fd8", 
+                "message" : "bug with nop fixed."
+            }, 
+            {
+                "uid" : "42bc15758d6b5060780a07f0dc7ada21757f05ea", 
+                "date" : "2015-07-08T15:05:14.000+0000", 
+                "name" : "42bc15758d6b5060780a07f0dc7ada21757f05ea", 
+                "message" : "AST added.\nMetrics SLOC, CC, NOP, NOC added."
+            }, 
+            {
+                "uid" : "2942a4aaa657727c3dc157b92f241794078d0990", 
+                "date" : "2015-07-05T07:08:21.000+0000", 
+                "name" : "2942a4aaa657727c3dc157b92f241794078d0990", 
+                "message" : "Metric SLOC Added and some bugs fixed."
+            }, 
+            {
+                "uid" : "afc1807367a02c7b02bc6ccfe3f7de3ac230ac65", 
+                "date" : "2015-06-27T01:24:33.000+0000", 
+                "name" : "afc1807367a02c7b02bc6ccfe3f7de3ac230ac65", 
+                "message" : "Pom.xml updated.\nCompilation unit changed to jdk 1.6."
+            }, 
+            {
+                "uid" : "764afe4bdca1449a87d991da455c329207174b94", 
+                "date" : "2015-06-21T20:31:42.000+0000", 
+                "name" : "764afe4bdca1449a87d991da455c329207174b94", 
+                "message" : "Create README.md\n\nReadme updated."
+            }, 
+            {
+                "uid" : "cba56ec6317005e6165967f5ecef7343b9571549", 
+                "date" : "2015-06-21T03:32:12.000+0000", 
+                "name" : "cba56ec6317005e6165967f5ecef7343b9571549", 
+                "message" : "Merge pull request #44 from visminer/feat\n\nRemoved test metric."
+            }, 
+            {
+                "uid" : "7cc5194998ccc7a2735a57e90e1f40eb7c0e2742", 
+                "date" : "2015-06-21T03:31:07.000+0000", 
+                "name" : "7cc5194998ccc7a2735a57e90e1f40eb7c0e2742", 
+                "message" : "Removed test metric."
+            }, 
+            {
+                "uid" : "3c7ad0e16f704886769acdd1614040a4aacc35eb", 
+                "date" : "2015-06-21T03:24:48.000+0000", 
+                "name" : "3c7ad0e16f704886769acdd1614040a4aacc35eb", 
+                "message" : "Merge pull request #43 from visminer/feat\n\nFeat"
+            }, 
+            {
+                "uid" : "53cb1c4f55bf4c473856b5fb6a4369df56465a97", 
+                "date" : "2015-06-21T03:15:14.000+0000", 
+                "name" : "53cb1c4f55bf4c473856b5fb6a4369df56465a97", 
+                "message" : "Bugs with persistence solved.\nJavadoc generated."
+            }, 
+            {
+                "uid" : "8f3475c0a3a8dc8bc89fda0673feffc00530eabf", 
+                "date" : "2015-06-20T02:05:55.000+0000", 
+                "name" : "8f3475c0a3a8dc8bc89fda0673feffc00530eabf", 
+                "message" : "Javadoc finished.\nSome bugs solved."
+            }, 
+            {
+                "uid" : "d815db09e3efd4f158746614aac4955acb421a4e", 
+                "date" : "2015-06-15T19:25:12.000+0000", 
+                "name" : "d815db09e3efd4f158746614aac4955acb421a4e", 
+                "message" : "Merge pull request #42 from visminer/feat\n\nFeat"
+            }, 
+            {
+                "uid" : "2a97c0de73e3bf1353bb264adc8e51a9f12551d2", 
+                "date" : "2015-06-15T18:34:41.000+0000", 
+                "name" : "2a97c0de73e3bf1353bb264adc8e51a9f12551d2", 
+                "message" : "Repository navigation finished."
+            }, 
+            {
+                "uid" : "456291c8db2b1ae65c1e84f9fbdaeab0f38a9885", 
+                "date" : "2015-06-12T21:49:07.000+0000", 
+                "name" : "456291c8db2b1ae65c1e84f9fbdaeab0f38a9885", 
+                "message" : "Metric calculation finished"
+            }, 
+            {
+                "uid" : "0bc721add05ae6ab8c5fcae37de9a0838bada85e", 
+                "date" : "2015-06-08T05:33:51.000+0000", 
+                "name" : "0bc721add05ae6ab8c5fcae37de9a0838bada85e", 
+                "message" : "repository analyzers finished"
+            }, 
+            {
+                "uid" : "f14b4bfa774856b5b04c813622b06e8934fdc396", 
+                "date" : "2015-06-01T11:11:30.000+0000", 
+                "name" : "f14b4bfa774856b5b04c813622b06e8934fdc396", 
+                "message" : "feat branch updated."
+            }, 
+            {
+                "uid" : "5a089901ac8a8b83fdb8b75c23ef8bfe31c59d04", 
+                "date" : "2014-11-05T01:48:17.000+0000", 
+                "name" : "5a089901ac8a8b83fdb8b75c23ef8bfe31c59d04", 
+                "message" : "Removing old version\n"
+            }, 
+            {
+                "uid" : "52993f411b9cc4e4c981e42bb19ef3b05d0fd7bd", 
+                "date" : "2014-11-05T01:29:03.000+0000", 
+                "name" : "52993f411b9cc4e4c981e42bb19ef3b05d0fd7bd", 
+                "message" : "new version uploaded.\n"
+            }, 
+            {
+                "uid" : "6ed1fc91faa3c1ea48efa314bdcf8759d34a2814", 
+                "date" : "2014-07-02T19:50:45.000+0000", 
+                "name" : "6ed1fc91faa3c1ea48efa314bdcf8759d34a2814", 
+                "message" : "Update README.md"
+            }, 
+            {
+                "uid" : "2b260fad2d0a1823628602991aae0681ff166369", 
+                "date" : "2014-07-01T22:31:42.000+0000", 
+                "name" : "2b260fad2d0a1823628602991aae0681ff166369", 
+                "message" : "issue #40\n"
+            }, 
+            {
+                "uid" : "c10b4612d8ebf8b654c990e7c5ddcfb6f25e80d7", 
+                "date" : "2014-06-27T18:32:09.000+0000", 
+                "name" : "c10b4612d8ebf8b654c990e7c5ddcfb6f25e80d7", 
+                "message" : "Merge pull request #39 from visminer/issue-38\n\nissue #38"
+            }, 
+            {
+                "uid" : "13347713f035a34458030fed1c6fc3b350103369", 
+                "date" : "2014-06-27T18:30:58.000+0000", 
+                "name" : "13347713f035a34458030fed1c6fc3b350103369", 
+                "message" : "issue #38\n"
+            }, 
+            {
+                "uid" : "edbed14e054a2d53cd9ebabe9e676cf97c07beea", 
+                "date" : "2014-06-18T05:03:43.000+0000", 
+                "name" : "edbed14e054a2d53cd9ebabe9e676cf97c07beea", 
+                "message" : "Delete Visminer-ER-model.png"
+            }, 
+            {
+                "uid" : "695f8a1d1f106acdaae407dafc6268e01872f845", 
+                "date" : "2014-06-18T05:03:02.000+0000", 
+                "name" : "695f8a1d1f106acdaae407dafc6268e01872f845", 
+                "message" : "Delete Visminer-ER-model.mwb"
+            }, 
+            {
+                "uid" : "ee4842c9e6686eff3d6242ba22dc6e8fe8ce115b", 
+                "date" : "2014-06-18T05:01:14.000+0000", 
+                "name" : "ee4842c9e6686eff3d6242ba22dc6e8fe8ce115b", 
+                "message" : "add model_EER of version 0.5.0\n"
+            }, 
+            {
+                "uid" : "704636727019a153070d063a450fe93048cc0b3b", 
+                "date" : "2014-06-18T04:26:18.000+0000", 
+                "name" : "704636727019a153070d063a450fe93048cc0b3b", 
+                "message" : "Merge pull request #35 from visminer/issue-27\n\n#27 #19"
+            }, 
+            {
+                "uid" : "3be6a1529cd2e8633d294db74a913918be6a07bd", 
+                "date" : "2014-06-18T04:20:20.000+0000", 
+                "name" : "3be6a1529cd2e8633d294db74a913918be6a07bd", 
+                "message" : "#27 #19\n"
+            }, 
+            {
+                "uid" : "b2e25ba8c6a62ad5708af3ac00ed73f7970a3422", 
+                "date" : "2014-06-17T04:52:00.000+0000", 
+                "name" : "b2e25ba8c6a62ad5708af3ac00ed73f7970a3422", 
+                "message" : "Merge pull request #34 from visminer/issue-21\n\n#21"
+            }, 
+            {
+                "uid" : "2062c3119196609316e7d5e227ec6e0e791fdb26", 
+                "date" : "2014-06-17T04:45:18.000+0000", 
+                "name" : "2062c3119196609316e7d5e227ec6e0e791fdb26", 
+                "message" : "#21\n"
+            }, 
+            {
+                "uid" : "8904b60bfd9099fab40db8acc4b058e27649a234", 
+                "date" : "2014-06-09T03:14:20.000+0000", 
+                "name" : "8904b60bfd9099fab40db8acc4b058e27649a234", 
+                "message" : "Merge pull request #30 from visminer/issue-29\n\nissue #29"
+            }, 
+            {
+                "uid" : "1628b4fbe56b8ba08a99864029b840ef94b085b4", 
+                "date" : "2014-06-09T03:10:21.000+0000", 
+                "name" : "1628b4fbe56b8ba08a99864029b840ef94b085b4", 
+                "message" : "issue #29\n"
+            }, 
+            {
+                "uid" : "6287600f85d54e7005473e7954c7e9e72354183d", 
+                "date" : "2014-06-06T04:45:00.000+0000", 
+                "name" : "6287600f85d54e7005473e7954c7e9e72354183d", 
+                "message" : "Merge pull request #26 from visminer/issue-22-m22\n\nIssue 22 m22"
+            }, 
+            {
+                "uid" : "499c97143141f8c7d45c34a418f573fcad4ab41c", 
+                "date" : "2014-06-06T04:43:21.000+0000", 
+                "name" : "499c97143141f8c7d45c34a418f573fcad4ab41c", 
+                "message" : "resolving conflict merge #22\n"
+            }, 
+            {
+                "uid" : "55e7a2c7f2f4a611e7ed64ca4078be73898dbb82", 
+                "date" : "2014-06-06T04:19:28.000+0000", 
+                "name" : "55e7a2c7f2f4a611e7ed64ca4078be73898dbb82", 
+                "message" : "issue #22\n"
+            }, 
+            {
+                "uid" : "f540f54fadaf76ee29b9fbcf415f4b929fc40072", 
+                "date" : "2014-06-06T00:29:59.000+0000", 
+                "name" : "f540f54fadaf76ee29b9fbcf415f4b929fc40072", 
+                "message" : "Error in files acess solved."
+            }, 
+            {
+                "uid" : "6249cc020876214f7492c6a8ae17b69fddeafb79", 
+                "date" : "2014-06-03T03:29:13.000+0000", 
+                "name" : "6249cc020876214f7492c6a8ae17b69fddeafb79", 
+                "message" : "Merge pull request #12 from visminer/IssueMilestone\n\n#11"
+            }, 
+            {
+                "uid" : "93d774f9d09aaa4056ce9f89705bcf741af82257", 
+                "date" : "2014-05-31T07:43:31.000+0000", 
+                "name" : "93d774f9d09aaa4056ce9f89705bcf741af82257", 
+                "message" : "#11\n"
+            }, 
+            {
+                "uid" : "a7b68e85413c03a649ad9c71a31638fa0620197c", 
+                "date" : "2014-05-22T16:46:05.000+0000", 
+                "name" : "a7b68e85413c03a649ad9c71a31638fa0620197c", 
+                "message" : "function to get metric by its name added."
+            }, 
+            {
+                "uid" : "387766796d368a64e45f6c283b1f3eb43523f66d", 
+                "date" : "2014-05-18T14:40:46.000+0000", 
+                "name" : "387766796d368a64e45f6c283b1f3eb43523f66d", 
+                "message" : "changes"
+            }, 
+            {
+                "uid" : "2e28395528d5162f443eb8f398da4fee0fe0f6f5", 
+                "date" : "2014-05-18T00:55:01.000+0000", 
+                "name" : "2e28395528d5162f443eb8f398da4fee0fe0f6f5", 
+                "message" : "changes"
+            }, 
+            {
+                "uid" : "1450877e6d1de3eb040205b722fef9e5a095a6ae", 
+                "date" : "2014-05-16T21:42:17.000+0000", 
+                "name" : "1450877e6d1de3eb040205b722fef9e5a095a6ae", 
+                "message" : "fixes 3"
+            }, 
+            {
+                "uid" : "78108f1cad84232e834e4fce0563eb7187a89968", 
+                "date" : "2014-05-16T21:29:49.000+0000", 
+                "name" : "78108f1cad84232e834e4fce0563eb7187a89968", 
+                "message" : "fixes"
+            }, 
+            {
+                "uid" : "810351dea9d73136e091b2abfbb1ab640cfe973d", 
+                "date" : "2014-05-15T16:00:40.000+0000", 
+                "name" : "810351dea9d73136e091b2abfbb1ab640cfe973d", 
+                "message" : "fixes 1"
+            }, 
+            {
+                "uid" : "a142f675c82b18647fec683d730db983cf6a271a", 
+                "date" : "2014-05-15T03:14:42.000+0000", 
+                "name" : "a142f675c82b18647fec683d730db983cf6a271a", 
+                "message" : "modified the presentation\n"
+            }, 
+            {
+                "uid" : "f32cf747db7fa836fea2c91cf43e1921407623cd", 
+                "date" : "2014-05-15T03:10:35.000+0000", 
+                "name" : "f32cf747db7fa836fea2c91cf43e1921407623cd", 
+                "message" : "modified the class example\n"
+            }, 
+            {
+                "uid" : "87c7f90d37730281f79bd4558edb974b4b10cefb", 
+                "date" : "2014-05-13T18:46:15.000+0000", 
+                "name" : "87c7f90d37730281f79bd4558edb974b4b10cefb", 
+                "message" : "reorganized the ER model\n"
+            }, 
+            {
+                "uid" : "411422e1c6229cbbe5f58b3d314b6c863befd22a", 
+                "date" : "2014-05-13T18:38:30.000+0000", 
+                "name" : "411422e1c6229cbbe5f58b3d314b6c863befd22a", 
+                "message" : "update the presentation\n"
+            }, 
+            {
+                "uid" : "f2b738f677e256d1cfc9c0bdc2f513558535362a", 
+                "date" : "2014-05-13T18:38:30.000+0000", 
+                "name" : "f2b738f677e256d1cfc9c0bdc2f513558535362a", 
+                "message" : "improved the ER diagram\n"
+            }, 
+            {
+                "uid" : "12c6a6375065b3d8d7a8b5cf42d55b7db78f4d41", 
+                "date" : "2014-05-12T03:24:51.000+0000", 
+                "name" : "12c6a6375065b3d8d7a8b5cf42d55b7db78f4d41", 
+                "message" : "documentation finished"
+            }, 
+            {
+                "uid" : "4fdd7aa223e15541917a25aa357e2e88b9fab210", 
+                "date" : "2014-05-11T01:57:30.000+0000", 
+                "name" : "4fdd7aa223e15541917a25aa357e2e88b9fab210", 
+                "message" : "#6\n"
+            }, 
+            {
+                "uid" : "f3fd8d299f0da8c00b8d550670fc945e5f55c799", 
+                "date" : "2014-05-11T01:29:09.000+0000", 
+                "name" : "f3fd8d299f0da8c00b8d550670fc945e5f55c799", 
+                "message" : "reference to the issue #6\n"
+            }, 
+            {
+                "uid" : "2c11bc6dbfe61c9590bfdb5ad0d31036fc3dd176", 
+                "date" : "2014-05-10T13:53:46.000+0000", 
+                "name" : "2c11bc6dbfe61c9590bfdb5ad0d31036fc3dd176", 
+                "message" : "renamed the files\n"
+            }, 
+            {
+                "uid" : "23a33f3c65760a313374d610d0058e9587e594ec", 
+                "date" : "2014-05-10T02:48:20.000+0000", 
+                "name" : "23a33f3c65760a313374d610d0058e9587e594ec", 
+                "message" : "Class diagram added."
+            }, 
+            {
+                "uid" : "c177234fae00ef2c47d31252b8c7689589ca4686", 
+                "date" : "2014-05-10T02:13:20.000+0000", 
+                "name" : "c177234fae00ef2c47d31252b8c7689589ca4686", 
+                "message" : "I create a new package called org.visminer.git.local and I put the\nclasses GitUtil and AnalyzeRepository there."
+            }, 
+            {
+                "uid" : "7834b3405c37d03af0ca2f0c9cf7b50b506cec33", 
+                "date" : "2014-05-10T01:34:38.000+0000", 
+                "name" : "7834b3405c37d03af0ca2f0c9cf7b50b506cec33", 
+                "message" : "class diagram added."
+            }, 
+            {
+                "uid" : "e1b06ce88ca3645a6d26eeb7a575c8a7c5e6cebe", 
+                "date" : "2014-05-09T21:02:01.000+0000", 
+                "name" : "e1b06ce88ca3645a6d26eeb7a575c8a7c5e6cebe", 
+                "message" : "ER model added."
+            }, 
+            {
+                "uid" : "b6f0a29bf31e274dd009a90b7bfa4f3e1107aeef", 
+                "date" : "2014-04-28T12:10:23.000+0000", 
+                "name" : "b6f0a29bf31e274dd009a90b7bfa4f3e1107aeef", 
+                "message" : "ORM changes."
+            }, 
+            {
+                "uid" : "71eb5f30b9f804ac2eb4c94f0009b18f6f1f8688", 
+                "date" : "2014-04-28T02:22:14.000+0000", 
+                "name" : "71eb5f30b9f804ac2eb4c94f0009b18f6f1f8688", 
+                "message" : "- new folder docs\n- first version of the visminer presentation"
+            }, 
+            {
+                "uid" : "baca34449a4a1685401e25213d005a9ce15c92a8", 
+                "date" : "2014-04-27T07:42:56.000+0000", 
+                "name" : "baca34449a4a1685401e25213d005a9ce15c92a8", 
+                "message" : "Merge pull request #5 from visminer/issue4\n\nissue #4"
+            }, 
+            {
+                "uid" : "497feb90f0ab0327f4538e5f97e9ad9e5f301903", 
+                "date" : "2014-04-27T07:40:03.000+0000", 
+                "name" : "497feb90f0ab0327f4538e5f97e9ad9e5f301903", 
+                "message" : "issue #4\n"
+            }, 
+            {
+                "uid" : "e7e6c3ee462539baa42a9ac8fff2b214415887ea", 
+                "date" : "2014-04-25T15:59:46.000+0000", 
+                "name" : "e7e6c3ee462539baa42a9ac8fff2b214415887ea", 
+                "message" : "Merge pull request #3 from visminer/branchMilestoneBranch\n\nissue #2"
+            }, 
+            {
+                "uid" : "763f8b404798d5e14526bfea97060695af9e65a9", 
+                "date" : "2014-04-25T07:33:59.000+0000", 
+                "name" : "763f8b404798d5e14526bfea97060695af9e65a9", 
+                "message" : "issue #2\n"
+            }, 
+            {
+                "uid" : "2f72644ac7e57c1ca3b40cfb8c115310e3cafa29", 
+                "date" : "2014-04-23T20:26:32.000+0000", 
+                "name" : "2f72644ac7e57c1ca3b40cfb8c115310e3cafa29", 
+                "message" : "Update README.md"
+            }, 
+            {
+                "uid" : "b43109e52f5a26e30795e70ab9396440e3dd1765", 
+                "date" : "2014-04-09T21:00:36.000+0000", 
+                "name" : "b43109e52f5a26e30795e70ab9396440e3dd1765", 
+                "message" : "Algumas mudanças no código."
+            }, 
+            {
+                "uid" : "92ff3a0ed677db036d97f39f0724b6d2f41ad8d0", 
+                "date" : "2014-04-09T20:29:47.000+0000", 
+                "name" : "92ff3a0ed677db036d97f39f0724b6d2f41ad8d0", 
+                "message" : "Foram adicionados:\ncalculo das métricas NOC e NOP.\nanalíse das versões. "
+            }, 
+            {
+                "uid" : "a8a2010901ec86a98bcbaf8cb9b5c88f7260b4c5", 
+                "date" : "2014-04-09T16:16:11.000+0000", 
+                "name" : "a8a2010901ec86a98bcbaf8cb9b5c88f7260b4c5", 
+                "message" : "erro no mapeamento resolvido."
+            }, 
+            {
+                "uid" : "77ae5b7be8faf8c55296beb87af7ceb05be3ff84", 
+                "date" : "2014-04-09T15:03:13.000+0000", 
+                "name" : "77ae5b7be8faf8c55296beb87af7ceb05be3ff84", 
+                "message" : "initial\n"
+            }, 
+            {
+                "uid" : "97bfbe9870f7df252a354bcfa54fb2abd3c4a59e", 
+                "date" : "2014-04-09T14:55:44.000+0000", 
+                "name" : "97bfbe9870f7df252a354bcfa54fb2abd3c4a59e", 
+                "message" : "Initial commit\n"
+            }
+        ]
+    },
+    { 
+        "id" : "56d37dd3f09b020fa42e62c8", 
+        "repository" : "c12152e2172786191e3f51eb1f524d8418a03a85", 
+        "lastUpdate" : "2014-04-09T16:16:11.000+0000", 
+        "name" : "0.1.0", 
+        "fullName" : "refs/tags/0.1.0", 
+        "type" : "TAG", 
+        "commits" : [
+            {
+                "uid" : "a8a2010901ec86a98bcbaf8cb9b5c88f7260b4c5", 
+                "date" : "2014-04-09T16:16:11.000+0000", 
+                "name" : "a8a2010901ec86a98bcbaf8cb9b5c88f7260b4c5", 
+                "message" : "erro no mapeamento resolvido."
+            }, 
+            {
+                "uid" : "77ae5b7be8faf8c55296beb87af7ceb05be3ff84", 
+                "date" : "2014-04-09T15:03:13.000+0000", 
+                "name" : "77ae5b7be8faf8c55296beb87af7ceb05be3ff84", 
+                "message" : "initial\n"
+            }, 
+            {
+                "uid" : "97bfbe9870f7df252a354bcfa54fb2abd3c4a59e", 
+                "date" : "2014-04-09T14:55:44.000+0000", 
+                "name" : "97bfbe9870f7df252a354bcfa54fb2abd3c4a59e", 
+                "message" : "Initial commit\n"
+            }
+        ]
+    },
+    { 
+        "id" : "56d37dd3f09b020fa42e62c9", 
+        "repository" : "c12152e2172786191e3f51eb1f524d8418a03a85", 
+        "lastUpdate" : "2014-05-16T21:42:17.000+0000", 
+        "name" : "0.2.0", 
+        "fullName" : "refs/tags/0.2.0", 
+        "type" : "TAG", 
+        "commits" : [
+            {
+                "uid" : "1450877e6d1de3eb040205b722fef9e5a095a6ae", 
+                "date" : "2014-05-16T21:42:17.000+0000", 
+                "name" : "1450877e6d1de3eb040205b722fef9e5a095a6ae", 
+                "message" : "fixes 3"
+            }, 
+            {
+                "uid" : "78108f1cad84232e834e4fce0563eb7187a89968", 
+                "date" : "2014-05-16T21:29:49.000+0000", 
+                "name" : "78108f1cad84232e834e4fce0563eb7187a89968", 
+                "message" : "fixes"
+            }, 
+            {
+                "uid" : "810351dea9d73136e091b2abfbb1ab640cfe973d", 
+                "date" : "2014-05-15T16:00:40.000+0000", 
+                "name" : "810351dea9d73136e091b2abfbb1ab640cfe973d", 
+                "message" : "fixes 1"
+            }, 
+            {
+                "uid" : "a142f675c82b18647fec683d730db983cf6a271a", 
+                "date" : "2014-05-15T03:14:42.000+0000", 
+                "name" : "a142f675c82b18647fec683d730db983cf6a271a", 
+                "message" : "modified the presentation\n"
+            }, 
+            {
+                "uid" : "f32cf747db7fa836fea2c91cf43e1921407623cd", 
+                "date" : "2014-05-15T03:10:35.000+0000", 
+                "name" : "f32cf747db7fa836fea2c91cf43e1921407623cd", 
+                "message" : "modified the class example\n"
+            }, 
+            {
+                "uid" : "87c7f90d37730281f79bd4558edb974b4b10cefb", 
+                "date" : "2014-05-13T18:46:15.000+0000", 
+                "name" : "87c7f90d37730281f79bd4558edb974b4b10cefb", 
+                "message" : "reorganized the ER model\n"
+            }, 
+            {
+                "uid" : "411422e1c6229cbbe5f58b3d314b6c863befd22a", 
+                "date" : "2014-05-13T18:38:30.000+0000", 
+                "name" : "411422e1c6229cbbe5f58b3d314b6c863befd22a", 
+                "message" : "update the presentation\n"
+            }, 
+            {
+                "uid" : "f2b738f677e256d1cfc9c0bdc2f513558535362a", 
+                "date" : "2014-05-13T18:38:30.000+0000", 
+                "name" : "f2b738f677e256d1cfc9c0bdc2f513558535362a", 
+                "message" : "improved the ER diagram\n"
+            }, 
+            {
+                "uid" : "12c6a6375065b3d8d7a8b5cf42d55b7db78f4d41", 
+                "date" : "2014-05-12T03:24:51.000+0000", 
+                "name" : "12c6a6375065b3d8d7a8b5cf42d55b7db78f4d41", 
+                "message" : "documentation finished"
+            }, 
+            {
+                "uid" : "4fdd7aa223e15541917a25aa357e2e88b9fab210", 
+                "date" : "2014-05-11T01:57:30.000+0000", 
+                "name" : "4fdd7aa223e15541917a25aa357e2e88b9fab210", 
+                "message" : "#6\n"
+            }, 
+            {
+                "uid" : "f3fd8d299f0da8c00b8d550670fc945e5f55c799", 
+                "date" : "2014-05-11T01:29:09.000+0000", 
+                "name" : "f3fd8d299f0da8c00b8d550670fc945e5f55c799", 
+                "message" : "reference to the issue #6\n"
+            }, 
+            {
+                "uid" : "2c11bc6dbfe61c9590bfdb5ad0d31036fc3dd176", 
+                "date" : "2014-05-10T13:53:46.000+0000", 
+                "name" : "2c11bc6dbfe61c9590bfdb5ad0d31036fc3dd176", 
+                "message" : "renamed the files\n"
+            }, 
+            {
+                "uid" : "23a33f3c65760a313374d610d0058e9587e594ec", 
+                "date" : "2014-05-10T02:48:20.000+0000", 
+                "name" : "23a33f3c65760a313374d610d0058e9587e594ec", 
+                "message" : "Class diagram added."
+            }, 
+            {
+                "uid" : "c177234fae00ef2c47d31252b8c7689589ca4686", 
+                "date" : "2014-05-10T02:13:20.000+0000", 
+                "name" : "c177234fae00ef2c47d31252b8c7689589ca4686", 
+                "message" : "I create a new package called org.visminer.git.local and I put the\nclasses GitUtil and AnalyzeRepository there."
+            }, 
+            {
+                "uid" : "7834b3405c37d03af0ca2f0c9cf7b50b506cec33", 
+                "date" : "2014-05-10T01:34:38.000+0000", 
+                "name" : "7834b3405c37d03af0ca2f0c9cf7b50b506cec33", 
+                "message" : "class diagram added."
+            }, 
+            {
+                "uid" : "e1b06ce88ca3645a6d26eeb7a575c8a7c5e6cebe", 
+                "date" : "2014-05-09T21:02:01.000+0000", 
+                "name" : "e1b06ce88ca3645a6d26eeb7a575c8a7c5e6cebe", 
+                "message" : "ER model added."
+            }, 
+            {
+                "uid" : "b6f0a29bf31e274dd009a90b7bfa4f3e1107aeef", 
+                "date" : "2014-04-28T12:10:23.000+0000", 
+                "name" : "b6f0a29bf31e274dd009a90b7bfa4f3e1107aeef", 
+                "message" : "ORM changes."
+            }, 
+            {
+                "uid" : "71eb5f30b9f804ac2eb4c94f0009b18f6f1f8688", 
+                "date" : "2014-04-28T02:22:14.000+0000", 
+                "name" : "71eb5f30b9f804ac2eb4c94f0009b18f6f1f8688", 
+                "message" : "- new folder docs\n- first version of the visminer presentation"
+            }, 
+            {
+                "uid" : "baca34449a4a1685401e25213d005a9ce15c92a8", 
+                "date" : "2014-04-27T07:42:56.000+0000", 
+                "name" : "baca34449a4a1685401e25213d005a9ce15c92a8", 
+                "message" : "Merge pull request #5 from visminer/issue4\n\nissue #4"
+            }, 
+            {
+                "uid" : "497feb90f0ab0327f4538e5f97e9ad9e5f301903", 
+                "date" : "2014-04-27T07:40:03.000+0000", 
+                "name" : "497feb90f0ab0327f4538e5f97e9ad9e5f301903", 
+                "message" : "issue #4\n"
+            }, 
+            {
+                "uid" : "e7e6c3ee462539baa42a9ac8fff2b214415887ea", 
+                "date" : "2014-04-25T15:59:46.000+0000", 
+                "name" : "e7e6c3ee462539baa42a9ac8fff2b214415887ea", 
+                "message" : "Merge pull request #3 from visminer/branchMilestoneBranch\n\nissue #2"
+            }, 
+            {
+                "uid" : "763f8b404798d5e14526bfea97060695af9e65a9", 
+                "date" : "2014-04-25T07:33:59.000+0000", 
+                "name" : "763f8b404798d5e14526bfea97060695af9e65a9", 
+                "message" : "issue #2\n"
+            }, 
+            {
+                "uid" : "2f72644ac7e57c1ca3b40cfb8c115310e3cafa29", 
+                "date" : "2014-04-23T20:26:32.000+0000", 
+                "name" : "2f72644ac7e57c1ca3b40cfb8c115310e3cafa29", 
+                "message" : "Update README.md"
+            }, 
+            {
+                "uid" : "b43109e52f5a26e30795e70ab9396440e3dd1765", 
+                "date" : "2014-04-09T21:00:36.000+0000", 
+                "name" : "b43109e52f5a26e30795e70ab9396440e3dd1765", 
+                "message" : "Algumas mudanças no código."
+            }, 
+            {
+                "uid" : "92ff3a0ed677db036d97f39f0724b6d2f41ad8d0", 
+                "date" : "2014-04-09T20:29:47.000+0000", 
+                "name" : "92ff3a0ed677db036d97f39f0724b6d2f41ad8d0", 
+                "message" : "Foram adicionados:\ncalculo das métricas NOC e NOP.\nanalíse das versões. "
+            }, 
+            {
+                "uid" : "a8a2010901ec86a98bcbaf8cb9b5c88f7260b4c5", 
+                "date" : "2014-04-09T16:16:11.000+0000", 
+                "name" : "a8a2010901ec86a98bcbaf8cb9b5c88f7260b4c5", 
+                "message" : "erro no mapeamento resolvido."
+            }, 
+            {
+                "uid" : "77ae5b7be8faf8c55296beb87af7ceb05be3ff84", 
+                "date" : "2014-04-09T15:03:13.000+0000", 
+                "name" : "77ae5b7be8faf8c55296beb87af7ceb05be3ff84", 
+                "message" : "initial\n"
+            }, 
+            {
+                "uid" : "97bfbe9870f7df252a354bcfa54fb2abd3c4a59e", 
+                "date" : "2014-04-09T14:55:44.000+0000", 
+                "name" : "97bfbe9870f7df252a354bcfa54fb2abd3c4a59e", 
+                "message" : "Initial commit\n"
+            }
+        ]
+    },
+    { 
+        "id" : "56d37dd3f09b020fa42e62ca", 
+        "repository" : "c12152e2172786191e3f51eb1f524d8418a03a85", 
+        "lastUpdate" : "2014-05-18T14:40:46.000+0000", 
+        "name" : "0.3.0", 
+        "fullName" : "refs/tags/0.3.0", 
+        "type" : "TAG", 
+        "commits" : [
+            {
+                "uid" : "387766796d368a64e45f6c283b1f3eb43523f66d", 
+                "date" : "2014-05-18T14:40:46.000+0000", 
+                "name" : "387766796d368a64e45f6c283b1f3eb43523f66d", 
+                "message" : "changes"
+            }, 
+            {
+                "uid" : "2e28395528d5162f443eb8f398da4fee0fe0f6f5", 
+                "date" : "2014-05-18T00:55:01.000+0000", 
+                "name" : "2e28395528d5162f443eb8f398da4fee0fe0f6f5", 
+                "message" : "changes"
+            }, 
+            {
+                "uid" : "1450877e6d1de3eb040205b722fef9e5a095a6ae", 
+                "date" : "2014-05-16T21:42:17.000+0000", 
+                "name" : "1450877e6d1de3eb040205b722fef9e5a095a6ae", 
+                "message" : "fixes 3"
+            }, 
+            {
+                "uid" : "78108f1cad84232e834e4fce0563eb7187a89968", 
+                "date" : "2014-05-16T21:29:49.000+0000", 
+                "name" : "78108f1cad84232e834e4fce0563eb7187a89968", 
+                "message" : "fixes"
+            }, 
+            {
+                "uid" : "810351dea9d73136e091b2abfbb1ab640cfe973d", 
+                "date" : "2014-05-15T16:00:40.000+0000", 
+                "name" : "810351dea9d73136e091b2abfbb1ab640cfe973d", 
+                "message" : "fixes 1"
+            }, 
+            {
+                "uid" : "a142f675c82b18647fec683d730db983cf6a271a", 
+                "date" : "2014-05-15T03:14:42.000+0000", 
+                "name" : "a142f675c82b18647fec683d730db983cf6a271a", 
+                "message" : "modified the presentation\n"
+            }, 
+            {
+                "uid" : "f32cf747db7fa836fea2c91cf43e1921407623cd", 
+                "date" : "2014-05-15T03:10:35.000+0000", 
+                "name" : "f32cf747db7fa836fea2c91cf43e1921407623cd", 
+                "message" : "modified the class example\n"
+            }, 
+            {
+                "uid" : "87c7f90d37730281f79bd4558edb974b4b10cefb", 
+                "date" : "2014-05-13T18:46:15.000+0000", 
+                "name" : "87c7f90d37730281f79bd4558edb974b4b10cefb", 
+                "message" : "reorganized the ER model\n"
+            }, 
+            {
+                "uid" : "411422e1c6229cbbe5f58b3d314b6c863befd22a", 
+                "date" : "2014-05-13T18:38:30.000+0000", 
+                "name" : "411422e1c6229cbbe5f58b3d314b6c863befd22a", 
+                "message" : "update the presentation\n"
+            }, 
+            {
+                "uid" : "f2b738f677e256d1cfc9c0bdc2f513558535362a", 
+                "date" : "2014-05-13T18:38:30.000+0000", 
+                "name" : "f2b738f677e256d1cfc9c0bdc2f513558535362a", 
+                "message" : "improved the ER diagram\n"
+            }, 
+            {
+                "uid" : "12c6a6375065b3d8d7a8b5cf42d55b7db78f4d41", 
+                "date" : "2014-05-12T03:24:51.000+0000", 
+                "name" : "12c6a6375065b3d8d7a8b5cf42d55b7db78f4d41", 
+                "message" : "documentation finished"
+            }, 
+            {
+                "uid" : "4fdd7aa223e15541917a25aa357e2e88b9fab210", 
+                "date" : "2014-05-11T01:57:30.000+0000", 
+                "name" : "4fdd7aa223e15541917a25aa357e2e88b9fab210", 
+                "message" : "#6\n"
+            }, 
+            {
+                "uid" : "f3fd8d299f0da8c00b8d550670fc945e5f55c799", 
+                "date" : "2014-05-11T01:29:09.000+0000", 
+                "name" : "f3fd8d299f0da8c00b8d550670fc945e5f55c799", 
+                "message" : "reference to the issue #6\n"
+            }, 
+            {
+                "uid" : "2c11bc6dbfe61c9590bfdb5ad0d31036fc3dd176", 
+                "date" : "2014-05-10T13:53:46.000+0000", 
+                "name" : "2c11bc6dbfe61c9590bfdb5ad0d31036fc3dd176", 
+                "message" : "renamed the files\n"
+            }, 
+            {
+                "uid" : "23a33f3c65760a313374d610d0058e9587e594ec", 
+                "date" : "2014-05-10T02:48:20.000+0000", 
+                "name" : "23a33f3c65760a313374d610d0058e9587e594ec", 
+                "message" : "Class diagram added."
+            }, 
+            {
+                "uid" : "c177234fae00ef2c47d31252b8c7689589ca4686", 
+                "date" : "2014-05-10T02:13:20.000+0000", 
+                "name" : "c177234fae00ef2c47d31252b8c7689589ca4686", 
+                "message" : "I create a new package called org.visminer.git.local and I put the\nclasses GitUtil and AnalyzeRepository there."
+            }, 
+            {
+                "uid" : "7834b3405c37d03af0ca2f0c9cf7b50b506cec33", 
+                "date" : "2014-05-10T01:34:38.000+0000", 
+                "name" : "7834b3405c37d03af0ca2f0c9cf7b50b506cec33", 
+                "message" : "class diagram added."
+            }, 
+            {
+                "uid" : "e1b06ce88ca3645a6d26eeb7a575c8a7c5e6cebe", 
+                "date" : "2014-05-09T21:02:01.000+0000", 
+                "name" : "e1b06ce88ca3645a6d26eeb7a575c8a7c5e6cebe", 
+                "message" : "ER model added."
+            }, 
+            {
+                "uid" : "b6f0a29bf31e274dd009a90b7bfa4f3e1107aeef", 
+                "date" : "2014-04-28T12:10:23.000+0000", 
+                "name" : "b6f0a29bf31e274dd009a90b7bfa4f3e1107aeef", 
+                "message" : "ORM changes."
+            }, 
+            {
+                "uid" : "71eb5f30b9f804ac2eb4c94f0009b18f6f1f8688", 
+                "date" : "2014-04-28T02:22:14.000+0000", 
+                "name" : "71eb5f30b9f804ac2eb4c94f0009b18f6f1f8688", 
+                "message" : "- new folder docs\n- first version of the visminer presentation"
+            }, 
+            {
+                "uid" : "baca34449a4a1685401e25213d005a9ce15c92a8", 
+                "date" : "2014-04-27T07:42:56.000+0000", 
+                "name" : "baca34449a4a1685401e25213d005a9ce15c92a8", 
+                "message" : "Merge pull request #5 from visminer/issue4\n\nissue #4"
+            }, 
+            {
+                "uid" : "497feb90f0ab0327f4538e5f97e9ad9e5f301903", 
+                "date" : "2014-04-27T07:40:03.000+0000", 
+                "name" : "497feb90f0ab0327f4538e5f97e9ad9e5f301903", 
+                "message" : "issue #4\n"
+            }, 
+            {
+                "uid" : "e7e6c3ee462539baa42a9ac8fff2b214415887ea", 
+                "date" : "2014-04-25T15:59:46.000+0000", 
+                "name" : "e7e6c3ee462539baa42a9ac8fff2b214415887ea", 
+                "message" : "Merge pull request #3 from visminer/branchMilestoneBranch\n\nissue #2"
+            }, 
+            {
+                "uid" : "763f8b404798d5e14526bfea97060695af9e65a9", 
+                "date" : "2014-04-25T07:33:59.000+0000", 
+                "name" : "763f8b404798d5e14526bfea97060695af9e65a9", 
+                "message" : "issue #2\n"
+            }, 
+            {
+                "uid" : "2f72644ac7e57c1ca3b40cfb8c115310e3cafa29", 
+                "date" : "2014-04-23T20:26:32.000+0000", 
+                "name" : "2f72644ac7e57c1ca3b40cfb8c115310e3cafa29", 
+                "message" : "Update README.md"
+            }, 
+            {
+                "uid" : "b43109e52f5a26e30795e70ab9396440e3dd1765", 
+                "date" : "2014-04-09T21:00:36.000+0000", 
+                "name" : "b43109e52f5a26e30795e70ab9396440e3dd1765", 
+                "message" : "Algumas mudanças no código."
+            }, 
+            {
+                "uid" : "92ff3a0ed677db036d97f39f0724b6d2f41ad8d0", 
+                "date" : "2014-04-09T20:29:47.000+0000", 
+                "name" : "92ff3a0ed677db036d97f39f0724b6d2f41ad8d0", 
+                "message" : "Foram adicionados:\ncalculo das métricas NOC e NOP.\nanalíse das versões. "
+            }, 
+            {
+                "uid" : "a8a2010901ec86a98bcbaf8cb9b5c88f7260b4c5", 
+                "date" : "2014-04-09T16:16:11.000+0000", 
+                "name" : "a8a2010901ec86a98bcbaf8cb9b5c88f7260b4c5", 
+                "message" : "erro no mapeamento resolvido."
+            }, 
+            {
+                "uid" : "77ae5b7be8faf8c55296beb87af7ceb05be3ff84", 
+                "date" : "2014-04-09T15:03:13.000+0000", 
+                "name" : "77ae5b7be8faf8c55296beb87af7ceb05be3ff84", 
+                "message" : "initial\n"
+            }, 
+            {
+                "uid" : "97bfbe9870f7df252a354bcfa54fb2abd3c4a59e", 
+                "date" : "2014-04-09T14:55:44.000+0000", 
+                "name" : "97bfbe9870f7df252a354bcfa54fb2abd3c4a59e", 
+                "message" : "Initial commit\n"
+            }
+        ]
+    },
+    { 
+        "id" : "56d37dd3f09b020fa42e62cb", 
+        "repository" : "c12152e2172786191e3f51eb1f524d8418a03a85", 
+        "lastUpdate" : "2014-06-17T04:52:00.000+0000", 
+        "name" : "0.4.0", 
+        "fullName" : "refs/tags/0.4.0", 
+        "type" : "TAG", 
+        "commits" : [
+            {
+                "uid" : "b2e25ba8c6a62ad5708af3ac00ed73f7970a3422", 
+                "date" : "2014-06-17T04:52:00.000+0000", 
+                "name" : "b2e25ba8c6a62ad5708af3ac00ed73f7970a3422", 
+                "message" : "Merge pull request #34 from visminer/issue-21\n\n#21"
+            }, 
+            {
+                "uid" : "2062c3119196609316e7d5e227ec6e0e791fdb26", 
+                "date" : "2014-06-17T04:45:18.000+0000", 
+                "name" : "2062c3119196609316e7d5e227ec6e0e791fdb26", 
+                "message" : "#21\n"
+            }, 
+            {
+                "uid" : "8904b60bfd9099fab40db8acc4b058e27649a234", 
+                "date" : "2014-06-09T03:14:20.000+0000", 
+                "name" : "8904b60bfd9099fab40db8acc4b058e27649a234", 
+                "message" : "Merge pull request #30 from visminer/issue-29\n\nissue #29"
+            }, 
+            {
+                "uid" : "1628b4fbe56b8ba08a99864029b840ef94b085b4", 
+                "date" : "2014-06-09T03:10:21.000+0000", 
+                "name" : "1628b4fbe56b8ba08a99864029b840ef94b085b4", 
+                "message" : "issue #29\n"
+            }, 
+            {
+                "uid" : "6287600f85d54e7005473e7954c7e9e72354183d", 
+                "date" : "2014-06-06T04:45:00.000+0000", 
+                "name" : "6287600f85d54e7005473e7954c7e9e72354183d", 
+                "message" : "Merge pull request #26 from visminer/issue-22-m22\n\nIssue 22 m22"
+            }, 
+            {
+                "uid" : "499c97143141f8c7d45c34a418f573fcad4ab41c", 
+                "date" : "2014-06-06T04:43:21.000+0000", 
+                "name" : "499c97143141f8c7d45c34a418f573fcad4ab41c", 
+                "message" : "resolving conflict merge #22\n"
+            }, 
+            {
+                "uid" : "55e7a2c7f2f4a611e7ed64ca4078be73898dbb82", 
+                "date" : "2014-06-06T04:19:28.000+0000", 
+                "name" : "55e7a2c7f2f4a611e7ed64ca4078be73898dbb82", 
+                "message" : "issue #22\n"
+            }, 
+            {
+                "uid" : "f540f54fadaf76ee29b9fbcf415f4b929fc40072", 
+                "date" : "2014-06-06T00:29:59.000+0000", 
+                "name" : "f540f54fadaf76ee29b9fbcf415f4b929fc40072", 
+                "message" : "Error in files acess solved."
+            }, 
+            {
+                "uid" : "6249cc020876214f7492c6a8ae17b69fddeafb79", 
+                "date" : "2014-06-03T03:29:13.000+0000", 
+                "name" : "6249cc020876214f7492c6a8ae17b69fddeafb79", 
+                "message" : "Merge pull request #12 from visminer/IssueMilestone\n\n#11"
+            }, 
+            {
+                "uid" : "93d774f9d09aaa4056ce9f89705bcf741af82257", 
+                "date" : "2014-05-31T07:43:31.000+0000", 
+                "name" : "93d774f9d09aaa4056ce9f89705bcf741af82257", 
+                "message" : "#11\n"
+            }, 
+            {
+                "uid" : "a7b68e85413c03a649ad9c71a31638fa0620197c", 
+                "date" : "2014-05-22T16:46:05.000+0000", 
+                "name" : "a7b68e85413c03a649ad9c71a31638fa0620197c", 
+                "message" : "function to get metric by its name added."
+            }, 
+            {
+                "uid" : "387766796d368a64e45f6c283b1f3eb43523f66d", 
+                "date" : "2014-05-18T14:40:46.000+0000", 
+                "name" : "387766796d368a64e45f6c283b1f3eb43523f66d", 
+                "message" : "changes"
+            }, 
+            {
+                "uid" : "2e28395528d5162f443eb8f398da4fee0fe0f6f5", 
+                "date" : "2014-05-18T00:55:01.000+0000", 
+                "name" : "2e28395528d5162f443eb8f398da4fee0fe0f6f5", 
+                "message" : "changes"
+            }, 
+            {
+                "uid" : "1450877e6d1de3eb040205b722fef9e5a095a6ae", 
+                "date" : "2014-05-16T21:42:17.000+0000", 
+                "name" : "1450877e6d1de3eb040205b722fef9e5a095a6ae", 
+                "message" : "fixes 3"
+            }, 
+            {
+                "uid" : "78108f1cad84232e834e4fce0563eb7187a89968", 
+                "date" : "2014-05-16T21:29:49.000+0000", 
+                "name" : "78108f1cad84232e834e4fce0563eb7187a89968", 
+                "message" : "fixes"
+            }, 
+            {
+                "uid" : "810351dea9d73136e091b2abfbb1ab640cfe973d", 
+                "date" : "2014-05-15T16:00:40.000+0000", 
+                "name" : "810351dea9d73136e091b2abfbb1ab640cfe973d", 
+                "message" : "fixes 1"
+            }, 
+            {
+                "uid" : "a142f675c82b18647fec683d730db983cf6a271a", 
+                "date" : "2014-05-15T03:14:42.000+0000", 
+                "name" : "a142f675c82b18647fec683d730db983cf6a271a", 
+                "message" : "modified the presentation\n"
+            }, 
+            {
+                "uid" : "f32cf747db7fa836fea2c91cf43e1921407623cd", 
+                "date" : "2014-05-15T03:10:35.000+0000", 
+                "name" : "f32cf747db7fa836fea2c91cf43e1921407623cd", 
+                "message" : "modified the class example\n"
+            }, 
+            {
+                "uid" : "87c7f90d37730281f79bd4558edb974b4b10cefb", 
+                "date" : "2014-05-13T18:46:15.000+0000", 
+                "name" : "87c7f90d37730281f79bd4558edb974b4b10cefb", 
+                "message" : "reorganized the ER model\n"
+            }, 
+            {
+                "uid" : "411422e1c6229cbbe5f58b3d314b6c863befd22a", 
+                "date" : "2014-05-13T18:38:30.000+0000", 
+                "name" : "411422e1c6229cbbe5f58b3d314b6c863befd22a", 
+                "message" : "update the presentation\n"
+            }, 
+            {
+                "uid" : "f2b738f677e256d1cfc9c0bdc2f513558535362a", 
+                "date" : "2014-05-13T18:38:30.000+0000", 
+                "name" : "f2b738f677e256d1cfc9c0bdc2f513558535362a", 
+                "message" : "improved the ER diagram\n"
+            }, 
+            {
+                "uid" : "12c6a6375065b3d8d7a8b5cf42d55b7db78f4d41", 
+                "date" : "2014-05-12T03:24:51.000+0000", 
+                "name" : "12c6a6375065b3d8d7a8b5cf42d55b7db78f4d41", 
+                "message" : "documentation finished"
+            }, 
+            {
+                "uid" : "4fdd7aa223e15541917a25aa357e2e88b9fab210", 
+                "date" : "2014-05-11T01:57:30.000+0000", 
+                "name" : "4fdd7aa223e15541917a25aa357e2e88b9fab210", 
+                "message" : "#6\n"
+            }, 
+            {
+                "uid" : "f3fd8d299f0da8c00b8d550670fc945e5f55c799", 
+                "date" : "2014-05-11T01:29:09.000+0000", 
+                "name" : "f3fd8d299f0da8c00b8d550670fc945e5f55c799", 
+                "message" : "reference to the issue #6\n"
+            }, 
+            {
+                "uid" : "2c11bc6dbfe61c9590bfdb5ad0d31036fc3dd176", 
+                "date" : "2014-05-10T13:53:46.000+0000", 
+                "name" : "2c11bc6dbfe61c9590bfdb5ad0d31036fc3dd176", 
+                "message" : "renamed the files\n"
+            }, 
+            {
+                "uid" : "23a33f3c65760a313374d610d0058e9587e594ec", 
+                "date" : "2014-05-10T02:48:20.000+0000", 
+                "name" : "23a33f3c65760a313374d610d0058e9587e594ec", 
+                "message" : "Class diagram added."
+            }, 
+            {
+                "uid" : "c177234fae00ef2c47d31252b8c7689589ca4686", 
+                "date" : "2014-05-10T02:13:20.000+0000", 
+                "name" : "c177234fae00ef2c47d31252b8c7689589ca4686", 
+                "message" : "I create a new package called org.visminer.git.local and I put the\nclasses GitUtil and AnalyzeRepository there."
+            }, 
+            {
+                "uid" : "7834b3405c37d03af0ca2f0c9cf7b50b506cec33", 
+                "date" : "2014-05-10T01:34:38.000+0000", 
+                "name" : "7834b3405c37d03af0ca2f0c9cf7b50b506cec33", 
+                "message" : "class diagram added."
+            }, 
+            {
+                "uid" : "e1b06ce88ca3645a6d26eeb7a575c8a7c5e6cebe", 
+                "date" : "2014-05-09T21:02:01.000+0000", 
+                "name" : "e1b06ce88ca3645a6d26eeb7a575c8a7c5e6cebe", 
+                "message" : "ER model added."
+            }, 
+            {
+                "uid" : "b6f0a29bf31e274dd009a90b7bfa4f3e1107aeef", 
+                "date" : "2014-04-28T12:10:23.000+0000", 
+                "name" : "b6f0a29bf31e274dd009a90b7bfa4f3e1107aeef", 
+                "message" : "ORM changes."
+            }, 
+            {
+                "uid" : "71eb5f30b9f804ac2eb4c94f0009b18f6f1f8688", 
+                "date" : "2014-04-28T02:22:14.000+0000", 
+                "name" : "71eb5f30b9f804ac2eb4c94f0009b18f6f1f8688", 
+                "message" : "- new folder docs\n- first version of the visminer presentation"
+            }, 
+            {
+                "uid" : "baca34449a4a1685401e25213d005a9ce15c92a8", 
+                "date" : "2014-04-27T07:42:56.000+0000", 
+                "name" : "baca34449a4a1685401e25213d005a9ce15c92a8", 
+                "message" : "Merge pull request #5 from visminer/issue4\n\nissue #4"
+            }, 
+            {
+                "uid" : "497feb90f0ab0327f4538e5f97e9ad9e5f301903", 
+                "date" : "2014-04-27T07:40:03.000+0000", 
+                "name" : "497feb90f0ab0327f4538e5f97e9ad9e5f301903", 
+                "message" : "issue #4\n"
+            }, 
+            {
+                "uid" : "e7e6c3ee462539baa42a9ac8fff2b214415887ea", 
+                "date" : "2014-04-25T15:59:46.000+0000", 
+                "name" : "e7e6c3ee462539baa42a9ac8fff2b214415887ea", 
+                "message" : "Merge pull request #3 from visminer/branchMilestoneBranch\n\nissue #2"
+            }, 
+            {
+                "uid" : "763f8b404798d5e14526bfea97060695af9e65a9", 
+                "date" : "2014-04-25T07:33:59.000+0000", 
+                "name" : "763f8b404798d5e14526bfea97060695af9e65a9", 
+                "message" : "issue #2\n"
+            }, 
+            {
+                "uid" : "2f72644ac7e57c1ca3b40cfb8c115310e3cafa29", 
+                "date" : "2014-04-23T20:26:32.000+0000", 
+                "name" : "2f72644ac7e57c1ca3b40cfb8c115310e3cafa29", 
+                "message" : "Update README.md"
+            }, 
+            {
+                "uid" : "b43109e52f5a26e30795e70ab9396440e3dd1765", 
+                "date" : "2014-04-09T21:00:36.000+0000", 
+                "name" : "b43109e52f5a26e30795e70ab9396440e3dd1765", 
+                "message" : "Algumas mudanças no código."
+            }, 
+            {
+                "uid" : "92ff3a0ed677db036d97f39f0724b6d2f41ad8d0", 
+                "date" : "2014-04-09T20:29:47.000+0000", 
+                "name" : "92ff3a0ed677db036d97f39f0724b6d2f41ad8d0", 
+                "message" : "Foram adicionados:\ncalculo das métricas NOC e NOP.\nanalíse das versões. "
+            }, 
+            {
+                "uid" : "a8a2010901ec86a98bcbaf8cb9b5c88f7260b4c5", 
+                "date" : "2014-04-09T16:16:11.000+0000", 
+                "name" : "a8a2010901ec86a98bcbaf8cb9b5c88f7260b4c5", 
+                "message" : "erro no mapeamento resolvido."
+            }, 
+            {
+                "uid" : "77ae5b7be8faf8c55296beb87af7ceb05be3ff84", 
+                "date" : "2014-04-09T15:03:13.000+0000", 
+                "name" : "77ae5b7be8faf8c55296beb87af7ceb05be3ff84", 
+                "message" : "initial\n"
+            }, 
+            {
+                "uid" : "97bfbe9870f7df252a354bcfa54fb2abd3c4a59e", 
+                "date" : "2014-04-09T14:55:44.000+0000", 
+                "name" : "97bfbe9870f7df252a354bcfa54fb2abd3c4a59e", 
+                "message" : "Initial commit\n"
+            }
+        ]
+    },
+    { 
+        "id" : "56d37dd3f09b020fa42e62cc", 
+        "repository" : "c12152e2172786191e3f51eb1f524d8418a03a85", 
+        "lastUpdate" : "2014-06-18T04:26:18.000+0000", 
+        "name" : "0.5.0", 
+        "fullName" : "refs/tags/0.5.0", 
+        "type" : "TAG", 
+        "commits" : [
+            {
+                "uid" : "704636727019a153070d063a450fe93048cc0b3b", 
+                "date" : "2014-06-18T04:26:18.000+0000", 
+                "name" : "704636727019a153070d063a450fe93048cc0b3b", 
+                "message" : "Merge pull request #35 from visminer/issue-27\n\n#27 #19"
+            }, 
+            {
+                "uid" : "3be6a1529cd2e8633d294db74a913918be6a07bd", 
+                "date" : "2014-06-18T04:20:20.000+0000", 
+                "name" : "3be6a1529cd2e8633d294db74a913918be6a07bd", 
+                "message" : "#27 #19\n"
+            }, 
+            {
+                "uid" : "b2e25ba8c6a62ad5708af3ac00ed73f7970a3422", 
+                "date" : "2014-06-17T04:52:00.000+0000", 
+                "name" : "b2e25ba8c6a62ad5708af3ac00ed73f7970a3422", 
+                "message" : "Merge pull request #34 from visminer/issue-21\n\n#21"
+            }, 
+            {
+                "uid" : "2062c3119196609316e7d5e227ec6e0e791fdb26", 
+                "date" : "2014-06-17T04:45:18.000+0000", 
+                "name" : "2062c3119196609316e7d5e227ec6e0e791fdb26", 
+                "message" : "#21\n"
+            }, 
+            {
+                "uid" : "8904b60bfd9099fab40db8acc4b058e27649a234", 
+                "date" : "2014-06-09T03:14:20.000+0000", 
+                "name" : "8904b60bfd9099fab40db8acc4b058e27649a234", 
+                "message" : "Merge pull request #30 from visminer/issue-29\n\nissue #29"
+            }, 
+            {
+                "uid" : "1628b4fbe56b8ba08a99864029b840ef94b085b4", 
+                "date" : "2014-06-09T03:10:21.000+0000", 
+                "name" : "1628b4fbe56b8ba08a99864029b840ef94b085b4", 
+                "message" : "issue #29\n"
+            }, 
+            {
+                "uid" : "6287600f85d54e7005473e7954c7e9e72354183d", 
+                "date" : "2014-06-06T04:45:00.000+0000", 
+                "name" : "6287600f85d54e7005473e7954c7e9e72354183d", 
+                "message" : "Merge pull request #26 from visminer/issue-22-m22\n\nIssue 22 m22"
+            }, 
+            {
+                "uid" : "499c97143141f8c7d45c34a418f573fcad4ab41c", 
+                "date" : "2014-06-06T04:43:21.000+0000", 
+                "name" : "499c97143141f8c7d45c34a418f573fcad4ab41c", 
+                "message" : "resolving conflict merge #22\n"
+            }, 
+            {
+                "uid" : "55e7a2c7f2f4a611e7ed64ca4078be73898dbb82", 
+                "date" : "2014-06-06T04:19:28.000+0000", 
+                "name" : "55e7a2c7f2f4a611e7ed64ca4078be73898dbb82", 
+                "message" : "issue #22\n"
+            }, 
+            {
+                "uid" : "f540f54fadaf76ee29b9fbcf415f4b929fc40072", 
+                "date" : "2014-06-06T00:29:59.000+0000", 
+                "name" : "f540f54fadaf76ee29b9fbcf415f4b929fc40072", 
+                "message" : "Error in files acess solved."
+            }, 
+            {
+                "uid" : "6249cc020876214f7492c6a8ae17b69fddeafb79", 
+                "date" : "2014-06-03T03:29:13.000+0000", 
+                "name" : "6249cc020876214f7492c6a8ae17b69fddeafb79", 
+                "message" : "Merge pull request #12 from visminer/IssueMilestone\n\n#11"
+            }, 
+            {
+                "uid" : "93d774f9d09aaa4056ce9f89705bcf741af82257", 
+                "date" : "2014-05-31T07:43:31.000+0000", 
+                "name" : "93d774f9d09aaa4056ce9f89705bcf741af82257", 
+                "message" : "#11\n"
+            }, 
+            {
+                "uid" : "a7b68e85413c03a649ad9c71a31638fa0620197c", 
+                "date" : "2014-05-22T16:46:05.000+0000", 
+                "name" : "a7b68e85413c03a649ad9c71a31638fa0620197c", 
+                "message" : "function to get metric by its name added."
+            }, 
+            {
+                "uid" : "387766796d368a64e45f6c283b1f3eb43523f66d", 
+                "date" : "2014-05-18T14:40:46.000+0000", 
+                "name" : "387766796d368a64e45f6c283b1f3eb43523f66d", 
+                "message" : "changes"
+            }, 
+            {
+                "uid" : "2e28395528d5162f443eb8f398da4fee0fe0f6f5", 
+                "date" : "2014-05-18T00:55:01.000+0000", 
+                "name" : "2e28395528d5162f443eb8f398da4fee0fe0f6f5", 
+                "message" : "changes"
+            }, 
+            {
+                "uid" : "1450877e6d1de3eb040205b722fef9e5a095a6ae", 
+                "date" : "2014-05-16T21:42:17.000+0000", 
+                "name" : "1450877e6d1de3eb040205b722fef9e5a095a6ae", 
+                "message" : "fixes 3"
+            }, 
+            {
+                "uid" : "78108f1cad84232e834e4fce0563eb7187a89968", 
+                "date" : "2014-05-16T21:29:49.000+0000", 
+                "name" : "78108f1cad84232e834e4fce0563eb7187a89968", 
+                "message" : "fixes"
+            }, 
+            {
+                "uid" : "810351dea9d73136e091b2abfbb1ab640cfe973d", 
+                "date" : "2014-05-15T16:00:40.000+0000", 
+                "name" : "810351dea9d73136e091b2abfbb1ab640cfe973d", 
+                "message" : "fixes 1"
+            }, 
+            {
+                "uid" : "a142f675c82b18647fec683d730db983cf6a271a", 
+                "date" : "2014-05-15T03:14:42.000+0000", 
+                "name" : "a142f675c82b18647fec683d730db983cf6a271a", 
+                "message" : "modified the presentation\n"
+            }, 
+            {
+                "uid" : "f32cf747db7fa836fea2c91cf43e1921407623cd", 
+                "date" : "2014-05-15T03:10:35.000+0000", 
+                "name" : "f32cf747db7fa836fea2c91cf43e1921407623cd", 
+                "message" : "modified the class example\n"
+            }, 
+            {
+                "uid" : "87c7f90d37730281f79bd4558edb974b4b10cefb", 
+                "date" : "2014-05-13T18:46:15.000+0000", 
+                "name" : "87c7f90d37730281f79bd4558edb974b4b10cefb", 
+                "message" : "reorganized the ER model\n"
+            }, 
+            {
+                "uid" : "411422e1c6229cbbe5f58b3d314b6c863befd22a", 
+                "date" : "2014-05-13T18:38:30.000+0000", 
+                "name" : "411422e1c6229cbbe5f58b3d314b6c863befd22a", 
+                "message" : "update the presentation\n"
+            }, 
+            {
+                "uid" : "f2b738f677e256d1cfc9c0bdc2f513558535362a", 
+                "date" : "2014-05-13T18:38:30.000+0000", 
+                "name" : "f2b738f677e256d1cfc9c0bdc2f513558535362a", 
+                "message" : "improved the ER diagram\n"
+            }, 
+            {
+                "uid" : "12c6a6375065b3d8d7a8b5cf42d55b7db78f4d41", 
+                "date" : "2014-05-12T03:24:51.000+0000", 
+                "name" : "12c6a6375065b3d8d7a8b5cf42d55b7db78f4d41", 
+                "message" : "documentation finished"
+            }, 
+            {
+                "uid" : "4fdd7aa223e15541917a25aa357e2e88b9fab210", 
+                "date" : "2014-05-11T01:57:30.000+0000", 
+                "name" : "4fdd7aa223e15541917a25aa357e2e88b9fab210", 
+                "message" : "#6\n"
+            }, 
+            {
+                "uid" : "f3fd8d299f0da8c00b8d550670fc945e5f55c799", 
+                "date" : "2014-05-11T01:29:09.000+0000", 
+                "name" : "f3fd8d299f0da8c00b8d550670fc945e5f55c799", 
+                "message" : "reference to the issue #6\n"
+            }, 
+            {
+                "uid" : "2c11bc6dbfe61c9590bfdb5ad0d31036fc3dd176", 
+                "date" : "2014-05-10T13:53:46.000+0000", 
+                "name" : "2c11bc6dbfe61c9590bfdb5ad0d31036fc3dd176", 
+                "message" : "renamed the files\n"
+            }, 
+            {
+                "uid" : "23a33f3c65760a313374d610d0058e9587e594ec", 
+                "date" : "2014-05-10T02:48:20.000+0000", 
+                "name" : "23a33f3c65760a313374d610d0058e9587e594ec", 
+                "message" : "Class diagram added."
+            }, 
+            {
+                "uid" : "c177234fae00ef2c47d31252b8c7689589ca4686", 
+                "date" : "2014-05-10T02:13:20.000+0000", 
+                "name" : "c177234fae00ef2c47d31252b8c7689589ca4686", 
+                "message" : "I create a new package called org.visminer.git.local and I put the\nclasses GitUtil and AnalyzeRepository there."
+            }, 
+            {
+                "uid" : "7834b3405c37d03af0ca2f0c9cf7b50b506cec33", 
+                "date" : "2014-05-10T01:34:38.000+0000", 
+                "name" : "7834b3405c37d03af0ca2f0c9cf7b50b506cec33", 
+                "message" : "class diagram added."
+            }, 
+            {
+                "uid" : "e1b06ce88ca3645a6d26eeb7a575c8a7c5e6cebe", 
+                "date" : "2014-05-09T21:02:01.000+0000", 
+                "name" : "e1b06ce88ca3645a6d26eeb7a575c8a7c5e6cebe", 
+                "message" : "ER model added."
+            }, 
+            {
+                "uid" : "b6f0a29bf31e274dd009a90b7bfa4f3e1107aeef", 
+                "date" : "2014-04-28T12:10:23.000+0000", 
+                "name" : "b6f0a29bf31e274dd009a90b7bfa4f3e1107aeef", 
+                "message" : "ORM changes."
+            }, 
+            {
+                "uid" : "71eb5f30b9f804ac2eb4c94f0009b18f6f1f8688", 
+                "date" : "2014-04-28T02:22:14.000+0000", 
+                "name" : "71eb5f30b9f804ac2eb4c94f0009b18f6f1f8688", 
+                "message" : "- new folder docs\n- first version of the visminer presentation"
+            }, 
+            {
+                "uid" : "baca34449a4a1685401e25213d005a9ce15c92a8", 
+                "date" : "2014-04-27T07:42:56.000+0000", 
+                "name" : "baca34449a4a1685401e25213d005a9ce15c92a8", 
+                "message" : "Merge pull request #5 from visminer/issue4\n\nissue #4"
+            }, 
+            {
+                "uid" : "497feb90f0ab0327f4538e5f97e9ad9e5f301903", 
+                "date" : "2014-04-27T07:40:03.000+0000", 
+                "name" : "497feb90f0ab0327f4538e5f97e9ad9e5f301903", 
+                "message" : "issue #4\n"
+            }, 
+            {
+                "uid" : "e7e6c3ee462539baa42a9ac8fff2b214415887ea", 
+                "date" : "2014-04-25T15:59:46.000+0000", 
+                "name" : "e7e6c3ee462539baa42a9ac8fff2b214415887ea", 
+                "message" : "Merge pull request #3 from visminer/branchMilestoneBranch\n\nissue #2"
+            }, 
+            {
+                "uid" : "763f8b404798d5e14526bfea97060695af9e65a9", 
+                "date" : "2014-04-25T07:33:59.000+0000", 
+                "name" : "763f8b404798d5e14526bfea97060695af9e65a9", 
+                "message" : "issue #2\n"
+            }, 
+            {
+                "uid" : "2f72644ac7e57c1ca3b40cfb8c115310e3cafa29", 
+                "date" : "2014-04-23T20:26:32.000+0000", 
+                "name" : "2f72644ac7e57c1ca3b40cfb8c115310e3cafa29", 
+                "message" : "Update README.md"
+            }, 
+            {
+                "uid" : "b43109e52f5a26e30795e70ab9396440e3dd1765", 
+                "date" : "2014-04-09T21:00:36.000+0000", 
+                "name" : "b43109e52f5a26e30795e70ab9396440e3dd1765", 
+                "message" : "Algumas mudanças no código."
+            }, 
+            {
+                "uid" : "92ff3a0ed677db036d97f39f0724b6d2f41ad8d0", 
+                "date" : "2014-04-09T20:29:47.000+0000", 
+                "name" : "92ff3a0ed677db036d97f39f0724b6d2f41ad8d0", 
+                "message" : "Foram adicionados:\ncalculo das métricas NOC e NOP.\nanalíse das versões. "
+            }, 
+            {
+                "uid" : "a8a2010901ec86a98bcbaf8cb9b5c88f7260b4c5", 
+                "date" : "2014-04-09T16:16:11.000+0000", 
+                "name" : "a8a2010901ec86a98bcbaf8cb9b5c88f7260b4c5", 
+                "message" : "erro no mapeamento resolvido."
+            }, 
+            {
+                "uid" : "77ae5b7be8faf8c55296beb87af7ceb05be3ff84", 
+                "date" : "2014-04-09T15:03:13.000+0000", 
+                "name" : "77ae5b7be8faf8c55296beb87af7ceb05be3ff84", 
+                "message" : "initial\n"
+            }, 
+            {
+                "uid" : "97bfbe9870f7df252a354bcfa54fb2abd3c4a59e", 
+                "date" : "2014-04-09T14:55:44.000+0000", 
+                "name" : "97bfbe9870f7df252a354bcfa54fb2abd3c4a59e", 
+                "message" : "Initial commit\n"
+            }
+        ]
+    },
+    { 
+        "id" : "56d37dd3f09b020fa42e62cd", 
+        "repository" : "c12152e2172786191e3f51eb1f524d8418a03a85", 
+        "lastUpdate" : "2014-06-27T18:32:09.000+0000", 
+        "name" : "0.6.0", 
+        "fullName" : "refs/tags/0.6.0", 
+        "type" : "TAG", 
+        "commits" : [
+            {
+                "uid" : "c10b4612d8ebf8b654c990e7c5ddcfb6f25e80d7", 
+                "date" : "2014-06-27T18:32:09.000+0000", 
+                "name" : "c10b4612d8ebf8b654c990e7c5ddcfb6f25e80d7", 
+                "message" : "Merge pull request #39 from visminer/issue-38\n\nissue #38"
+            }, 
+            {
+                "uid" : "13347713f035a34458030fed1c6fc3b350103369", 
+                "date" : "2014-06-27T18:30:58.000+0000", 
+                "name" : "13347713f035a34458030fed1c6fc3b350103369", 
+                "message" : "issue #38\n"
+            }, 
+            {
+                "uid" : "edbed14e054a2d53cd9ebabe9e676cf97c07beea", 
+                "date" : "2014-06-18T05:03:43.000+0000", 
+                "name" : "edbed14e054a2d53cd9ebabe9e676cf97c07beea", 
+                "message" : "Delete Visminer-ER-model.png"
+            }, 
+            {
+                "uid" : "695f8a1d1f106acdaae407dafc6268e01872f845", 
+                "date" : "2014-06-18T05:03:02.000+0000", 
+                "name" : "695f8a1d1f106acdaae407dafc6268e01872f845", 
+                "message" : "Delete Visminer-ER-model.mwb"
+            }, 
+            {
+                "uid" : "ee4842c9e6686eff3d6242ba22dc6e8fe8ce115b", 
+                "date" : "2014-06-18T05:01:14.000+0000", 
+                "name" : "ee4842c9e6686eff3d6242ba22dc6e8fe8ce115b", 
+                "message" : "add model_EER of version 0.5.0\n"
+            }, 
+            {
+                "uid" : "704636727019a153070d063a450fe93048cc0b3b", 
+                "date" : "2014-06-18T04:26:18.000+0000", 
+                "name" : "704636727019a153070d063a450fe93048cc0b3b", 
+                "message" : "Merge pull request #35 from visminer/issue-27\n\n#27 #19"
+            }, 
+            {
+                "uid" : "3be6a1529cd2e8633d294db74a913918be6a07bd", 
+                "date" : "2014-06-18T04:20:20.000+0000", 
+                "name" : "3be6a1529cd2e8633d294db74a913918be6a07bd", 
+                "message" : "#27 #19\n"
+            }, 
+            {
+                "uid" : "b2e25ba8c6a62ad5708af3ac00ed73f7970a3422", 
+                "date" : "2014-06-17T04:52:00.000+0000", 
+                "name" : "b2e25ba8c6a62ad5708af3ac00ed73f7970a3422", 
+                "message" : "Merge pull request #34 from visminer/issue-21\n\n#21"
+            }, 
+            {
+                "uid" : "2062c3119196609316e7d5e227ec6e0e791fdb26", 
+                "date" : "2014-06-17T04:45:18.000+0000", 
+                "name" : "2062c3119196609316e7d5e227ec6e0e791fdb26", 
+                "message" : "#21\n"
+            }, 
+            {
+                "uid" : "8904b60bfd9099fab40db8acc4b058e27649a234", 
+                "date" : "2014-06-09T03:14:20.000+0000", 
+                "name" : "8904b60bfd9099fab40db8acc4b058e27649a234", 
+                "message" : "Merge pull request #30 from visminer/issue-29\n\nissue #29"
+            }, 
+            {
+                "uid" : "1628b4fbe56b8ba08a99864029b840ef94b085b4", 
+                "date" : "2014-06-09T03:10:21.000+0000", 
+                "name" : "1628b4fbe56b8ba08a99864029b840ef94b085b4", 
+                "message" : "issue #29\n"
+            }, 
+            {
+                "uid" : "6287600f85d54e7005473e7954c7e9e72354183d", 
+                "date" : "2014-06-06T04:45:00.000+0000", 
+                "name" : "6287600f85d54e7005473e7954c7e9e72354183d", 
+                "message" : "Merge pull request #26 from visminer/issue-22-m22\n\nIssue 22 m22"
+            }, 
+            {
+                "uid" : "499c97143141f8c7d45c34a418f573fcad4ab41c", 
+                "date" : "2014-06-06T04:43:21.000+0000", 
+                "name" : "499c97143141f8c7d45c34a418f573fcad4ab41c", 
+                "message" : "resolving conflict merge #22\n"
+            }, 
+            {
+                "uid" : "55e7a2c7f2f4a611e7ed64ca4078be73898dbb82", 
+                "date" : "2014-06-06T04:19:28.000+0000", 
+                "name" : "55e7a2c7f2f4a611e7ed64ca4078be73898dbb82", 
+                "message" : "issue #22\n"
+            }, 
+            {
+                "uid" : "f540f54fadaf76ee29b9fbcf415f4b929fc40072", 
+                "date" : "2014-06-06T00:29:59.000+0000", 
+                "name" : "f540f54fadaf76ee29b9fbcf415f4b929fc40072", 
+                "message" : "Error in files acess solved."
+            }, 
+            {
+                "uid" : "6249cc020876214f7492c6a8ae17b69fddeafb79", 
+                "date" : "2014-06-03T03:29:13.000+0000", 
+                "name" : "6249cc020876214f7492c6a8ae17b69fddeafb79", 
+                "message" : "Merge pull request #12 from visminer/IssueMilestone\n\n#11"
+            }, 
+            {
+                "uid" : "93d774f9d09aaa4056ce9f89705bcf741af82257", 
+                "date" : "2014-05-31T07:43:31.000+0000", 
+                "name" : "93d774f9d09aaa4056ce9f89705bcf741af82257", 
+                "message" : "#11\n"
+            }, 
+            {
+                "uid" : "a7b68e85413c03a649ad9c71a31638fa0620197c", 
+                "date" : "2014-05-22T16:46:05.000+0000", 
+                "name" : "a7b68e85413c03a649ad9c71a31638fa0620197c", 
+                "message" : "function to get metric by its name added."
+            }, 
+            {
+                "uid" : "387766796d368a64e45f6c283b1f3eb43523f66d", 
+                "date" : "2014-05-18T14:40:46.000+0000", 
+                "name" : "387766796d368a64e45f6c283b1f3eb43523f66d", 
+                "message" : "changes"
+            }, 
+            {
+                "uid" : "2e28395528d5162f443eb8f398da4fee0fe0f6f5", 
+                "date" : "2014-05-18T00:55:01.000+0000", 
+                "name" : "2e28395528d5162f443eb8f398da4fee0fe0f6f5", 
+                "message" : "changes"
+            }, 
+            {
+                "uid" : "1450877e6d1de3eb040205b722fef9e5a095a6ae", 
+                "date" : "2014-05-16T21:42:17.000+0000", 
+                "name" : "1450877e6d1de3eb040205b722fef9e5a095a6ae", 
+                "message" : "fixes 3"
+            }, 
+            {
+                "uid" : "78108f1cad84232e834e4fce0563eb7187a89968", 
+                "date" : "2014-05-16T21:29:49.000+0000", 
+                "name" : "78108f1cad84232e834e4fce0563eb7187a89968", 
+                "message" : "fixes"
+            }, 
+            {
+                "uid" : "810351dea9d73136e091b2abfbb1ab640cfe973d", 
+                "date" : "2014-05-15T16:00:40.000+0000", 
+                "name" : "810351dea9d73136e091b2abfbb1ab640cfe973d", 
+                "message" : "fixes 1"
+            }, 
+            {
+                "uid" : "a142f675c82b18647fec683d730db983cf6a271a", 
+                "date" : "2014-05-15T03:14:42.000+0000", 
+                "name" : "a142f675c82b18647fec683d730db983cf6a271a", 
+                "message" : "modified the presentation\n"
+            }, 
+            {
+                "uid" : "f32cf747db7fa836fea2c91cf43e1921407623cd", 
+                "date" : "2014-05-15T03:10:35.000+0000", 
+                "name" : "f32cf747db7fa836fea2c91cf43e1921407623cd", 
+                "message" : "modified the class example\n"
+            }, 
+            {
+                "uid" : "87c7f90d37730281f79bd4558edb974b4b10cefb", 
+                "date" : "2014-05-13T18:46:15.000+0000", 
+                "name" : "87c7f90d37730281f79bd4558edb974b4b10cefb", 
+                "message" : "reorganized the ER model\n"
+            }, 
+            {
+                "uid" : "411422e1c6229cbbe5f58b3d314b6c863befd22a", 
+                "date" : "2014-05-13T18:38:30.000+0000", 
+                "name" : "411422e1c6229cbbe5f58b3d314b6c863befd22a", 
+                "message" : "update the presentation\n"
+            }, 
+            {
+                "uid" : "f2b738f677e256d1cfc9c0bdc2f513558535362a", 
+                "date" : "2014-05-13T18:38:30.000+0000", 
+                "name" : "f2b738f677e256d1cfc9c0bdc2f513558535362a", 
+                "message" : "improved the ER diagram\n"
+            }, 
+            {
+                "uid" : "12c6a6375065b3d8d7a8b5cf42d55b7db78f4d41", 
+                "date" : "2014-05-12T03:24:51.000+0000", 
+                "name" : "12c6a6375065b3d8d7a8b5cf42d55b7db78f4d41", 
+                "message" : "documentation finished"
+            }, 
+            {
+                "uid" : "4fdd7aa223e15541917a25aa357e2e88b9fab210", 
+                "date" : "2014-05-11T01:57:30.000+0000", 
+                "name" : "4fdd7aa223e15541917a25aa357e2e88b9fab210", 
+                "message" : "#6\n"
+            }, 
+            {
+                "uid" : "f3fd8d299f0da8c00b8d550670fc945e5f55c799", 
+                "date" : "2014-05-11T01:29:09.000+0000", 
+                "name" : "f3fd8d299f0da8c00b8d550670fc945e5f55c799", 
+                "message" : "reference to the issue #6\n"
+            }, 
+            {
+                "uid" : "2c11bc6dbfe61c9590bfdb5ad0d31036fc3dd176", 
+                "date" : "2014-05-10T13:53:46.000+0000", 
+                "name" : "2c11bc6dbfe61c9590bfdb5ad0d31036fc3dd176", 
+                "message" : "renamed the files\n"
+            }, 
+            {
+                "uid" : "23a33f3c65760a313374d610d0058e9587e594ec", 
+                "date" : "2014-05-10T02:48:20.000+0000", 
+                "name" : "23a33f3c65760a313374d610d0058e9587e594ec", 
+                "message" : "Class diagram added."
+            }, 
+            {
+                "uid" : "c177234fae00ef2c47d31252b8c7689589ca4686", 
+                "date" : "2014-05-10T02:13:20.000+0000", 
+                "name" : "c177234fae00ef2c47d31252b8c7689589ca4686", 
+                "message" : "I create a new package called org.visminer.git.local and I put the\nclasses GitUtil and AnalyzeRepository there."
+            }, 
+            {
+                "uid" : "7834b3405c37d03af0ca2f0c9cf7b50b506cec33", 
+                "date" : "2014-05-10T01:34:38.000+0000", 
+                "name" : "7834b3405c37d03af0ca2f0c9cf7b50b506cec33", 
+                "message" : "class diagram added."
+            }, 
+            {
+                "uid" : "e1b06ce88ca3645a6d26eeb7a575c8a7c5e6cebe", 
+                "date" : "2014-05-09T21:02:01.000+0000", 
+                "name" : "e1b06ce88ca3645a6d26eeb7a575c8a7c5e6cebe", 
+                "message" : "ER model added."
+            }, 
+            {
+                "uid" : "b6f0a29bf31e274dd009a90b7bfa4f3e1107aeef", 
+                "date" : "2014-04-28T12:10:23.000+0000", 
+                "name" : "b6f0a29bf31e274dd009a90b7bfa4f3e1107aeef", 
+                "message" : "ORM changes."
+            }, 
+            {
+                "uid" : "71eb5f30b9f804ac2eb4c94f0009b18f6f1f8688", 
+                "date" : "2014-04-28T02:22:14.000+0000", 
+                "name" : "71eb5f30b9f804ac2eb4c94f0009b18f6f1f8688", 
+                "message" : "- new folder docs\n- first version of the visminer presentation"
+            }, 
+            {
+                "uid" : "baca34449a4a1685401e25213d005a9ce15c92a8", 
+                "date" : "2014-04-27T07:42:56.000+0000", 
+                "name" : "baca34449a4a1685401e25213d005a9ce15c92a8", 
+                "message" : "Merge pull request #5 from visminer/issue4\n\nissue #4"
+            }, 
+            {
+                "uid" : "497feb90f0ab0327f4538e5f97e9ad9e5f301903", 
+                "date" : "2014-04-27T07:40:03.000+0000", 
+                "name" : "497feb90f0ab0327f4538e5f97e9ad9e5f301903", 
+                "message" : "issue #4\n"
+            }, 
+            {
+                "uid" : "e7e6c3ee462539baa42a9ac8fff2b214415887ea", 
+                "date" : "2014-04-25T15:59:46.000+0000", 
+                "name" : "e7e6c3ee462539baa42a9ac8fff2b214415887ea", 
+                "message" : "Merge pull request #3 from visminer/branchMilestoneBranch\n\nissue #2"
+            }, 
+            {
+                "uid" : "763f8b404798d5e14526bfea97060695af9e65a9", 
+                "date" : "2014-04-25T07:33:59.000+0000", 
+                "name" : "763f8b404798d5e14526bfea97060695af9e65a9", 
+                "message" : "issue #2\n"
+            }, 
+            {
+                "uid" : "2f72644ac7e57c1ca3b40cfb8c115310e3cafa29", 
+                "date" : "2014-04-23T20:26:32.000+0000", 
+                "name" : "2f72644ac7e57c1ca3b40cfb8c115310e3cafa29", 
+                "message" : "Update README.md"
+            }, 
+            {
+                "uid" : "b43109e52f5a26e30795e70ab9396440e3dd1765", 
+                "date" : "2014-04-09T21:00:36.000+0000", 
+                "name" : "b43109e52f5a26e30795e70ab9396440e3dd1765", 
+                "message" : "Algumas mudanças no código."
+            }, 
+            {
+                "uid" : "92ff3a0ed677db036d97f39f0724b6d2f41ad8d0", 
+                "date" : "2014-04-09T20:29:47.000+0000", 
+                "name" : "92ff3a0ed677db036d97f39f0724b6d2f41ad8d0", 
+                "message" : "Foram adicionados:\ncalculo das métricas NOC e NOP.\nanalíse das versões. "
+            }, 
+            {
+                "uid" : "a8a2010901ec86a98bcbaf8cb9b5c88f7260b4c5", 
+                "date" : "2014-04-09T16:16:11.000+0000", 
+                "name" : "a8a2010901ec86a98bcbaf8cb9b5c88f7260b4c5", 
+                "message" : "erro no mapeamento resolvido."
+            }, 
+            {
+                "uid" : "77ae5b7be8faf8c55296beb87af7ceb05be3ff84", 
+                "date" : "2014-04-09T15:03:13.000+0000", 
+                "name" : "77ae5b7be8faf8c55296beb87af7ceb05be3ff84", 
+                "message" : "initial\n"
+            }, 
+            {
+                "uid" : "97bfbe9870f7df252a354bcfa54fb2abd3c4a59e", 
+                "date" : "2014-04-09T14:55:44.000+0000", 
+                "name" : "97bfbe9870f7df252a354bcfa54fb2abd3c4a59e", 
+                "message" : "Initial commit\n"
+            }
+        ]
+    },
+    { 
+        "id" : "56d37dd3f09b020fa42e62ce", 
+        "repository" : "c12152e2172786191e3f51eb1f524d8418a03a85", 
+        "lastUpdate" : "2014-07-01T22:31:42.000+0000", 
+        "name" : "0.7.0", 
+        "fullName" : "refs/tags/0.7.0", 
+        "type" : "TAG", 
+        "commits" : [
+            {
+                "uid" : "2b260fad2d0a1823628602991aae0681ff166369", 
+                "date" : "2014-07-01T22:31:42.000+0000", 
+                "name" : "2b260fad2d0a1823628602991aae0681ff166369", 
+                "message" : "issue #40\n"
+            }, 
+            {
+                "uid" : "c10b4612d8ebf8b654c990e7c5ddcfb6f25e80d7", 
+                "date" : "2014-06-27T18:32:09.000+0000", 
+                "name" : "c10b4612d8ebf8b654c990e7c5ddcfb6f25e80d7", 
+                "message" : "Merge pull request #39 from visminer/issue-38\n\nissue #38"
+            }, 
+            {
+                "uid" : "13347713f035a34458030fed1c6fc3b350103369", 
+                "date" : "2014-06-27T18:30:58.000+0000", 
+                "name" : "13347713f035a34458030fed1c6fc3b350103369", 
+                "message" : "issue #38\n"
+            }, 
+            {
+                "uid" : "edbed14e054a2d53cd9ebabe9e676cf97c07beea", 
+                "date" : "2014-06-18T05:03:43.000+0000", 
+                "name" : "edbed14e054a2d53cd9ebabe9e676cf97c07beea", 
+                "message" : "Delete Visminer-ER-model.png"
+            }, 
+            {
+                "uid" : "695f8a1d1f106acdaae407dafc6268e01872f845", 
+                "date" : "2014-06-18T05:03:02.000+0000", 
+                "name" : "695f8a1d1f106acdaae407dafc6268e01872f845", 
+                "message" : "Delete Visminer-ER-model.mwb"
+            }, 
+            {
+                "uid" : "ee4842c9e6686eff3d6242ba22dc6e8fe8ce115b", 
+                "date" : "2014-06-18T05:01:14.000+0000", 
+                "name" : "ee4842c9e6686eff3d6242ba22dc6e8fe8ce115b", 
+                "message" : "add model_EER of version 0.5.0\n"
+            }, 
+            {
+                "uid" : "704636727019a153070d063a450fe93048cc0b3b", 
+                "date" : "2014-06-18T04:26:18.000+0000", 
+                "name" : "704636727019a153070d063a450fe93048cc0b3b", 
+                "message" : "Merge pull request #35 from visminer/issue-27\n\n#27 #19"
+            }, 
+            {
+                "uid" : "3be6a1529cd2e8633d294db74a913918be6a07bd", 
+                "date" : "2014-06-18T04:20:20.000+0000", 
+                "name" : "3be6a1529cd2e8633d294db74a913918be6a07bd", 
+                "message" : "#27 #19\n"
+            }, 
+            {
+                "uid" : "b2e25ba8c6a62ad5708af3ac00ed73f7970a3422", 
+                "date" : "2014-06-17T04:52:00.000+0000", 
+                "name" : "b2e25ba8c6a62ad5708af3ac00ed73f7970a3422", 
+                "message" : "Merge pull request #34 from visminer/issue-21\n\n#21"
+            }, 
+            {
+                "uid" : "2062c3119196609316e7d5e227ec6e0e791fdb26", 
+                "date" : "2014-06-17T04:45:18.000+0000", 
+                "name" : "2062c3119196609316e7d5e227ec6e0e791fdb26", 
+                "message" : "#21\n"
+            }, 
+            {
+                "uid" : "8904b60bfd9099fab40db8acc4b058e27649a234", 
+                "date" : "2014-06-09T03:14:20.000+0000", 
+                "name" : "8904b60bfd9099fab40db8acc4b058e27649a234", 
+                "message" : "Merge pull request #30 from visminer/issue-29\n\nissue #29"
+            }, 
+            {
+                "uid" : "1628b4fbe56b8ba08a99864029b840ef94b085b4", 
+                "date" : "2014-06-09T03:10:21.000+0000", 
+                "name" : "1628b4fbe56b8ba08a99864029b840ef94b085b4", 
+                "message" : "issue #29\n"
+            }, 
+            {
+                "uid" : "6287600f85d54e7005473e7954c7e9e72354183d", 
+                "date" : "2014-06-06T04:45:00.000+0000", 
+                "name" : "6287600f85d54e7005473e7954c7e9e72354183d", 
+                "message" : "Merge pull request #26 from visminer/issue-22-m22\n\nIssue 22 m22"
+            }, 
+            {
+                "uid" : "499c97143141f8c7d45c34a418f573fcad4ab41c", 
+                "date" : "2014-06-06T04:43:21.000+0000", 
+                "name" : "499c97143141f8c7d45c34a418f573fcad4ab41c", 
+                "message" : "resolving conflict merge #22\n"
+            }, 
+            {
+                "uid" : "55e7a2c7f2f4a611e7ed64ca4078be73898dbb82", 
+                "date" : "2014-06-06T04:19:28.000+0000", 
+                "name" : "55e7a2c7f2f4a611e7ed64ca4078be73898dbb82", 
+                "message" : "issue #22\n"
+            }, 
+            {
+                "uid" : "f540f54fadaf76ee29b9fbcf415f4b929fc40072", 
+                "date" : "2014-06-06T00:29:59.000+0000", 
+                "name" : "f540f54fadaf76ee29b9fbcf415f4b929fc40072", 
+                "message" : "Error in files acess solved."
+            }, 
+            {
+                "uid" : "6249cc020876214f7492c6a8ae17b69fddeafb79", 
+                "date" : "2014-06-03T03:29:13.000+0000", 
+                "name" : "6249cc020876214f7492c6a8ae17b69fddeafb79", 
+                "message" : "Merge pull request #12 from visminer/IssueMilestone\n\n#11"
+            }, 
+            {
+                "uid" : "93d774f9d09aaa4056ce9f89705bcf741af82257", 
+                "date" : "2014-05-31T07:43:31.000+0000", 
+                "name" : "93d774f9d09aaa4056ce9f89705bcf741af82257", 
+                "message" : "#11\n"
+            }, 
+            {
+                "uid" : "a7b68e85413c03a649ad9c71a31638fa0620197c", 
+                "date" : "2014-05-22T16:46:05.000+0000", 
+                "name" : "a7b68e85413c03a649ad9c71a31638fa0620197c", 
+                "message" : "function to get metric by its name added."
+            }, 
+            {
+                "uid" : "387766796d368a64e45f6c283b1f3eb43523f66d", 
+                "date" : "2014-05-18T14:40:46.000+0000", 
+                "name" : "387766796d368a64e45f6c283b1f3eb43523f66d", 
+                "message" : "changes"
+            }, 
+            {
+                "uid" : "2e28395528d5162f443eb8f398da4fee0fe0f6f5", 
+                "date" : "2014-05-18T00:55:01.000+0000", 
+                "name" : "2e28395528d5162f443eb8f398da4fee0fe0f6f5", 
+                "message" : "changes"
+            }, 
+            {
+                "uid" : "1450877e6d1de3eb040205b722fef9e5a095a6ae", 
+                "date" : "2014-05-16T21:42:17.000+0000", 
+                "name" : "1450877e6d1de3eb040205b722fef9e5a095a6ae", 
+                "message" : "fixes 3"
+            }, 
+            {
+                "uid" : "78108f1cad84232e834e4fce0563eb7187a89968", 
+                "date" : "2014-05-16T21:29:49.000+0000", 
+                "name" : "78108f1cad84232e834e4fce0563eb7187a89968", 
+                "message" : "fixes"
+            }, 
+            {
+                "uid" : "810351dea9d73136e091b2abfbb1ab640cfe973d", 
+                "date" : "2014-05-15T16:00:40.000+0000", 
+                "name" : "810351dea9d73136e091b2abfbb1ab640cfe973d", 
+                "message" : "fixes 1"
+            }, 
+            {
+                "uid" : "a142f675c82b18647fec683d730db983cf6a271a", 
+                "date" : "2014-05-15T03:14:42.000+0000", 
+                "name" : "a142f675c82b18647fec683d730db983cf6a271a", 
+                "message" : "modified the presentation\n"
+            }, 
+            {
+                "uid" : "f32cf747db7fa836fea2c91cf43e1921407623cd", 
+                "date" : "2014-05-15T03:10:35.000+0000", 
+                "name" : "f32cf747db7fa836fea2c91cf43e1921407623cd", 
+                "message" : "modified the class example\n"
+            }, 
+            {
+                "uid" : "87c7f90d37730281f79bd4558edb974b4b10cefb", 
+                "date" : "2014-05-13T18:46:15.000+0000", 
+                "name" : "87c7f90d37730281f79bd4558edb974b4b10cefb", 
+                "message" : "reorganized the ER model\n"
+            }, 
+            {
+                "uid" : "411422e1c6229cbbe5f58b3d314b6c863befd22a", 
+                "date" : "2014-05-13T18:38:30.000+0000", 
+                "name" : "411422e1c6229cbbe5f58b3d314b6c863befd22a", 
+                "message" : "update the presentation\n"
+            }, 
+            {
+                "uid" : "f2b738f677e256d1cfc9c0bdc2f513558535362a", 
+                "date" : "2014-05-13T18:38:30.000+0000", 
+                "name" : "f2b738f677e256d1cfc9c0bdc2f513558535362a", 
+                "message" : "improved the ER diagram\n"
+            }, 
+            {
+                "uid" : "12c6a6375065b3d8d7a8b5cf42d55b7db78f4d41", 
+                "date" : "2014-05-12T03:24:51.000+0000", 
+                "name" : "12c6a6375065b3d8d7a8b5cf42d55b7db78f4d41", 
+                "message" : "documentation finished"
+            }, 
+            {
+                "uid" : "4fdd7aa223e15541917a25aa357e2e88b9fab210", 
+                "date" : "2014-05-11T01:57:30.000+0000", 
+                "name" : "4fdd7aa223e15541917a25aa357e2e88b9fab210", 
+                "message" : "#6\n"
+            }, 
+            {
+                "uid" : "f3fd8d299f0da8c00b8d550670fc945e5f55c799", 
+                "date" : "2014-05-11T01:29:09.000+0000", 
+                "name" : "f3fd8d299f0da8c00b8d550670fc945e5f55c799", 
+                "message" : "reference to the issue #6\n"
+            }, 
+            {
+                "uid" : "2c11bc6dbfe61c9590bfdb5ad0d31036fc3dd176", 
+                "date" : "2014-05-10T13:53:46.000+0000", 
+                "name" : "2c11bc6dbfe61c9590bfdb5ad0d31036fc3dd176", 
+                "message" : "renamed the files\n"
+            }, 
+            {
+                "uid" : "23a33f3c65760a313374d610d0058e9587e594ec", 
+                "date" : "2014-05-10T02:48:20.000+0000", 
+                "name" : "23a33f3c65760a313374d610d0058e9587e594ec", 
+                "message" : "Class diagram added."
+            }, 
+            {
+                "uid" : "c177234fae00ef2c47d31252b8c7689589ca4686", 
+                "date" : "2014-05-10T02:13:20.000+0000", 
+                "name" : "c177234fae00ef2c47d31252b8c7689589ca4686", 
+                "message" : "I create a new package called org.visminer.git.local and I put the\nclasses GitUtil and AnalyzeRepository there."
+            }, 
+            {
+                "uid" : "7834b3405c37d03af0ca2f0c9cf7b50b506cec33", 
+                "date" : "2014-05-10T01:34:38.000+0000", 
+                "name" : "7834b3405c37d03af0ca2f0c9cf7b50b506cec33", 
+                "message" : "class diagram added."
+            }, 
+            {
+                "uid" : "e1b06ce88ca3645a6d26eeb7a575c8a7c5e6cebe", 
+                "date" : "2014-05-09T21:02:01.000+0000", 
+                "name" : "e1b06ce88ca3645a6d26eeb7a575c8a7c5e6cebe", 
+                "message" : "ER model added."
+            }, 
+            {
+                "uid" : "b6f0a29bf31e274dd009a90b7bfa4f3e1107aeef", 
+                "date" : "2014-04-28T12:10:23.000+0000", 
+                "name" : "b6f0a29bf31e274dd009a90b7bfa4f3e1107aeef", 
+                "message" : "ORM changes."
+            }, 
+            {
+                "uid" : "71eb5f30b9f804ac2eb4c94f0009b18f6f1f8688", 
+                "date" : "2014-04-28T02:22:14.000+0000", 
+                "name" : "71eb5f30b9f804ac2eb4c94f0009b18f6f1f8688", 
+                "message" : "- new folder docs\n- first version of the visminer presentation"
+            }, 
+            {
+                "uid" : "baca34449a4a1685401e25213d005a9ce15c92a8", 
+                "date" : "2014-04-27T07:42:56.000+0000", 
+                "name" : "baca34449a4a1685401e25213d005a9ce15c92a8", 
+                "message" : "Merge pull request #5 from visminer/issue4\n\nissue #4"
+            }, 
+            {
+                "uid" : "497feb90f0ab0327f4538e5f97e9ad9e5f301903", 
+                "date" : "2014-04-27T07:40:03.000+0000", 
+                "name" : "497feb90f0ab0327f4538e5f97e9ad9e5f301903", 
+                "message" : "issue #4\n"
+            }, 
+            {
+                "uid" : "e7e6c3ee462539baa42a9ac8fff2b214415887ea", 
+                "date" : "2014-04-25T15:59:46.000+0000", 
+                "name" : "e7e6c3ee462539baa42a9ac8fff2b214415887ea", 
+                "message" : "Merge pull request #3 from visminer/branchMilestoneBranch\n\nissue #2"
+            }, 
+            {
+                "uid" : "763f8b404798d5e14526bfea97060695af9e65a9", 
+                "date" : "2014-04-25T07:33:59.000+0000", 
+                "name" : "763f8b404798d5e14526bfea97060695af9e65a9", 
+                "message" : "issue #2\n"
+            }, 
+            {
+                "uid" : "2f72644ac7e57c1ca3b40cfb8c115310e3cafa29", 
+                "date" : "2014-04-23T20:26:32.000+0000", 
+                "name" : "2f72644ac7e57c1ca3b40cfb8c115310e3cafa29", 
+                "message" : "Update README.md"
+            }, 
+            {
+                "uid" : "b43109e52f5a26e30795e70ab9396440e3dd1765", 
+                "date" : "2014-04-09T21:00:36.000+0000", 
+                "name" : "b43109e52f5a26e30795e70ab9396440e3dd1765", 
+                "message" : "Algumas mudanças no código."
+            }, 
+            {
+                "uid" : "92ff3a0ed677db036d97f39f0724b6d2f41ad8d0", 
+                "date" : "2014-04-09T20:29:47.000+0000", 
+                "name" : "92ff3a0ed677db036d97f39f0724b6d2f41ad8d0", 
+                "message" : "Foram adicionados:\ncalculo das métricas NOC e NOP.\nanalíse das versões. "
+            }, 
+            {
+                "uid" : "a8a2010901ec86a98bcbaf8cb9b5c88f7260b4c5", 
+                "date" : "2014-04-09T16:16:11.000+0000", 
+                "name" : "a8a2010901ec86a98bcbaf8cb9b5c88f7260b4c5", 
+                "message" : "erro no mapeamento resolvido."
+            }, 
+            {
+                "uid" : "77ae5b7be8faf8c55296beb87af7ceb05be3ff84", 
+                "date" : "2014-04-09T15:03:13.000+0000", 
+                "name" : "77ae5b7be8faf8c55296beb87af7ceb05be3ff84", 
+                "message" : "initial\n"
+            }, 
+            {
+                "uid" : "97bfbe9870f7df252a354bcfa54fb2abd3c4a59e", 
+                "date" : "2014-04-09T14:55:44.000+0000", 
+                "name" : "97bfbe9870f7df252a354bcfa54fb2abd3c4a59e", 
+                "message" : "Initial commit\n"
+            }
+        ]
+    },
+    { 
+        "id" : "56d37dd3f09b020fa42e62cf", 
+        "repository" : "c12152e2172786191e3f51eb1f524d8418a03a85", 
+        "lastUpdate" : "2014-11-05T01:48:17.000+0000", 
+        "name" : "0.8.0", 
+        "fullName" : "refs/tags/0.8.0", 
+        "type" : "TAG", 
+        "commits" : [
+            {
+                "uid" : "5a089901ac8a8b83fdb8b75c23ef8bfe31c59d04", 
+                "date" : "2014-11-05T01:48:17.000+0000", 
+                "name" : "5a089901ac8a8b83fdb8b75c23ef8bfe31c59d04", 
+                "message" : "Removing old version\n"
+            }, 
+            {
+                "uid" : "52993f411b9cc4e4c981e42bb19ef3b05d0fd7bd", 
+                "date" : "2014-11-05T01:29:03.000+0000", 
+                "name" : "52993f411b9cc4e4c981e42bb19ef3b05d0fd7bd", 
+                "message" : "new version uploaded.\n"
+            }, 
+            {
+                "uid" : "6ed1fc91faa3c1ea48efa314bdcf8759d34a2814", 
+                "date" : "2014-07-02T19:50:45.000+0000", 
+                "name" : "6ed1fc91faa3c1ea48efa314bdcf8759d34a2814", 
+                "message" : "Update README.md"
+            }, 
+            {
+                "uid" : "2b260fad2d0a1823628602991aae0681ff166369", 
+                "date" : "2014-07-01T22:31:42.000+0000", 
+                "name" : "2b260fad2d0a1823628602991aae0681ff166369", 
+                "message" : "issue #40\n"
+            }, 
+            {
+                "uid" : "c10b4612d8ebf8b654c990e7c5ddcfb6f25e80d7", 
+                "date" : "2014-06-27T18:32:09.000+0000", 
+                "name" : "c10b4612d8ebf8b654c990e7c5ddcfb6f25e80d7", 
+                "message" : "Merge pull request #39 from visminer/issue-38\n\nissue #38"
+            }, 
+            {
+                "uid" : "13347713f035a34458030fed1c6fc3b350103369", 
+                "date" : "2014-06-27T18:30:58.000+0000", 
+                "name" : "13347713f035a34458030fed1c6fc3b350103369", 
+                "message" : "issue #38\n"
+            }, 
+            {
+                "uid" : "edbed14e054a2d53cd9ebabe9e676cf97c07beea", 
+                "date" : "2014-06-18T05:03:43.000+0000", 
+                "name" : "edbed14e054a2d53cd9ebabe9e676cf97c07beea", 
+                "message" : "Delete Visminer-ER-model.png"
+            }, 
+            {
+                "uid" : "695f8a1d1f106acdaae407dafc6268e01872f845", 
+                "date" : "2014-06-18T05:03:02.000+0000", 
+                "name" : "695f8a1d1f106acdaae407dafc6268e01872f845", 
+                "message" : "Delete Visminer-ER-model.mwb"
+            }, 
+            {
+                "uid" : "ee4842c9e6686eff3d6242ba22dc6e8fe8ce115b", 
+                "date" : "2014-06-18T05:01:14.000+0000", 
+                "name" : "ee4842c9e6686eff3d6242ba22dc6e8fe8ce115b", 
+                "message" : "add model_EER of version 0.5.0\n"
+            }, 
+            {
+                "uid" : "704636727019a153070d063a450fe93048cc0b3b", 
+                "date" : "2014-06-18T04:26:18.000+0000", 
+                "name" : "704636727019a153070d063a450fe93048cc0b3b", 
+                "message" : "Merge pull request #35 from visminer/issue-27\n\n#27 #19"
+            }, 
+            {
+                "uid" : "3be6a1529cd2e8633d294db74a913918be6a07bd", 
+                "date" : "2014-06-18T04:20:20.000+0000", 
+                "name" : "3be6a1529cd2e8633d294db74a913918be6a07bd", 
+                "message" : "#27 #19\n"
+            }, 
+            {
+                "uid" : "b2e25ba8c6a62ad5708af3ac00ed73f7970a3422", 
+                "date" : "2014-06-17T04:52:00.000+0000", 
+                "name" : "b2e25ba8c6a62ad5708af3ac00ed73f7970a3422", 
+                "message" : "Merge pull request #34 from visminer/issue-21\n\n#21"
+            }, 
+            {
+                "uid" : "2062c3119196609316e7d5e227ec6e0e791fdb26", 
+                "date" : "2014-06-17T04:45:18.000+0000", 
+                "name" : "2062c3119196609316e7d5e227ec6e0e791fdb26", 
+                "message" : "#21\n"
+            }, 
+            {
+                "uid" : "8904b60bfd9099fab40db8acc4b058e27649a234", 
+                "date" : "2014-06-09T03:14:20.000+0000", 
+                "name" : "8904b60bfd9099fab40db8acc4b058e27649a234", 
+                "message" : "Merge pull request #30 from visminer/issue-29\n\nissue #29"
+            }, 
+            {
+                "uid" : "1628b4fbe56b8ba08a99864029b840ef94b085b4", 
+                "date" : "2014-06-09T03:10:21.000+0000", 
+                "name" : "1628b4fbe56b8ba08a99864029b840ef94b085b4", 
+                "message" : "issue #29\n"
+            }, 
+            {
+                "uid" : "6287600f85d54e7005473e7954c7e9e72354183d", 
+                "date" : "2014-06-06T04:45:00.000+0000", 
+                "name" : "6287600f85d54e7005473e7954c7e9e72354183d", 
+                "message" : "Merge pull request #26 from visminer/issue-22-m22\n\nIssue 22 m22"
+            }, 
+            {
+                "uid" : "499c97143141f8c7d45c34a418f573fcad4ab41c", 
+                "date" : "2014-06-06T04:43:21.000+0000", 
+                "name" : "499c97143141f8c7d45c34a418f573fcad4ab41c", 
+                "message" : "resolving conflict merge #22\n"
+            }, 
+            {
+                "uid" : "55e7a2c7f2f4a611e7ed64ca4078be73898dbb82", 
+                "date" : "2014-06-06T04:19:28.000+0000", 
+                "name" : "55e7a2c7f2f4a611e7ed64ca4078be73898dbb82", 
+                "message" : "issue #22\n"
+            }, 
+            {
+                "uid" : "f540f54fadaf76ee29b9fbcf415f4b929fc40072", 
+                "date" : "2014-06-06T00:29:59.000+0000", 
+                "name" : "f540f54fadaf76ee29b9fbcf415f4b929fc40072", 
+                "message" : "Error in files acess solved."
+            }, 
+            {
+                "uid" : "6249cc020876214f7492c6a8ae17b69fddeafb79", 
+                "date" : "2014-06-03T03:29:13.000+0000", 
+                "name" : "6249cc020876214f7492c6a8ae17b69fddeafb79", 
+                "message" : "Merge pull request #12 from visminer/IssueMilestone\n\n#11"
+            }, 
+            {
+                "uid" : "93d774f9d09aaa4056ce9f89705bcf741af82257", 
+                "date" : "2014-05-31T07:43:31.000+0000", 
+                "name" : "93d774f9d09aaa4056ce9f89705bcf741af82257", 
+                "message" : "#11\n"
+            }, 
+            {
+                "uid" : "a7b68e85413c03a649ad9c71a31638fa0620197c", 
+                "date" : "2014-05-22T16:46:05.000+0000", 
+                "name" : "a7b68e85413c03a649ad9c71a31638fa0620197c", 
+                "message" : "function to get metric by its name added."
+            }, 
+            {
+                "uid" : "387766796d368a64e45f6c283b1f3eb43523f66d", 
+                "date" : "2014-05-18T14:40:46.000+0000", 
+                "name" : "387766796d368a64e45f6c283b1f3eb43523f66d", 
+                "message" : "changes"
+            }, 
+            {
+                "uid" : "2e28395528d5162f443eb8f398da4fee0fe0f6f5", 
+                "date" : "2014-05-18T00:55:01.000+0000", 
+                "name" : "2e28395528d5162f443eb8f398da4fee0fe0f6f5", 
+                "message" : "changes"
+            }, 
+            {
+                "uid" : "1450877e6d1de3eb040205b722fef9e5a095a6ae", 
+                "date" : "2014-05-16T21:42:17.000+0000", 
+                "name" : "1450877e6d1de3eb040205b722fef9e5a095a6ae", 
+                "message" : "fixes 3"
+            }, 
+            {
+                "uid" : "78108f1cad84232e834e4fce0563eb7187a89968", 
+                "date" : "2014-05-16T21:29:49.000+0000", 
+                "name" : "78108f1cad84232e834e4fce0563eb7187a89968", 
+                "message" : "fixes"
+            }, 
+            {
+                "uid" : "810351dea9d73136e091b2abfbb1ab640cfe973d", 
+                "date" : "2014-05-15T16:00:40.000+0000", 
+                "name" : "810351dea9d73136e091b2abfbb1ab640cfe973d", 
+                "message" : "fixes 1"
+            }, 
+            {
+                "uid" : "a142f675c82b18647fec683d730db983cf6a271a", 
+                "date" : "2014-05-15T03:14:42.000+0000", 
+                "name" : "a142f675c82b18647fec683d730db983cf6a271a", 
+                "message" : "modified the presentation\n"
+            }, 
+            {
+                "uid" : "f32cf747db7fa836fea2c91cf43e1921407623cd", 
+                "date" : "2014-05-15T03:10:35.000+0000", 
+                "name" : "f32cf747db7fa836fea2c91cf43e1921407623cd", 
+                "message" : "modified the class example\n"
+            }, 
+            {
+                "uid" : "87c7f90d37730281f79bd4558edb974b4b10cefb", 
+                "date" : "2014-05-13T18:46:15.000+0000", 
+                "name" : "87c7f90d37730281f79bd4558edb974b4b10cefb", 
+                "message" : "reorganized the ER model\n"
+            }, 
+            {
+                "uid" : "411422e1c6229cbbe5f58b3d314b6c863befd22a", 
+                "date" : "2014-05-13T18:38:30.000+0000", 
+                "name" : "411422e1c6229cbbe5f58b3d314b6c863befd22a", 
+                "message" : "update the presentation\n"
+            }, 
+            {
+                "uid" : "f2b738f677e256d1cfc9c0bdc2f513558535362a", 
+                "date" : "2014-05-13T18:38:30.000+0000", 
+                "name" : "f2b738f677e256d1cfc9c0bdc2f513558535362a", 
+                "message" : "improved the ER diagram\n"
+            }, 
+            {
+                "uid" : "12c6a6375065b3d8d7a8b5cf42d55b7db78f4d41", 
+                "date" : "2014-05-12T03:24:51.000+0000", 
+                "name" : "12c6a6375065b3d8d7a8b5cf42d55b7db78f4d41", 
+                "message" : "documentation finished"
+            }, 
+            {
+                "uid" : "4fdd7aa223e15541917a25aa357e2e88b9fab210", 
+                "date" : "2014-05-11T01:57:30.000+0000", 
+                "name" : "4fdd7aa223e15541917a25aa357e2e88b9fab210", 
+                "message" : "#6\n"
+            }, 
+            {
+                "uid" : "f3fd8d299f0da8c00b8d550670fc945e5f55c799", 
+                "date" : "2014-05-11T01:29:09.000+0000", 
+                "name" : "f3fd8d299f0da8c00b8d550670fc945e5f55c799", 
+                "message" : "reference to the issue #6\n"
+            }, 
+            {
+                "uid" : "2c11bc6dbfe61c9590bfdb5ad0d31036fc3dd176", 
+                "date" : "2014-05-10T13:53:46.000+0000", 
+                "name" : "2c11bc6dbfe61c9590bfdb5ad0d31036fc3dd176", 
+                "message" : "renamed the files\n"
+            }, 
+            {
+                "uid" : "23a33f3c65760a313374d610d0058e9587e594ec", 
+                "date" : "2014-05-10T02:48:20.000+0000", 
+                "name" : "23a33f3c65760a313374d610d0058e9587e594ec", 
+                "message" : "Class diagram added."
+            }, 
+            {
+                "uid" : "c177234fae00ef2c47d31252b8c7689589ca4686", 
+                "date" : "2014-05-10T02:13:20.000+0000", 
+                "name" : "c177234fae00ef2c47d31252b8c7689589ca4686", 
+                "message" : "I create a new package called org.visminer.git.local and I put the\nclasses GitUtil and AnalyzeRepository there."
+            }, 
+            {
+                "uid" : "7834b3405c37d03af0ca2f0c9cf7b50b506cec33", 
+                "date" : "2014-05-10T01:34:38.000+0000", 
+                "name" : "7834b3405c37d03af0ca2f0c9cf7b50b506cec33", 
+                "message" : "class diagram added."
+            }, 
+            {
+                "uid" : "e1b06ce88ca3645a6d26eeb7a575c8a7c5e6cebe", 
+                "date" : "2014-05-09T21:02:01.000+0000", 
+                "name" : "e1b06ce88ca3645a6d26eeb7a575c8a7c5e6cebe", 
+                "message" : "ER model added."
+            }, 
+            {
+                "uid" : "b6f0a29bf31e274dd009a90b7bfa4f3e1107aeef", 
+                "date" : "2014-04-28T12:10:23.000+0000", 
+                "name" : "b6f0a29bf31e274dd009a90b7bfa4f3e1107aeef", 
+                "message" : "ORM changes."
+            }, 
+            {
+                "uid" : "71eb5f30b9f804ac2eb4c94f0009b18f6f1f8688", 
+                "date" : "2014-04-28T02:22:14.000+0000", 
+                "name" : "71eb5f30b9f804ac2eb4c94f0009b18f6f1f8688", 
+                "message" : "- new folder docs\n- first version of the visminer presentation"
+            }, 
+            {
+                "uid" : "baca34449a4a1685401e25213d005a9ce15c92a8", 
+                "date" : "2014-04-27T07:42:56.000+0000", 
+                "name" : "baca34449a4a1685401e25213d005a9ce15c92a8", 
+                "message" : "Merge pull request #5 from visminer/issue4\n\nissue #4"
+            }, 
+            {
+                "uid" : "497feb90f0ab0327f4538e5f97e9ad9e5f301903", 
+                "date" : "2014-04-27T07:40:03.000+0000", 
+                "name" : "497feb90f0ab0327f4538e5f97e9ad9e5f301903", 
+                "message" : "issue #4\n"
+            }, 
+            {
+                "uid" : "e7e6c3ee462539baa42a9ac8fff2b214415887ea", 
+                "date" : "2014-04-25T15:59:46.000+0000", 
+                "name" : "e7e6c3ee462539baa42a9ac8fff2b214415887ea", 
+                "message" : "Merge pull request #3 from visminer/branchMilestoneBranch\n\nissue #2"
+            }, 
+            {
+                "uid" : "763f8b404798d5e14526bfea97060695af9e65a9", 
+                "date" : "2014-04-25T07:33:59.000+0000", 
+                "name" : "763f8b404798d5e14526bfea97060695af9e65a9", 
+                "message" : "issue #2\n"
+            }, 
+            {
+                "uid" : "2f72644ac7e57c1ca3b40cfb8c115310e3cafa29", 
+                "date" : "2014-04-23T20:26:32.000+0000", 
+                "name" : "2f72644ac7e57c1ca3b40cfb8c115310e3cafa29", 
+                "message" : "Update README.md"
+            }, 
+            {
+                "uid" : "b43109e52f5a26e30795e70ab9396440e3dd1765", 
+                "date" : "2014-04-09T21:00:36.000+0000", 
+                "name" : "b43109e52f5a26e30795e70ab9396440e3dd1765", 
+                "message" : "Algumas mudanças no código."
+            }, 
+            {
+                "uid" : "92ff3a0ed677db036d97f39f0724b6d2f41ad8d0", 
+                "date" : "2014-04-09T20:29:47.000+0000", 
+                "name" : "92ff3a0ed677db036d97f39f0724b6d2f41ad8d0", 
+                "message" : "Foram adicionados:\ncalculo das métricas NOC e NOP.\nanalíse das versões. "
+            }, 
+            {
+                "uid" : "a8a2010901ec86a98bcbaf8cb9b5c88f7260b4c5", 
+                "date" : "2014-04-09T16:16:11.000+0000", 
+                "name" : "a8a2010901ec86a98bcbaf8cb9b5c88f7260b4c5", 
+                "message" : "erro no mapeamento resolvido."
+            }, 
+            {
+                "uid" : "77ae5b7be8faf8c55296beb87af7ceb05be3ff84", 
+                "date" : "2014-04-09T15:03:13.000+0000", 
+                "name" : "77ae5b7be8faf8c55296beb87af7ceb05be3ff84", 
+                "message" : "initial\n"
+            }, 
+            {
+                "uid" : "97bfbe9870f7df252a354bcfa54fb2abd3c4a59e", 
+                "date" : "2014-04-09T14:55:44.000+0000", 
+                "name" : "97bfbe9870f7df252a354bcfa54fb2abd3c4a59e", 
+                "message" : "Initial commit\n"
+            }
+        ]
+    },
+    { 
+        "id" : "56d37dd3f09b020fa42e62d0", 
+        "repository" : "c12152e2172786191e3f51eb1f524d8418a03a85", 
+        "lastUpdate" : "2015-10-23T16:20:03.000+0000", 
+        "name" : "0.9.0", 
+        "fullName" : "refs/tags/0.9.0", 
+        "type" : "TAG", 
+        "commits" : [
+            {
+                "uid" : "78419958cdfa535c80ac96ac1b02412675de3ff8", 
+                "date" : "2015-10-23T16:20:03.000+0000", 
+                "name" : "78419958cdfa535c80ac96ac1b02412675de3ff8", 
+                "message" : "Error caused by JPA validator solved."
+            }, 
+            {
+                "uid" : "592254285ee9149ff04bcbdf9c555b80d8d14e43", 
+                "date" : "2015-10-10T04:00:21.000+0000", 
+                "name" : "592254285ee9149ff04bcbdf9c555b80d8d14e43", 
+                "message" : "Check null is not need anymore for lists from db."
+            }, 
+            {
+                "uid" : "2121cefc0ea356c7c131482c62025a0818090cf4", 
+                "date" : "2015-10-08T01:47:57.000+0000", 
+                "name" : "2121cefc0ea356c7c131482c62025a0818090cf4", 
+                "message" : "it seems one cannot push a file collection to a new repository if the\ndatabase's been newly added (possibly a bug?)\n+ verification if file uids collection is null/empty to avoid the issue!"
+            }, 
+            {
+                "uid" : "bd3d7235e3ad9812b320ce50de4d5f28a52956eb", 
+                "date" : "2015-10-08T01:44:45.000+0000", 
+                "name" : "bd3d7235e3ad9812b320ce50de4d5f28a52956eb", 
+                "message" : "+ conversion from db entities (namely, tree & committer) to\ntheir biz format in the retrieval of biz repository collections"
+            }, 
+            {
+                "uid" : "0114a3c470e7f8fe0f5473a32c593524e64bd3ab", 
+                "date" : "2015-10-06T17:59:35.000+0000", 
+                "name" : "0114a3c470e7f8fe0f5473a32c593524e64bd3ab", 
+                "message" : "Repository.explore() method call added in Visminer-Test"
+            }, 
+            {
+                "uid" : "e55c640817a7a004bc0e6285710d733c13910f30", 
+                "date" : "2015-10-06T14:03:06.000+0000", 
+                "name" : "e55c640817a7a004bc0e6285710d733c13910f30", 
+                "message" : "Navigation through issues, milestones enabled.\n\nBugs solved. \n\n"
+            }, 
+            {
+                "uid" : "fdd7ff302c1c1a9aaa18af04c59fd1398bdb9a34", 
+                "date" : "2015-10-04T22:46:22.000+0000", 
+                "name" : "fdd7ff302c1c1a9aaa18af04c59fd1398bdb9a34", 
+                "message" : "Tests updated"
+            }, 
+            {
+                "uid" : "be2084fd84c31a3c090df1a98b2afbe97305112d", 
+                "date" : "2015-10-04T21:27:18.000+0000", 
+                "name" : "be2084fd84c31a3c090df1a98b2afbe97305112d", 
+                "message" : "Solving problems."
+            }, 
+            {
+                "uid" : "c6ed103b811840afd94667e1e3f3859a3588933d", 
+                "date" : "2015-10-03T18:09:30.000+0000", 
+                "name" : "c6ed103b811840afd94667e1e3f3859a3588933d", 
+                "message" : "close #72\nclose #71\nclose #68"
+            }, 
+            {
+                "uid" : "24abbf24127668d2f73ed2c034a28c4d39eca539", 
+                "date" : "2015-10-02T18:48:21.000+0000", 
+                "name" : "24abbf24127668d2f73ed2c034a28c4d39eca539", 
+                "message" : "close #67"
+            }, 
+            {
+                "uid" : "9cb23d99e7c478cbc8b4960114b751383e6b678e", 
+                "date" : "2015-10-02T02:03:47.000+0000", 
+                "name" : "9cb23d99e7c478cbc8b4960114b751383e6b678e", 
+                "message" : "Git access improved.\nAutomated tests added."
+            }, 
+            {
+                "uid" : "19a26f27c6a68951c73f9a74e5d1ea567877b9a0", 
+                "date" : "2015-09-30T16:16:32.000+0000", 
+                "name" : "19a26f27c6a68951c73f9a74e5d1ea567877b9a0", 
+                "message" : "correct a bug that only happen in Windows OS."
+            }, 
+            {
+                "uid" : "fec94fe0f49cb66cc778d97cd5ba517a21241126", 
+                "date" : "2015-09-30T09:21:30.000+0000", 
+                "name" : "fec94fe0f49cb66cc778d97cd5ba517a21241126", 
+                "message" : "Merge pull request #66 from visminer/desenvolvimento\n\nDesenvolvimento"
+            }, 
+            {
+                "uid" : "93cfb1cc13248fd711546f9c079aaaebc5ad4972", 
+                "date" : "2015-09-29T20:30:29.000+0000", 
+                "name" : "93cfb1cc13248fd711546f9c079aaaebc5ad4972", 
+                "message" : "Changes in classes signatures.\nGit installed is no more necessary.\nSLOC metric refactored.\nBugs corrections;"
+            }, 
+            {
+                "uid" : "9d9213a12c4ebd51948e1f8e8049381487d0e2bb", 
+                "date" : "2015-09-28T05:30:07.000+0000", 
+                "name" : "9d9213a12c4ebd51948e1f8e8049381487d0e2bb", 
+                "message" : "Git installed is no longer necessary.\nSome changes in classes annotations."
+            }, 
+            {
+                "uid" : "3bf28edaf05f444dfc48be3f5464f3815ffe11c1", 
+                "date" : "2015-09-25T06:16:23.000+0000", 
+                "name" : "3bf28edaf05f444dfc48be3f5464f3815ffe11c1", 
+                "message" : "Problem that all software units are retrieved independently of the\ncommit.\nBugs solved.\nSaveAST improved.\n "
+            }, 
+            {
+                "uid" : "17c7842ad72bc661fa694999e25af80bb035d28d", 
+                "date" : "2015-09-23T02:59:05.000+0000", 
+                "name" : "17c7842ad72bc661fa694999e25af80bb035d28d", 
+                "message" : "Bugs solved in software units saving process.\nBugs solved in Project class."
+            }, 
+            {
+                "uid" : "c006ff991d746acab0edcb419ba85a845beb9a6a", 
+                "date" : "2015-09-21T15:39:04.000+0000", 
+                "name" : "c006ff991d746acab0edcb419ba85a845beb9a6a", 
+                "message" : "Problem in Windows OS solved.\nNow committers are always returned in ascendent order of the their first\ncommit.\nAnother small changes."
+            }, 
+            {
+                "uid" : "9302827ff1664afa548140cc112d1667627e4e4d", 
+                "date" : "2015-09-18T19:07:01.000+0000", 
+                "name" : "9302827ff1664afa548140cc112d1667627e4e4d", 
+                "message" : "Problem with repository path normalization solved."
+            }, 
+            {
+                "uid" : "ad3960ec99940b03e656a2dd42f4fc72fe0ad339", 
+                "date" : "2015-09-18T17:42:38.000+0000", 
+                "name" : "ad3960ec99940b03e656a2dd42f4fc72fe0ad339", 
+                "message" : "Update MetricCalculator.java\n\nBug in MetricCalculatorsolved solved."
+            }, 
+            {
+                "uid" : "fe0699cac9aef222862bebc888ee4e8039ea9c64", 
+                "date" : "2015-09-18T08:46:22.000+0000", 
+                "name" : "fe0699cac9aef222862bebc888ee4e8039ea9c64", 
+                "message" : "Merge pull request #65 from visminer/issue-45\n\nThis commit is an emergency solution, I did not intend to merge branch issue-45 right now, but was needed. A bug that stops metric calculation in some cases was solved. Only the resolution of this bug was pulled, the others pieces of code about #45 will be merged soon as possible."
+            }, 
+            {
+                "uid" : "2f2945a51f794682316a724f7ebff94ae6398a0d", 
+                "date" : "2015-09-18T08:39:58.000+0000", 
+                "name" : "2f2945a51f794682316a724f7ebff94ae6398a0d", 
+                "message" : "Solved bug in when files were retrieved in MetricCalculator."
+            }, 
+            {
+                "uid" : "939b66c9fcbe2b10a600fc748f7d79b6e01f5821", 
+                "date" : "2015-09-17T02:52:15.000+0000", 
+                "name" : "939b66c9fcbe2b10a600fc748f7d79b6e01f5821", 
+                "message" : "Merge pull request #64 from visminer/issue-45\n\nShortcut to check if repository exists added in Visminer class."
+            }, 
+            {
+                "uid" : "cd39828ca44909735af87234e895ca15d01303c6", 
+                "date" : "2015-09-17T02:51:56.000+0000", 
+                "name" : "cd39828ca44909735af87234e895ca15d01303c6", 
+                "message" : "Shortcut to check if repository exists added in Visminer class."
+            }, 
+            {
+                "uid" : "346064fe09e9abc75c36c86012201a543eade5ba", 
+                "date" : "2015-09-17T02:43:33.000+0000", 
+                "name" : "346064fe09e9abc75c36c86012201a543eade5ba", 
+                "message" : "Method for process repository path added. Add \"./git\" in repository path\nis optional now."
+            }, 
+            {
+                "uid" : "c745b684dbb9412892ff482a66abe07b5a9c2009", 
+                "date" : "2015-09-17T02:05:43.000+0000", 
+                "name" : "c745b684dbb9412892ff482a66abe07b5a9c2009", 
+                "message" : "Merge pull request #63 from DavidPinho/ATFDMetric\n\nAtfd metric"
+            }, 
+            {
+                "uid" : "5e860e894414c5d3c351a5b622369bb8112d8cee", 
+                "date" : "2015-09-17T02:02:14.000+0000", 
+                "name" : "5e860e894414c5d3c351a5b622369bb8112d8cee", 
+                "message" : "Few changes at TCC Metric\n"
+            }, 
+            {
+                "uid" : "6ccd8b2fc2849e9ab8ad64ec42b2f174444acb05", 
+                "date" : "2015-09-15T03:09:24.000+0000", 
+                "name" : "6ccd8b2fc2849e9ab8ad64ec42b2f174444acb05", 
+                "message" : "Adding ATFD Metric\n"
+            }, 
+            {
+                "uid" : "090e59dbe10adc07d655fd4b0c6cac80b5bf66e0", 
+                "date" : "2015-09-09T07:20:43.000+0000", 
+                "name" : "090e59dbe10adc07d655fd4b0c6cac80b5bf66e0", 
+                "message" : "Merge pull request #62 from visminer/DavidPinho-TccMetric\n\nDavid pinho tcc metric"
+            }, 
+            {
+                "uid" : "826d57a2a1bf5671871c83bd66196cfa59151845", 
+                "date" : "2015-09-09T07:15:15.000+0000", 
+                "name" : "826d57a2a1bf5671871c83bd66196cfa59151845", 
+                "message" : "Merge branch 'TccMetric' of https://github.com/DavidPinho/Visminer into\nDavidPinho-TccMetric\n\nConflicts:\n\tsrc/main/java/br/edu/ufba/softvis/visminer/analyzer/MetricCalculator.java\n"
+            }, 
+            {
+                "uid" : "d5a0d1b54773f1988f2de9014471b75bdfac1652", 
+                "date" : "2015-09-09T05:13:50.000+0000", 
+                "name" : "d5a0d1b54773f1988f2de9014471b75bdfac1652", 
+                "message" : "Merge pull request #61 from visminer/feat\n\nclosed #46"
+            }, 
+            {
+                "uid" : "a3fa5708607e871384767be7b4f3296f893edeb6", 
+                "date" : "2015-09-09T05:09:26.000+0000", 
+                "name" : "a3fa5708607e871384767be7b4f3296f893edeb6", 
+                "message" : "closed #46"
+            }, 
+            {
+                "uid" : "36606246db0cf1fb7adede4db3ec1513ff6bf756", 
+                "date" : "2015-08-31T04:50:14.000+0000", 
+                "name" : "36606246db0cf1fb7adede4db3ec1513ff6bf756", 
+                "message" : "Few changes to calculate TCC Metric\n"
+            }, 
+            {
+                "uid" : "48d873a16ac245938cd94d3f7a8920304e55239e", 
+                "date" : "2015-08-31T03:42:11.000+0000", 
+                "name" : "48d873a16ac245938cd94d3f7a8920304e55239e", 
+                "message" : "Adding TCC Metric\n"
+            }, 
+            {
+                "uid" : "dabeac209bf8b60d927e5aadf79a88e36b1e52a8", 
+                "date" : "2015-08-31T03:34:46.000+0000", 
+                "name" : "dabeac209bf8b60d927e5aadf79a88e36b1e52a8", 
+                "message" : "Detecting MethodInvocation and Field Access on MethodVisitor\n"
+            }, 
+            {
+                "uid" : "8117eb76bbaa127e5539f49ac81a31f9721bfeff", 
+                "date" : "2015-08-31T03:26:35.000+0000", 
+                "name" : "8117eb76bbaa127e5539f49ac81a31f9721bfeff", 
+                "message" : "Setting JavaASTGenerator to resolve Binding\n"
+            }, 
+            {
+                "uid" : "e9e225e676f003c596ebf58baa3d4d325c5b9b89", 
+                "date" : "2015-08-31T03:16:38.000+0000", 
+                "name" : "e9e225e676f003c596ebf58baa3d4d325c5b9b89", 
+                "message" : "Setting the field modifiers in MethodDeclaration to be a List<String>\n"
+            }, 
+            {
+                "uid" : "2a7b33c7e40f2b10e5a43081c7f608cf454e824f", 
+                "date" : "2015-08-17T23:45:57.000+0000", 
+                "name" : "2a7b33c7e40f2b10e5a43081c7f608cf454e824f", 
+                "message" : "Changes:\n1 - Examples added\n2 - Bug in tag access in git repositories solved"
+            }, 
+            {
+                "uid" : "83959666947b76ec584e3ae45a1c8d0fe9546c14", 
+                "date" : "2015-08-17T18:52:09.000+0000", 
+                "name" : "83959666947b76ec584e3ae45a1c8d0fe9546c14", 
+                "message" : "Changes:\n1 - Checkout support added to git repositories\n2 - Metric calculation improved, support for others AST generators\nenabled and issue about recalculate metrics for shared commits between\ntrees fixed."
+            }, 
+            {
+                "uid" : "c024a887b981731fe0422166fb29eec771c2e95c", 
+                "date" : "2015-08-15T10:08:13.000+0000", 
+                "name" : "c024a887b981731fe0422166fb29eec771c2e95c", 
+                "message" : "Error in configuration fixed."
+            }, 
+            {
+                "uid" : "ceff374c8bd26509c38add65e481adc1d0259259", 
+                "date" : "2015-08-13T23:51:19.000+0000", 
+                "name" : "ceff374c8bd26509c38add65e481adc1d0259259", 
+                "message" : "+ gitigone settings ???"
+            }, 
+            {
+                "uid" : "e8c5851b19e1f502595e7b4cb7a07926672ca1a6", 
+                "date" : "2015-08-13T02:48:16.000+0000", 
+                "name" : "e8c5851b19e1f502595e7b4cb7a07926672ca1a6", 
+                "message" : "+ ignoring settings"
+            }, 
+            {
+                "uid" : "c76b4fefe131c7de667aeb2c053535ee29edea51", 
+                "date" : "2015-08-13T02:46:55.000+0000", 
+                "name" : "c76b4fefe131c7de667aeb2c053535ee29edea51", 
+                "message" : "+ adapting to serve as component to Visminer Web"
+            }, 
+            {
+                "uid" : "ee9655625101ee6ba3d9c5b84517f25c5d25fe5c", 
+                "date" : "2015-08-13T02:39:53.000+0000", 
+                "name" : "ee9655625101ee6ba3d9c5b84517f25c5d25fe5c", 
+                "message" : "EntityManage was closing in a nested private function causing error in\nthe upper caller"
+            }, 
+            {
+                "uid" : "482b345117200bbbccbf3aa9f6ae2d87dc638770", 
+                "date" : "2015-08-13T02:34:56.000+0000", 
+                "name" : "482b345117200bbbccbf3aa9f6ae2d87dc638770", 
+                "message" : "+ retrieve function to fetch Commits from tree\n\nFrom an instance of Tree class. "
+            }, 
+            {
+                "uid" : "321a8fc40a2e62aee70f1ac4d111069a39c11142", 
+                "date" : "2015-08-13T02:30:31.000+0000", 
+                "name" : "321a8fc40a2e62aee70f1ac4d111069a39c11142", 
+                "message" : "enabling the return of Tree's \"name\" ONLY\n\nA better way to get the Tree printed out to a visualization"
+            }, 
+            {
+                "uid" : "393ebb721c0ca597b9158415d5139b0a18f4b8df", 
+                "date" : "2015-08-13T02:27:39.000+0000", 
+                "name" : "393ebb721c0ca597b9158415d5139b0a18f4b8df", 
+                "message" : "also affected by change: from Language to LanguageType"
+            }, 
+            {
+                "uid" : "3f957d1fe5ddb23a57c6aec07b5ff4b331423d73", 
+                "date" : "2015-08-13T02:26:06.000+0000", 
+                "name" : "3f957d1fe5ddb23a57c6aec07b5ff4b331423d73", 
+                "message" : "affected by change: from language to LanguageType "
+            }, 
+            {
+                "uid" : "12365f2c4b50ffafaf5d72853915264c4b2e1ba4", 
+                "date" : "2015-08-13T02:21:48.000+0000", 
+                "name" : "12365f2c4b50ffafaf5d72853915264c4b2e1ba4", 
+                "message" : "from Language to LanguageType\n\nAdopting predominant sufix in Constant package"
+            }, 
+            {
+                "uid" : "f4338b29cda64ead3039538bea69c6531c6de3b4", 
+                "date" : "2015-08-12T21:02:32.000+0000", 
+                "name" : "f4338b29cda64ead3039538bea69c6531c6de3b4", 
+                "message" : "Method to verify if repository already exists added in VisMiner"
+            }, 
+            {
+                "uid" : "52a21640d65194740bb5f851f41201b4e647b655", 
+                "date" : "2015-08-12T20:10:24.000+0000", 
+                "name" : "52a21640d65194740bb5f851f41201b4e647b655", 
+                "message" : "MetricRetriever.java added."
+            }, 
+            {
+                "uid" : "c8cd3c821ea07cba8fa8e5a438a842199283466c", 
+                "date" : "2015-08-12T17:35:23.000+0000", 
+                "name" : "c8cd3c821ea07cba8fa8e5a438a842199283466c", 
+                "message" : "pull request #59 merged. "
+            }, 
+            {
+                "uid" : "a4ebea924f30dc5d51d391020b3364ed526a7102", 
+                "date" : "2015-08-09T21:33:21.000+0000", 
+                "name" : "a4ebea924f30dc5d51d391020b3364ed526a7102", 
+                "message" : "JavaASTGenerator fixed."
+            }, 
+            {
+                "uid" : "ee62e36c6aa1cccceae285185ce6b0a3979e6b71", 
+                "date" : "2015-08-09T01:58:15.000+0000", 
+                "name" : "ee62e36c6aa1cccceae285185ce6b0a3979e6b71", 
+                "message" : "CC metric was corrected (before this commit \"throwns\" were considered in\nthe calculus).\npom.xml modified.\nSmall changes made in persistence."
+            }, 
+            {
+                "uid" : "fcc919cbcbba286ebb511915261afda9c1210165", 
+                "date" : "2015-08-04T16:58:00.000+0000", 
+                "name" : "fcc919cbcbba286ebb511915261afda9c1210165", 
+                "message" : "1 - CCMetric was refactored.\n2 - NOCMetric renamed to NOCAIMetric.\n3 - Some new nodes added to NodeType Enum.\n4 - MethodVisitor in ast.generator.java was refactored.\n5 - Metric Requisites feature added.\n"
+            }, 
+            {
+                "uid" : "4b3bfeb7e6d1d224b5ad6de0c52e2b873bc41a14", 
+                "date" : "2015-08-01T18:08:51.000+0000", 
+                "name" : "4b3bfeb7e6d1d224b5ad6de0c52e2b873bc41a14", 
+                "message" : "The AST was upgraded."
+            }, 
+            {
+                "uid" : "7fbdea2638e8e62642af09a6d38645151e9716b6", 
+                "date" : "2015-07-30T15:44:20.000+0000", 
+                "name" : "7fbdea2638e8e62642af09a6d38645151e9716b6", 
+                "message" : "Merge pull request #57 from DavidPinho/master\n\nAdding FieldDeclaration to the AST"
+            }, 
+            {
+                "uid" : "eadebe0c82873caac2268845371bfc1e4466c7fc", 
+                "date" : "2015-07-30T05:01:59.000+0000", 
+                "name" : "eadebe0c82873caac2268845371bfc1e4466c7fc", 
+                "message" : "FieldDeclaration added to the AST\n"
+            }, 
+            {
+                "uid" : "571b16a513e7d00c2edbcc12fe6125b49907bb8f", 
+                "date" : "2015-07-30T04:58:52.000+0000", 
+                "name" : "571b16a513e7d00c2edbcc12fe6125b49907bb8f", 
+                "message" : "FieldDeclaration added to the AST\n"
+            }, 
+            {
+                "uid" : "ca7bc65ee8cf19f729d92442258f54762082dc6a", 
+                "date" : "2015-07-22T06:08:41.000+0000", 
+                "name" : "ca7bc65ee8cf19f729d92442258f54762082dc6a", 
+                "message" : "Issues with charset fixed."
+            }, 
+            {
+                "uid" : "81303f5de4547376550e9e483895b11f7f2a277e", 
+                "date" : "2015-07-21T21:30:31.000+0000", 
+                "name" : "81303f5de4547376550e9e483895b11f7f2a277e", 
+                "message" : "Problems with ORM fixed."
+            }, 
+            {
+                "uid" : "94a5f79abd5b35d7b149f76f659e23add027f6d0", 
+                "date" : "2015-07-16T06:13:32.000+0000", 
+                "name" : "94a5f79abd5b35d7b149f76f659e23add027f6d0", 
+                "message" : "Merge pull request #55 from visminer/revert-54-master\n\nRevert \"Template Method + Iterating through expression tree\""
+            }, 
+            {
+                "uid" : "21a2b3064e8bb5cc66b99c43571af4eafe8d9977", 
+                "date" : "2015-07-16T06:12:06.000+0000", 
+                "name" : "21a2b3064e8bb5cc66b99c43571af4eafe8d9977", 
+                "message" : "Merge pull request #54 from luispscarvalho/master\n\nTemplate Method + Iterating through expression tree"
+            }, 
+            {
+                "uid" : "4dc4ecc028c64f756a59beb002c6498795233ccc", 
+                "date" : "2015-07-16T04:49:04.000+0000", 
+                "name" : "4dc4ecc028c64f756a59beb002c6498795233ccc", 
+                "message" : "inspectExpression -> extractExpression"
+            }, 
+            {
+                "uid" : "05a864746bcc3ebbd9719b1486bafd7d1d76c2f5", 
+                "date" : "2015-07-16T03:23:54.000+0000", 
+                "name" : "05a864746bcc3ebbd9719b1486bafd7d1d76c2f5", 
+                "message" : "+ template method pattern to avoid injection of repeated code \n\n"
+            }, 
+            {
+                "uid" : "a842e84b36441f8526c69a282113b8e98578e5f2", 
+                "date" : "2015-07-16T03:22:13.000+0000", 
+                "name" : "a842e84b36441f8526c69a282113b8e98578e5f2", 
+                "message" : "+ recovery of conditional expressions from source code"
+            }, 
+            {
+                "uid" : "666f08e8350f62a66c00ee524a25e2c4f8a6d73c", 
+                "date" : "2015-07-16T03:21:34.000+0000", 
+                "name" : "666f08e8350f62a66c00ee524a25e2c4f8a6d73c", 
+                "message" : "+ attribute to keep track of conditional expressions"
+            }, 
+            {
+                "uid" : "353983dfb9a6f68a04eeba193421433f3c6df5b1", 
+                "date" : "2015-07-16T03:13:03.000+0000", 
+                "name" : "353983dfb9a6f68a04eeba193421433f3c6df5b1", 
+                "message" : "Revert \"Template Method + Iterating through expression tree\"\n"
+            }, 
+            {
+                "uid" : "154eef072e9a501993bf26c06e845bceb53e0a35", 
+                "date" : "2015-07-15T18:48:12.000+0000", 
+                "name" : "154eef072e9a501993bf26c06e845bceb53e0a35", 
+                "message" : "Merge pull request #53 from visminer/feat\n\nFeat"
+            }, 
+            {
+                "uid" : "cf27de0290e0bf2dd85da96f689ee31e8c3342a9", 
+                "date" : "2015-07-15T18:45:46.000+0000", 
+                "name" : "cf27de0290e0bf2dd85da96f689ee31e8c3342a9", 
+                "message" : "Bugs solved.\nMetric WMC added."
+            }, 
+            {
+                "uid" : "ed19ac8fb3a3d0290a20d28b87fa0d85b649da8c", 
+                "date" : "2015-07-14T02:46:03.000+0000", 
+                "name" : "ed19ac8fb3a3d0290a20d28b87fa0d85b649da8c", 
+                "message" : "#49 merged.\nCC per class removed."
+            }, 
+            {
+                "uid" : "67d58016cd40eec340b8a719bf4a9376d0985682", 
+                "date" : "2015-07-11T19:08:03.000+0000", 
+                "name" : "67d58016cd40eec340b8a719bf4a9376d0985682", 
+                "message" : "Merge pull request #48 from visminer/feat\n\nFeat"
+            }, 
+            {
+                "uid" : "df33a8027d748df15d44a11e0a9794b154d71201", 
+                "date" : "2015-07-11T19:07:08.000+0000", 
+                "name" : "df33a8027d748df15d44a11e0a9794b154d71201", 
+                "message" : "New Metrics added:\nNOE, NOM\n\naverage CC of class added in CC metric calculation.\n\npom.xml modified."
+            }, 
+            {
+                "uid" : "f0dbeae4fc7c16c570abd98a7f16e764551e1fd8", 
+                "date" : "2015-07-08T20:37:08.000+0000", 
+                "name" : "f0dbeae4fc7c16c570abd98a7f16e764551e1fd8", 
+                "message" : "bug with nop fixed."
+            }, 
+            {
+                "uid" : "42bc15758d6b5060780a07f0dc7ada21757f05ea", 
+                "date" : "2015-07-08T15:05:14.000+0000", 
+                "name" : "42bc15758d6b5060780a07f0dc7ada21757f05ea", 
+                "message" : "AST added.\nMetrics SLOC, CC, NOP, NOC added."
+            }, 
+            {
+                "uid" : "2942a4aaa657727c3dc157b92f241794078d0990", 
+                "date" : "2015-07-05T07:08:21.000+0000", 
+                "name" : "2942a4aaa657727c3dc157b92f241794078d0990", 
+                "message" : "Metric SLOC Added and some bugs fixed."
+            }, 
+            {
+                "uid" : "afc1807367a02c7b02bc6ccfe3f7de3ac230ac65", 
+                "date" : "2015-06-27T01:24:33.000+0000", 
+                "name" : "afc1807367a02c7b02bc6ccfe3f7de3ac230ac65", 
+                "message" : "Pom.xml updated.\nCompilation unit changed to jdk 1.6."
+            }, 
+            {
+                "uid" : "764afe4bdca1449a87d991da455c329207174b94", 
+                "date" : "2015-06-21T20:31:42.000+0000", 
+                "name" : "764afe4bdca1449a87d991da455c329207174b94", 
+                "message" : "Create README.md\n\nReadme updated."
+            }, 
+            {
+                "uid" : "cba56ec6317005e6165967f5ecef7343b9571549", 
+                "date" : "2015-06-21T03:32:12.000+0000", 
+                "name" : "cba56ec6317005e6165967f5ecef7343b9571549", 
+                "message" : "Merge pull request #44 from visminer/feat\n\nRemoved test metric."
+            }, 
+            {
+                "uid" : "7cc5194998ccc7a2735a57e90e1f40eb7c0e2742", 
+                "date" : "2015-06-21T03:31:07.000+0000", 
+                "name" : "7cc5194998ccc7a2735a57e90e1f40eb7c0e2742", 
+                "message" : "Removed test metric."
+            }, 
+            {
+                "uid" : "3c7ad0e16f704886769acdd1614040a4aacc35eb", 
+                "date" : "2015-06-21T03:24:48.000+0000", 
+                "name" : "3c7ad0e16f704886769acdd1614040a4aacc35eb", 
+                "message" : "Merge pull request #43 from visminer/feat\n\nFeat"
+            }, 
+            {
+                "uid" : "53cb1c4f55bf4c473856b5fb6a4369df56465a97", 
+                "date" : "2015-06-21T03:15:14.000+0000", 
+                "name" : "53cb1c4f55bf4c473856b5fb6a4369df56465a97", 
+                "message" : "Bugs with persistence solved.\nJavadoc generated."
+            }, 
+            {
+                "uid" : "8f3475c0a3a8dc8bc89fda0673feffc00530eabf", 
+                "date" : "2015-06-20T02:05:55.000+0000", 
+                "name" : "8f3475c0a3a8dc8bc89fda0673feffc00530eabf", 
+                "message" : "Javadoc finished.\nSome bugs solved."
+            }, 
+            {
+                "uid" : "d815db09e3efd4f158746614aac4955acb421a4e", 
+                "date" : "2015-06-15T19:25:12.000+0000", 
+                "name" : "d815db09e3efd4f158746614aac4955acb421a4e", 
+                "message" : "Merge pull request #42 from visminer/feat\n\nFeat"
+            }, 
+            {
+                "uid" : "2a97c0de73e3bf1353bb264adc8e51a9f12551d2", 
+                "date" : "2015-06-15T18:34:41.000+0000", 
+                "name" : "2a97c0de73e3bf1353bb264adc8e51a9f12551d2", 
+                "message" : "Repository navigation finished."
+            }, 
+            {
+                "uid" : "456291c8db2b1ae65c1e84f9fbdaeab0f38a9885", 
+                "date" : "2015-06-12T21:49:07.000+0000", 
+                "name" : "456291c8db2b1ae65c1e84f9fbdaeab0f38a9885", 
+                "message" : "Metric calculation finished"
+            }, 
+            {
+                "uid" : "0bc721add05ae6ab8c5fcae37de9a0838bada85e", 
+                "date" : "2015-06-08T05:33:51.000+0000", 
+                "name" : "0bc721add05ae6ab8c5fcae37de9a0838bada85e", 
+                "message" : "repository analyzers finished"
+            }, 
+            {
+                "uid" : "f14b4bfa774856b5b04c813622b06e8934fdc396", 
+                "date" : "2015-06-01T11:11:30.000+0000", 
+                "name" : "f14b4bfa774856b5b04c813622b06e8934fdc396", 
+                "message" : "feat branch updated."
+            }, 
+            {
+                "uid" : "5a089901ac8a8b83fdb8b75c23ef8bfe31c59d04", 
+                "date" : "2014-11-05T01:48:17.000+0000", 
+                "name" : "5a089901ac8a8b83fdb8b75c23ef8bfe31c59d04", 
+                "message" : "Removing old version\n"
+            }, 
+            {
+                "uid" : "52993f411b9cc4e4c981e42bb19ef3b05d0fd7bd", 
+                "date" : "2014-11-05T01:29:03.000+0000", 
+                "name" : "52993f411b9cc4e4c981e42bb19ef3b05d0fd7bd", 
+                "message" : "new version uploaded.\n"
+            }, 
+            {
+                "uid" : "6ed1fc91faa3c1ea48efa314bdcf8759d34a2814", 
+                "date" : "2014-07-02T19:50:45.000+0000", 
+                "name" : "6ed1fc91faa3c1ea48efa314bdcf8759d34a2814", 
+                "message" : "Update README.md"
+            }, 
+            {
+                "uid" : "2b260fad2d0a1823628602991aae0681ff166369", 
+                "date" : "2014-07-01T22:31:42.000+0000", 
+                "name" : "2b260fad2d0a1823628602991aae0681ff166369", 
+                "message" : "issue #40\n"
+            }, 
+            {
+                "uid" : "c10b4612d8ebf8b654c990e7c5ddcfb6f25e80d7", 
+                "date" : "2014-06-27T18:32:09.000+0000", 
+                "name" : "c10b4612d8ebf8b654c990e7c5ddcfb6f25e80d7", 
+                "message" : "Merge pull request #39 from visminer/issue-38\n\nissue #38"
+            }, 
+            {
+                "uid" : "13347713f035a34458030fed1c6fc3b350103369", 
+                "date" : "2014-06-27T18:30:58.000+0000", 
+                "name" : "13347713f035a34458030fed1c6fc3b350103369", 
+                "message" : "issue #38\n"
+            }, 
+            {
+                "uid" : "edbed14e054a2d53cd9ebabe9e676cf97c07beea", 
+                "date" : "2014-06-18T05:03:43.000+0000", 
+                "name" : "edbed14e054a2d53cd9ebabe9e676cf97c07beea", 
+                "message" : "Delete Visminer-ER-model.png"
+            }, 
+            {
+                "uid" : "695f8a1d1f106acdaae407dafc6268e01872f845", 
+                "date" : "2014-06-18T05:03:02.000+0000", 
+                "name" : "695f8a1d1f106acdaae407dafc6268e01872f845", 
+                "message" : "Delete Visminer-ER-model.mwb"
+            }, 
+            {
+                "uid" : "ee4842c9e6686eff3d6242ba22dc6e8fe8ce115b", 
+                "date" : "2014-06-18T05:01:14.000+0000", 
+                "name" : "ee4842c9e6686eff3d6242ba22dc6e8fe8ce115b", 
+                "message" : "add model_EER of version 0.5.0\n"
+            }, 
+            {
+                "uid" : "704636727019a153070d063a450fe93048cc0b3b", 
+                "date" : "2014-06-18T04:26:18.000+0000", 
+                "name" : "704636727019a153070d063a450fe93048cc0b3b", 
+                "message" : "Merge pull request #35 from visminer/issue-27\n\n#27 #19"
+            }, 
+            {
+                "uid" : "3be6a1529cd2e8633d294db74a913918be6a07bd", 
+                "date" : "2014-06-18T04:20:20.000+0000", 
+                "name" : "3be6a1529cd2e8633d294db74a913918be6a07bd", 
+                "message" : "#27 #19\n"
+            }, 
+            {
+                "uid" : "b2e25ba8c6a62ad5708af3ac00ed73f7970a3422", 
+                "date" : "2014-06-17T04:52:00.000+0000", 
+                "name" : "b2e25ba8c6a62ad5708af3ac00ed73f7970a3422", 
+                "message" : "Merge pull request #34 from visminer/issue-21\n\n#21"
+            }, 
+            {
+                "uid" : "2062c3119196609316e7d5e227ec6e0e791fdb26", 
+                "date" : "2014-06-17T04:45:18.000+0000", 
+                "name" : "2062c3119196609316e7d5e227ec6e0e791fdb26", 
+                "message" : "#21\n"
+            }, 
+            {
+                "uid" : "8904b60bfd9099fab40db8acc4b058e27649a234", 
+                "date" : "2014-06-09T03:14:20.000+0000", 
+                "name" : "8904b60bfd9099fab40db8acc4b058e27649a234", 
+                "message" : "Merge pull request #30 from visminer/issue-29\n\nissue #29"
+            }, 
+            {
+                "uid" : "1628b4fbe56b8ba08a99864029b840ef94b085b4", 
+                "date" : "2014-06-09T03:10:21.000+0000", 
+                "name" : "1628b4fbe56b8ba08a99864029b840ef94b085b4", 
+                "message" : "issue #29\n"
+            }, 
+            {
+                "uid" : "6287600f85d54e7005473e7954c7e9e72354183d", 
+                "date" : "2014-06-06T04:45:00.000+0000", 
+                "name" : "6287600f85d54e7005473e7954c7e9e72354183d", 
+                "message" : "Merge pull request #26 from visminer/issue-22-m22\n\nIssue 22 m22"
+            }, 
+            {
+                "uid" : "499c97143141f8c7d45c34a418f573fcad4ab41c", 
+                "date" : "2014-06-06T04:43:21.000+0000", 
+                "name" : "499c97143141f8c7d45c34a418f573fcad4ab41c", 
+                "message" : "resolving conflict merge #22\n"
+            }, 
+            {
+                "uid" : "55e7a2c7f2f4a611e7ed64ca4078be73898dbb82", 
+                "date" : "2014-06-06T04:19:28.000+0000", 
+                "name" : "55e7a2c7f2f4a611e7ed64ca4078be73898dbb82", 
+                "message" : "issue #22\n"
+            }, 
+            {
+                "uid" : "f540f54fadaf76ee29b9fbcf415f4b929fc40072", 
+                "date" : "2014-06-06T00:29:59.000+0000", 
+                "name" : "f540f54fadaf76ee29b9fbcf415f4b929fc40072", 
+                "message" : "Error in files acess solved."
+            }, 
+            {
+                "uid" : "6249cc020876214f7492c6a8ae17b69fddeafb79", 
+                "date" : "2014-06-03T03:29:13.000+0000", 
+                "name" : "6249cc020876214f7492c6a8ae17b69fddeafb79", 
+                "message" : "Merge pull request #12 from visminer/IssueMilestone\n\n#11"
+            }, 
+            {
+                "uid" : "93d774f9d09aaa4056ce9f89705bcf741af82257", 
+                "date" : "2014-05-31T07:43:31.000+0000", 
+                "name" : "93d774f9d09aaa4056ce9f89705bcf741af82257", 
+                "message" : "#11\n"
+            }, 
+            {
+                "uid" : "a7b68e85413c03a649ad9c71a31638fa0620197c", 
+                "date" : "2014-05-22T16:46:05.000+0000", 
+                "name" : "a7b68e85413c03a649ad9c71a31638fa0620197c", 
+                "message" : "function to get metric by its name added."
+            }, 
+            {
+                "uid" : "387766796d368a64e45f6c283b1f3eb43523f66d", 
+                "date" : "2014-05-18T14:40:46.000+0000", 
+                "name" : "387766796d368a64e45f6c283b1f3eb43523f66d", 
+                "message" : "changes"
+            }, 
+            {
+                "uid" : "2e28395528d5162f443eb8f398da4fee0fe0f6f5", 
+                "date" : "2014-05-18T00:55:01.000+0000", 
+                "name" : "2e28395528d5162f443eb8f398da4fee0fe0f6f5", 
+                "message" : "changes"
+            }, 
+            {
+                "uid" : "1450877e6d1de3eb040205b722fef9e5a095a6ae", 
+                "date" : "2014-05-16T21:42:17.000+0000", 
+                "name" : "1450877e6d1de3eb040205b722fef9e5a095a6ae", 
+                "message" : "fixes 3"
+            }, 
+            {
+                "uid" : "78108f1cad84232e834e4fce0563eb7187a89968", 
+                "date" : "2014-05-16T21:29:49.000+0000", 
+                "name" : "78108f1cad84232e834e4fce0563eb7187a89968", 
+                "message" : "fixes"
+            }, 
+            {
+                "uid" : "810351dea9d73136e091b2abfbb1ab640cfe973d", 
+                "date" : "2014-05-15T16:00:40.000+0000", 
+                "name" : "810351dea9d73136e091b2abfbb1ab640cfe973d", 
+                "message" : "fixes 1"
+            }, 
+            {
+                "uid" : "a142f675c82b18647fec683d730db983cf6a271a", 
+                "date" : "2014-05-15T03:14:42.000+0000", 
+                "name" : "a142f675c82b18647fec683d730db983cf6a271a", 
+                "message" : "modified the presentation\n"
+            }, 
+            {
+                "uid" : "f32cf747db7fa836fea2c91cf43e1921407623cd", 
+                "date" : "2014-05-15T03:10:35.000+0000", 
+                "name" : "f32cf747db7fa836fea2c91cf43e1921407623cd", 
+                "message" : "modified the class example\n"
+            }, 
+            {
+                "uid" : "87c7f90d37730281f79bd4558edb974b4b10cefb", 
+                "date" : "2014-05-13T18:46:15.000+0000", 
+                "name" : "87c7f90d37730281f79bd4558edb974b4b10cefb", 
+                "message" : "reorganized the ER model\n"
+            }, 
+            {
+                "uid" : "411422e1c6229cbbe5f58b3d314b6c863befd22a", 
+                "date" : "2014-05-13T18:38:30.000+0000", 
+                "name" : "411422e1c6229cbbe5f58b3d314b6c863befd22a", 
+                "message" : "update the presentation\n"
+            }, 
+            {
+                "uid" : "f2b738f677e256d1cfc9c0bdc2f513558535362a", 
+                "date" : "2014-05-13T18:38:30.000+0000", 
+                "name" : "f2b738f677e256d1cfc9c0bdc2f513558535362a", 
+                "message" : "improved the ER diagram\n"
+            }, 
+            {
+                "uid" : "12c6a6375065b3d8d7a8b5cf42d55b7db78f4d41", 
+                "date" : "2014-05-12T03:24:51.000+0000", 
+                "name" : "12c6a6375065b3d8d7a8b5cf42d55b7db78f4d41", 
+                "message" : "documentation finished"
+            }, 
+            {
+                "uid" : "4fdd7aa223e15541917a25aa357e2e88b9fab210", 
+                "date" : "2014-05-11T01:57:30.000+0000", 
+                "name" : "4fdd7aa223e15541917a25aa357e2e88b9fab210", 
+                "message" : "#6\n"
+            }, 
+            {
+                "uid" : "f3fd8d299f0da8c00b8d550670fc945e5f55c799", 
+                "date" : "2014-05-11T01:29:09.000+0000", 
+                "name" : "f3fd8d299f0da8c00b8d550670fc945e5f55c799", 
+                "message" : "reference to the issue #6\n"
+            }, 
+            {
+                "uid" : "2c11bc6dbfe61c9590bfdb5ad0d31036fc3dd176", 
+                "date" : "2014-05-10T13:53:46.000+0000", 
+                "name" : "2c11bc6dbfe61c9590bfdb5ad0d31036fc3dd176", 
+                "message" : "renamed the files\n"
+            }, 
+            {
+                "uid" : "23a33f3c65760a313374d610d0058e9587e594ec", 
+                "date" : "2014-05-10T02:48:20.000+0000", 
+                "name" : "23a33f3c65760a313374d610d0058e9587e594ec", 
+                "message" : "Class diagram added."
+            }, 
+            {
+                "uid" : "c177234fae00ef2c47d31252b8c7689589ca4686", 
+                "date" : "2014-05-10T02:13:20.000+0000", 
+                "name" : "c177234fae00ef2c47d31252b8c7689589ca4686", 
+                "message" : "I create a new package called org.visminer.git.local and I put the\nclasses GitUtil and AnalyzeRepository there."
+            }, 
+            {
+                "uid" : "7834b3405c37d03af0ca2f0c9cf7b50b506cec33", 
+                "date" : "2014-05-10T01:34:38.000+0000", 
+                "name" : "7834b3405c37d03af0ca2f0c9cf7b50b506cec33", 
+                "message" : "class diagram added."
+            }, 
+            {
+                "uid" : "e1b06ce88ca3645a6d26eeb7a575c8a7c5e6cebe", 
+                "date" : "2014-05-09T21:02:01.000+0000", 
+                "name" : "e1b06ce88ca3645a6d26eeb7a575c8a7c5e6cebe", 
+                "message" : "ER model added."
+            }, 
+            {
+                "uid" : "b6f0a29bf31e274dd009a90b7bfa4f3e1107aeef", 
+                "date" : "2014-04-28T12:10:23.000+0000", 
+                "name" : "b6f0a29bf31e274dd009a90b7bfa4f3e1107aeef", 
+                "message" : "ORM changes."
+            }, 
+            {
+                "uid" : "71eb5f30b9f804ac2eb4c94f0009b18f6f1f8688", 
+                "date" : "2014-04-28T02:22:14.000+0000", 
+                "name" : "71eb5f30b9f804ac2eb4c94f0009b18f6f1f8688", 
+                "message" : "- new folder docs\n- first version of the visminer presentation"
+            }, 
+            {
+                "uid" : "baca34449a4a1685401e25213d005a9ce15c92a8", 
+                "date" : "2014-04-27T07:42:56.000+0000", 
+                "name" : "baca34449a4a1685401e25213d005a9ce15c92a8", 
+                "message" : "Merge pull request #5 from visminer/issue4\n\nissue #4"
+            }, 
+            {
+                "uid" : "497feb90f0ab0327f4538e5f97e9ad9e5f301903", 
+                "date" : "2014-04-27T07:40:03.000+0000", 
+                "name" : "497feb90f0ab0327f4538e5f97e9ad9e5f301903", 
+                "message" : "issue #4\n"
+            }, 
+            {
+                "uid" : "e7e6c3ee462539baa42a9ac8fff2b214415887ea", 
+                "date" : "2014-04-25T15:59:46.000+0000", 
+                "name" : "e7e6c3ee462539baa42a9ac8fff2b214415887ea", 
+                "message" : "Merge pull request #3 from visminer/branchMilestoneBranch\n\nissue #2"
+            }, 
+            {
+                "uid" : "763f8b404798d5e14526bfea97060695af9e65a9", 
+                "date" : "2014-04-25T07:33:59.000+0000", 
+                "name" : "763f8b404798d5e14526bfea97060695af9e65a9", 
+                "message" : "issue #2\n"
+            }, 
+            {
+                "uid" : "2f72644ac7e57c1ca3b40cfb8c115310e3cafa29", 
+                "date" : "2014-04-23T20:26:32.000+0000", 
+                "name" : "2f72644ac7e57c1ca3b40cfb8c115310e3cafa29", 
+                "message" : "Update README.md"
+            }, 
+            {
+                "uid" : "b43109e52f5a26e30795e70ab9396440e3dd1765", 
+                "date" : "2014-04-09T21:00:36.000+0000", 
+                "name" : "b43109e52f5a26e30795e70ab9396440e3dd1765", 
+                "message" : "Algumas mudanças no código."
+            }, 
+            {
+                "uid" : "92ff3a0ed677db036d97f39f0724b6d2f41ad8d0", 
+                "date" : "2014-04-09T20:29:47.000+0000", 
+                "name" : "92ff3a0ed677db036d97f39f0724b6d2f41ad8d0", 
+                "message" : "Foram adicionados:\ncalculo das métricas NOC e NOP.\nanalíse das versões. "
+            }, 
+            {
+                "uid" : "a8a2010901ec86a98bcbaf8cb9b5c88f7260b4c5", 
+                "date" : "2014-04-09T16:16:11.000+0000", 
+                "name" : "a8a2010901ec86a98bcbaf8cb9b5c88f7260b4c5", 
+                "message" : "erro no mapeamento resolvido."
+            }, 
+            {
+                "uid" : "77ae5b7be8faf8c55296beb87af7ceb05be3ff84", 
+                "date" : "2014-04-09T15:03:13.000+0000", 
+                "name" : "77ae5b7be8faf8c55296beb87af7ceb05be3ff84", 
+                "message" : "initial\n"
+            }, 
+            {
+                "uid" : "97bfbe9870f7df252a354bcfa54fb2abd3c4a59e", 
+                "date" : "2014-04-09T14:55:44.000+0000", 
+                "name" : "97bfbe9870f7df252a354bcfa54fb2abd3c4a59e", 
+                "message" : "Initial commit\n"
+            }
+        ]
+    }
+]
