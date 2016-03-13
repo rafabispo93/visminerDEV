@@ -16,7 +16,7 @@ public class VisminerLoader extends ServletContainer{
 		System.out.println("Configuring Database...");
 		
 		VisMiner visMiner = new VisMiner();
-		visMiner.setDBConfig("/home/david/Documents/UFBA/TCC/workspace/visminer-dashboard/dbconfig.properties");
+		visMiner.setDBConfig("dbconfig.properties");
 		
 		super.init(webConfig);
 	}
