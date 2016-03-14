@@ -27,22 +27,46 @@ var ModalInstanceCtrl = function ($scope, $modalInstance) {
 
 
 homeApp.controller('HomeCtrl', function ($scope, $timeout, $http, $sessionStorage) {
+	// This controller instance
   var thisCtrl = this;
-
-  thisCtrl.trees = [];
+  // Data collections
+  thisCtrl.commiters = [];
   thisCtrl.commits = [];
+  thisCtrl.repository = null;
+  thisCtrl.repositories = [];
+  thisCtrl.trees = [];
+
+  // Load all trees
+	thisCtrl.repositoriesLoad = function() { 
+		console.log('repositoriesLoad');
+		$http.get('RepositoryServlet', {params:{"action": "getAllByRepository"}})
+		.success(function(data) {
+			thisCtrl.repositories = data;
+		});
+	}
   
   // Load all trees
-	thisCtrl.treesLoad = function () { console.log('treesLoad');
-		$http.get('TreeServlet', {params:{"action": "getAllByRepository", "repositoryId": "61740a58d675ebdc5d58836523f2822ae7b60d2d"}})
+	thisCtrl.treesLoad = function(repositoryUid) { 
+		console.log('treesLoad', repositoryUid);
+		// Load the repository info
+		for (i in thisCtrl.repositories) {
+			if (thisCtrl.repositories[i].uid == repositoryUid) {
+				thisCtrl.repository = thisCtrl.repositories[i];
+				$sessionStorage.repository = thisCtrl.repository;
+				continue;
+			}
+		}
+
+		$http.get('TreeServlet', {params:{"action": "getAllByRepository", "repositoryId": repositoryUid}})
 		.success(function(data) {
 			thisCtrl.trees = data;
 			thisCtrl.refreshValues();
+			$scope.initSlider();
 		});
 	}
 
 	// Load all commits from all trees
-	thisCtrl.commitsLoad = function () { 
+	thisCtrl.commitsLoad = function() { 
 		console.log('commitsLoad');
 		thisCtrl.commits = [];
 		for (i in thisCtrl.trees) {
@@ -57,7 +81,7 @@ homeApp.controller('HomeCtrl', function ($scope, $timeout, $http, $sessionStorag
 
   // Define initial values
   thisCtrl.refreshValues = function () { console.log('refreshValues');
-  	// $sessionStorage.period = '';
+  	$sessionStorage.period = '';
 	  if (typeof $sessionStorage.period == 'undefined' || $sessionStorage.period == '') {
 	  	console.log('-- Initial configuration --')
 	  	var commits = [];
@@ -98,7 +122,7 @@ homeApp.controller('HomeCtrl', function ($scope, $timeout, $http, $sessionStorag
 	  thisCtrl.commitsLoad();
   }
 
-	thisCtrl.treesLoad();
+	thisCtrl.repositoriesLoad();
 
   $scope.ok = function () {
     $modalInstance.close();
@@ -250,56 +274,34 @@ homeApp.controller('HomeCtrl', function ($scope, $timeout, $http, $sessionStorag
 		return total;
 	}
 
-	// $scope.refreshValues = function(){
-	// 	// console.log('dateMinSelected', $scope.dateMinSelected);
-	// 	// console.log('dateMaxSelected', $scope.dateMaxSelected);
-	// 	$scope.projects = $scope.data.projects;
-	// 	$scope.commiters = $scope.getCommiters();
-	// 	$scope.codeSmells = $scope.data.codeSmells;
-	// 	$scope.getCommits();
-
-	// 	// $timeout(function(){ 
-	// 	// 	$('.sparkbar canvas').each(function () {
-	// 	// 		$(this).remove();
-	// 	// 	});
-	// 	// 	$('.sparkbar').each(function () {
-	// 	// 		$(this).html('90,80,90,-70,61,-83,63');
-
-	// 	// 		var $this = $(this);
-	// 	// 		$this.sparkline('html', {
-	// 	// 			type: 'bar',
-	// 	// 			height: $this.data('height') ? $this.data('height') : '30',
-	// 	// 			barColor: $this.data('color')
-	// 	// 		});
-	// 	// 	});
-	// 	// });
-	// }
-
-	$scope.initSlider = function(){
-		$("#slider").dateRangeSlider({
-			symmetricPositionning: true,
-			bounds: {
-				min: $scope.dateMin,
-				max: $scope.dateMax
-			},
-			defaultValues:{
-				min: $scope.dateMinSelected,
-				max: $scope.dateMaxSelected
-			},
-			range: {
-			//min: {days: 1}
-			},
-			formatter:function(val){
-				var days = val.getDate(),
-					month = val.getMonth() + 1,
-					year = val.getFullYear();
-				return month + "/" + days + "/" + year;
-			}
-		}).bind("valuesChanging", function(e, data){
-			$timeout(function(){ 
-				$scope.sliderValueChanged(data); 
+	$scope.initSlider = function() {
+		if (typeof $scope.sliderLoaded == 'undefined' || $scope.sliderLoaded == false) {
+			$("#slider").dateRangeSlider({
+				symmetricPositionning: true,
+				bounds: {
+					min: $scope.dateMin,
+					max: $scope.dateMax
+				},
+				defaultValues:{
+					min: $scope.dateMinSelected,
+					max: $scope.dateMaxSelected
+				},
+				range: {
+				//min: {days: 1}
+				},
+				formatter:function(val){
+					var days = val.getDate(),
+						month = val.getMonth() + 1,
+						year = val.getFullYear();
+					return month + "/" + days + "/" + year;
+				}
+			}).bind("valuesChanging", function(e, data){
+				$timeout(function(){ 
+					$scope.sliderValueChanged(data); 
+				});
 			});
-		});
+		}
+		$scope.sliderLoaded = true;
 	};
 
 	$scope.changeSliderValues = function(min, max){
@@ -319,8 +321,6 @@ homeApp.controller('HomeCtrl', function ($scope, $timeout, $http, $sessionStorag
 	$scope.testChangeSliderBounds = function(){
 		$scope.changeSliderBounds(new Date(2012, 1, 1), new Date(2012, 2, 28));
 	};
-
-	$scope.initSlider();
 
 	$http.get('public/js/data.json').success(function(data) {
 		$scope.data = data;
