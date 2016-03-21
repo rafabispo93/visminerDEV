@@ -102,13 +102,13 @@
             <li class="treeview">
               <a href="#">
                 <i class="fa fa-users"></i>
-                <span>Commiters</span>
-                <small class="label pull-right bg-green">{{commitersAll.length}}</small>
+                <span>Committers</span>
+                <small class="label pull-right bg-green">{{ctrl.filtered.committers.length}}</small>
               </a>
               <ul class="treeview-menu">
-                <li ng-repeat="commiter in commitersAll | orderBy:'name'">
+                <li ng-repeat="committer in ctrl.filtered.committers | orderBy:'message'">
                   <a href="javascript:void(0)">
-                    <i class="fa fa-caret-right"></i> {{commiter.name}}
+                    <i class="fa fa-caret-right"></i> {{committer.message}}
                   </a>
                 </li>
               </ul>
@@ -191,7 +191,7 @@
             <div class="row">
               <div class="col-lg-3 col-xs-6">
                 <!-- small box -->
-                <commits-overview commits="ctrl.commits"></commits-overview>
+                <commits-overview commits="ctrl.filtered.commits"></commits-overview>
               </div><!-- ./col -->
              
               <div class="col-lg-3 col-xs-6">
@@ -242,7 +242,7 @@
 
                 <div class="box box-info">
                   <div class="box-header with-border">
-                    <h3 class="box-title">Code Smells</h3>
+                    <h3 class="box-title">Technical Debt</h3>
 
                     <div class="box-tools pull-right">
                       <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
@@ -256,25 +256,25 @@
                       <table class="table no-margin">
                         <thead>
                           <tr>
-                            <th>Member</th>
+                            <th>Committer</th>
                             <th ng-repeat="cSmells in codeSmells | orderBy:'name'">{{cSmells.name}}</th>
                           </tr>
                         </thead>
                         <tbody>
-                          <tr ng-repeat="commiter in commiters | orderBy:'name'">
-                            <td>{{commiter.name}}</td>
+                          <tr ng-repeat="committer in thisCtrl.filtered.committers | orderBy:'message'">
+                            <td>{{committer.message}}</td>
                             <td ng-repeat="cSmells in codeSmells | orderBy:'name'">
-                              <div ng-if="getCodeSmellsByMember(cSmells.name, commiter.email) > 0">
+                              <div ng-if="getCodeSmellsByMember(cSmells.name, committer.email) > 0">
                                 <span class="description-percentage text-red">
-                                <i class="fa fa-caret-up"></i> {{getCodeSmellsByMember(cSmells.name, commiter.email)}}</span>
+                                <i class="fa fa-caret-up"></i> {{getCodeSmellsByMember(cSmells.name, committer.email)}}</span>
                               </div>
-                              <div ng-if="getCodeSmellsByMember(cSmells.name, commiter.email) == 0">
+                              <div ng-if="getCodeSmellsByMember(cSmells.name, committer.email) == 0">
                                 <span class="description-percentage text-yellow">
                                 <i class="fa fa-caret-left"></i> 0</span>
                               </div>
-                              <div ng-if="getCodeSmellsByMember(cSmells.name, commiter.email) < 0">
+                              <div ng-if="getCodeSmellsByMember(cSmells.name, committer.email) < 0">
                                 <span class="description-percentage text-green">
-                                <i class="fa fa-caret-down"></i> {{getCodeSmellsByMember(cSmells.name, commiter.email)}}</span>
+                                <i class="fa fa-caret-down"></i> {{getCodeSmellsByMember(cSmells.name, committer.email)}}</span>
                               </div>
                             </td>
                           </tr>
@@ -298,28 +298,23 @@
                 <div class="box box-success">
                   <div class="box-header">
                     <i class="fa fa-users"></i>
-                    <h3 class="box-title">{{commiters.length}} Members</h3>
+                    <h3 class="box-title">{{ctrl.filtered.committers.length}} Committers</h3>
                   </div>
                   <div class="box-body chat" id="chat-box">
                     <!-- chat item -->
-                    <div class="item" ng-repeat="commiter in commiters | orderBy:'name'">
-                      <img ng-src="{{commiter.avatar}}" alt="user image" class="">
+                    <div class="item" ng-repeat="committer in ctrl.filtered.committers | orderBy:'message'">
+                      <img ng-src="{{committer.avatar}}" alt="user image" class="">
                       <p class="message">
                         <a href="#" class="name">
-                          <small class="text-muted pull-right"><i class="fa fa-clock-o"></i> 2:15</small>
-                          {{ commiter.name }}
+                          <!-- <small class="text-muted pull-right"><i class="fa fa-clock-o"></i> 2:15</small> -->
+                          {{ committer.message }}
                         </a>
-                        {{ commiter.email }}
+                        {{ committer.email }}
                       </p>
                     </div><!-- /.item -->
                     <!-- chat item -->
                   </div><!-- /.chat -->
                 </div><!-- /.box (chat box) -->
-
-
-
-
-                
 
               </section><!-- right col -->
             </div><!-- /.row (main row) -->
