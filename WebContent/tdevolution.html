@@ -9,8 +9,10 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="public/css/ionicons.min.css">
     <link rel="stylesheet" href="public/css/AdminLTE.css">
+    <link rel="stylesheet" href="public/css/visminer-td.css">
     <link rel="stylesheet" href="public/css/skins/skin-blue.min.css">
     <link rel="stylesheet" href="" ref="public/plugins/iCheck/flat/blue.css">
+    <link rel="stylesheet" href="public/plugins/morris/morris.css">
     <link rel="stylesheet" href="public/plugins/jvectormap/jquery-jvectormap-1.2.2.css">
     <link rel="stylesheet" href="public/plugins/datepicker/datepicker3.css">
     <link rel="stylesheet" href="public/plugins/daterangepicker/daterangepicker-bs3.css">
@@ -27,191 +29,203 @@
 
       <!-- Content Wrapper. Contains page content -->
       <div class="content-wrapper">
-        <!-- Content Header (Page header) -->
-        <section class="content-header">
-          <h1>
-            Dashboard
-            <small>Control panel</small>
-          </h1>
+        <div ng-show="ctrl.repository==null">
+          <section class="content">
+            <div class="alert alert-warn-vmtd alert-dismissable">
+              <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+              <h4>Welcome</h4>
+                <i class="icon fa fa-hand-o-left"></i>Please, select a repository in the left menu.
+            </div>
+          </section>
+        </div>
+        <div ng-show="ctrl.repository!=null">
+          <!-- Content Header (Page header) -->
+          <section class="content-header">
+            <h1>
+              Dashboard
+              <small>Control panel</small>
+            </h1>
 
-          <!-- <div ng-controller="commitersCtrl as ctrl">
-            <b>Commiter</b><br>
-            <commiters-overview commiter="ctrl.commiter"></commiters-overview>
-          </div> -->
+            <!-- <div ng-controller="commitersCtrl as ctrl">
+              <b>Commiter</b><br>
+              <commiters-overview commiter="ctrl.commiter"></commiters-overview>
+            </div> -->
 
-          <div>
-            <b>Trees</b><br>
-            <trees-overview trees="ctrl.trees"></trees-overview>
-          </div>
+            <div>
+              <b>Trees</b><br>
+              <trees-overview trees="ctrl.trees"></trees-overview>
+            </div>
 
-          <ol class="breadcrumb">
-            <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-            <li class="active">Dashboard</li>
-          </ol>
-        </section>
+            <ol class="breadcrumb">
+              <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+              <li class="active">Dashboard</li>
+            </ol>
+          </section>
 
-        <!-- Main content -->
-        <section class="content">
+          <!-- Main content -->
+          <section class="content">
 
-          <!-- Small boxes (Stat box) -->
-          <div class="row">
-            <div class="col-lg-12 ">
-              <div id="slider"></div>
-            </div><!-- ./col -->
-          </div><!-- /.row -->
+            <!-- Small boxes (Stat box) -->
+            <div class="row">
+              <div class="col-lg-12 ">
+                <div id="slider"></div>
+              </div><!-- ./col -->
+            </div><!-- /.row -->
 
-          <!-- Small boxes (Stat box) -->
-          <div class="row">
-            <div class="col-lg-3 col-xs-6">
-              <!-- small box -->
-              <commits-overview commits="ctrl.commits"></commits-overview>
-            </div><!-- ./col -->
-           
-            <div class="col-lg-3 col-xs-6">
-              <!-- small box -->
-              <div class="small-box bg-green">
-                <div class="inner">
-                  <h3>{{classes.length}}</h3>
-                  <p>Classes</p>
-                </div>
-                <div class="icon">
-                  <i class="ion ion-document"></i>
-                </div>
-                <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
-              </div>
-            </div><!-- ./col -->
-            <div class="col-lg-3 col-xs-6">
-              <!-- small box -->
-              <div class="small-box bg-yellow">
-                <div class="inner">
-                  <h3>{{lines}}</h3>
-                  <p>Lines</p>
-                </div>
-                <div class="icon">
-                  <i class="ion ion-code-working"></i>
-                </div>
-                <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
-              </div>
-            </div><!-- ./col -->
-            <div class="col-lg-3 col-xs-6">
-              <!-- small box -->
-              <div class="small-box bg-red">
-                <div class="inner">
-                  <h3>{{codeSmellsQtty}}</h3>
-                  <p>Code Smells</p>
-                </div>
-                <div class="icon">
-                  <i class="ion ion-bug"></i>
-                </div>
-                <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
-              </div>
-            </div><!-- ./col -->
-          </div><!-- /.row -->
-          <!-- Main row -->
-          <div class="row">
-            <!-- Left col -->
-            <section class="col-lg-7 connectedSortable">
-              
-
-              <div class="box box-info">
-                <div class="box-header with-border">
-                  <h3 class="box-title">Code Smells</h3>
-
-                  <div class="box-tools pull-right">
-                    <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
-                    </button>
-                    <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+            <!-- Small boxes (Stat box) -->
+            <div class="row">
+              <div class="col-lg-3 col-xs-6">
+                <!-- small box -->
+                <commits-overview commits="ctrl.commits"></commits-overview>
+              </div><!-- ./col -->
+             
+              <div class="col-lg-3 col-xs-6">
+                <!-- small box -->
+                <div class="small-box bg-green">
+                  <div class="inner">
+                    <h3>{{classes.length}}</h3>
+                    <p>Classes</p>
                   </div>
-                </div>
-                <!-- /.box-header -->
-                <div class="box-body">
-                  <div class="table-responsive">
-                    <table class="table no-margin">
-                      <thead>
-                        <tr>
-                          <th>Member</th>
-                          <th ng-repeat="cSmells in codeSmells | orderBy:'name'">{{cSmells.name}}</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr ng-repeat="commiter in commiters | orderBy:'name'">
-                          <td>{{commiter.name}}</td>
-                          <td ng-repeat="cSmells in codeSmells | orderBy:'name'">
-                            <div ng-if="getCodeSmellsByMember(cSmells.name, commiter.email) > 0">
-                              <span class="description-percentage text-red">
-                              <i class="fa fa-caret-up"></i> {{getCodeSmellsByMember(cSmells.name, commiter.email)}}</span>
-                            </div>
-                            <div ng-if="getCodeSmellsByMember(cSmells.name, commiter.email) == 0">
-                              <span class="description-percentage text-yellow">
-                              <i class="fa fa-caret-left"></i> 0</span>
-                            </div>
-                            <div ng-if="getCodeSmellsByMember(cSmells.name, commiter.email) < 0">
-                              <span class="description-percentage text-green">
-                              <i class="fa fa-caret-down"></i> {{getCodeSmellsByMember(cSmells.name, commiter.email)}}</span>
-                            </div>
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
+                  <div class="icon">
+                    <i class="ion ion-document"></i>
                   </div>
-                  
-                  <!-- /.table-responsive -->
+                  <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
                 </div>
-                <!-- /.box-body -->
-                <!-- <div class="box-footer clearfix">
-                  <a href="javascript::;" class="btn btn-sm btn-default btn-flat pull-right">View All Code Smells Presents</a>
-                </div> -->
-                <!-- /.box-footer -->
-              </div>
-            </section><!-- /.Left col -->
-            <!-- right col (We are only adding the ID to make the widgets sortable)-->
-            <section class="col-lg-5 connectedSortable">
-
-              <!-- Chat box -->
-              <div class="box box-success">
-                <div class="box-header">
-                  <i class="fa fa-users"></i>
-                  <h3 class="box-title">{{commiters.length}} Members</h3>
-                </div>
-                <div class="box-body chat" id="chat-box">
-                  <!-- chat item -->
-                  <div class="item" ng-repeat="commiter in commiters | orderBy:'name'">
-                    <img ng-src="{{commiter.avatar}}" alt="user image" class="">
-                    <p class="message">
-                      <a href="#" class="name">
-                        <small class="text-muted pull-right"><i class="fa fa-clock-o"></i> 2:15</small>
-                        {{ commiter.name }}
-                      </a>
-                      {{ commiter.email }}
-                    </p>
-                  </div><!-- /.item -->
-                  <!-- chat item -->
-                </div><!-- /.chat -->
-              </div><!-- /.box (chat box) -->
-
-            </section><!-- right col -->
-          </div><!-- /.row (main row) -->
-
-          <div class="row">
-            <section class="col-md-12 connectedSortable">
-              <!-- Custom tabs (Charts with tabs)-->
-              <div class="nav-tabs-custom">
-                <!-- Tabs within a box -->
-                <ul class="nav nav-tabs pull-right">
-                  <li class="pull-left header"><i class="fa fa-bug"></i> TD Evolution</li>
-                </ul>
-                <div class="tab-content no-padding">
-                  <div class="box-body chart-responsive">
-                    <div class="chart" id="line-chart" style="height: 300px;"></div>
+              </div><!-- ./col -->
+              <div class="col-lg-3 col-xs-6">
+                <!-- small box -->
+                <div class="small-box bg-yellow">
+                  <div class="inner">
+                    <h3>{{lines}}</h3>
+                    <p>Lines</p>
                   </div>
+                  <div class="icon">
+                    <i class="ion ion-code-working"></i>
+                  </div>
+                  <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
                 </div>
-              </div><!-- /.nav-tabs-custom -->
-            </section>
-          </div>
+              </div><!-- ./col -->
+              <div class="col-lg-3 col-xs-6">
+                <!-- small box -->
+                <div class="small-box bg-red">
+                  <div class="inner">
+                    <h3>{{codeSmellsQtty}}</h3>
+                    <p>Code Smells</p>
+                  </div>
+                  <div class="icon">
+                    <i class="ion ion-bug"></i>
+                  </div>
+                  <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+                </div>
+              </div><!-- ./col -->
+            </div><!-- /.row -->
+            <!-- Main row -->
+            <div class="row">
+              <!-- Left col -->
+              <section class="col-lg-7 connectedSortable">
+                
 
-        </section><!-- /.content -->
+                <div class="box box-info">
+                  <div class="box-header with-border">
+                    <h3 class="box-title">Code Smells</h3>
+
+                    <div class="box-tools pull-right">
+                      <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                      </button>
+                      <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                    </div>
+                  </div>
+                  <!-- /.box-header -->
+                  <div class="box-body">
+                    <div class="table-responsive">
+                      <table class="table no-margin">
+                        <thead>
+                          <tr>
+                            <th>Member</th>
+                            <th ng-repeat="cSmells in codeSmells | orderBy:'name'">{{cSmells.name}}</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr ng-repeat="commiter in commiters | orderBy:'name'">
+                            <td>{{commiter.name}}</td>
+                            <td ng-repeat="cSmells in codeSmells | orderBy:'name'">
+                              <div ng-if="getCodeSmellsByMember(cSmells.name, commiter.email) > 0">
+                                <span class="description-percentage text-red">
+                                <i class="fa fa-caret-up"></i> {{getCodeSmellsByMember(cSmells.name, commiter.email)}}</span>
+                              </div>
+                              <div ng-if="getCodeSmellsByMember(cSmells.name, commiter.email) == 0">
+                                <span class="description-percentage text-yellow">
+                                <i class="fa fa-caret-left"></i> 0</span>
+                              </div>
+                              <div ng-if="getCodeSmellsByMember(cSmells.name, commiter.email) < 0">
+                                <span class="description-percentage text-green">
+                                <i class="fa fa-caret-down"></i> {{getCodeSmellsByMember(cSmells.name, commiter.email)}}</span>
+                              </div>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                    
+                    <!-- /.table-responsive -->
+                  </div>
+                  <!-- /.box-body -->
+                  <!-- <div class="box-footer clearfix">
+                    <a href="javascript::;" class="btn btn-sm btn-default btn-flat pull-right">View All Code Smells Presents</a>
+                  </div> -->
+                  <!-- /.box-footer -->
+                </div>
+              </section><!-- /.Left col -->
+              <!-- right col (We are only adding the ID to make the widgets sortable)-->
+              <section class="col-lg-5 connectedSortable">
+
+                <!-- Chat box -->
+                <div class="box box-success">
+                  <div class="box-header">
+                    <i class="fa fa-users"></i>
+                    <h3 class="box-title">{{commiters.length}} Members</h3>
+                  </div>
+                  <div class="box-body chat" id="chat-box">
+                    <!-- chat item -->
+                    <div class="item" ng-repeat="commiter in commiters | orderBy:'name'">
+                      <img ng-src="{{commiter.avatar}}" alt="user image" class="">
+                      <p class="message">
+                        <a href="#" class="name">
+                          <small class="text-muted pull-right"><i class="fa fa-clock-o"></i> 2:15</small>
+                          {{ commiter.name }}
+                        </a>
+                        {{ commiter.email }}
+                      </p>
+                    </div><!-- /.item -->
+                    <!-- chat item -->
+                  </div><!-- /.chat -->
+                </div><!-- /.box (chat box) -->
+
+              </section><!-- right col -->
+            </div><!-- /.row (main row) -->
+
+            <div class="row">
+              <section class="col-md-12 connectedSortable">
+                <!-- Custom tabs (Charts with tabs)-->
+                <div class="nav-tabs-custom">
+                  <!-- Tabs within a box -->
+                  <ul class="nav nav-tabs pull-right">
+                    <li class="pull-left header"><i class="fa fa-bug"></i> TD Evolution</li>
+                  </ul>
+                  <div class="tab-content no-padding">
+                    <div class="box-body chart-responsive">
+                      <div class="chart" id="line-chart" style="height: 300px;"></div>
+                    </div>
+                  </div>
+                </div><!-- /.nav-tabs-custom -->
+              </section>
+            </div>
+
+          </section><!-- /.content -->
+        </div>  
 
       </div><!-- /.content-wrapper -->
+
       <footer class="main-footer">
         <div class="pull-right hidden-xs">
         </div>
@@ -418,7 +432,6 @@
     <!-- AdminLTE App -->
     <script src="public/js/app.min.js"></script>
     <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-    <script src="public/js/pages/dashboard.js"></script>
 
     <script src="public/bower_components/angular/angular.js"></script>
     <script src="public/bower_components/ngstorage/ngStorage.js"></script>
