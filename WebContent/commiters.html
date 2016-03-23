@@ -44,99 +44,10 @@
   </head>
   <body class="hold-transition skin-blue sidebar-mini" ng-controller="HomeCtrl as ctrl">
     <div class="wrapper">
-
-      <header class="main-header">
-        <!-- Logo -->
-        <a href="index2.html" class="logo">
-          <!-- mini logo for sidebar mini 50x50 pixels -->
-          <span class="logo-mini"><b>TDMA</b></span>
-          <!-- logo for regular state and mobile devices -->
-          <span class="logo-lg"><b>TD</b> <b>M</b>ember <b>A</b>nalizer</span>
-        </a>
-        <!-- Header Navbar: style can be found in header.less -->
-        <nav class="navbar navbar-static-top" role="navigation">
-          <!-- Sidebar toggle button-->
-          <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
-            <span class="sr-only">Toggle navigation</span>
-          </a>
-        </nav>
-      </header>
-      <!-- Left side column. contains the logo and sidebar -->
-      <aside class="main-sidebar">
-        <!-- sidebar: style can be found in sidebar.less -->
-        <section class="sidebar">
-          <!-- sidebar menu: : style can be found in sidebar.less -->
-          <ul class="sidebar-menu">
-            <li class="active treeview">
-              <a href="#">
-                <i class="fa fa-dashboard"></i> 
-                <span>Dashboard</span> 
-                <i class="fa fa-angle-left pull-right"></i>
-              </a>
-              <ul class="treeview-menu">
-                <li class="active">
-                  <a href="index.html">
-                    <i class="fa fa-circle-o"></i> TD Evolution
-                  </a>
-                </li>
-                <li>
-                  <a href="commiters.html">
-                    <i class="fa fa-circle-o"></i> TD Commiters
-                  </a>
-                </li>
-              </ul>
-            </li>
-            <li class="treeview">
-              <a href="#">
-                <i class="fa fa-files-o"></i> <span>Repositories</span>
-                <small class="label pull-right bg-green">{{ctrl.repositories.length}}</small>
-              </a>
-              <ul class="treeview-menu">
-                <li ng-repeat="repository in ctrl.repositories | orderBy:'name'">
-                  <a href="javascript:void(0)" ng-click="ctrl.treesLoad(repository.uid)">
-                    <i class="fa fa-caret-right"></i> {{repository.name}}
-                  </a>
-                </li>
-              </ul>
-            </li>
-            <li class="treeview">
-              <a href="#">
-                <i class="fa fa-users"></i>
-                <span>Committers</span>
-                <small class="label pull-right bg-green">{{ctrl.filtered.committers.length}}</small>
-              </a>
-              <ul class="treeview-menu">
-                <li ng-repeat="committer in ctrl.filtered.committers | orderBy:'message'">
-                  <a href="javascript:void(0)">
-                    <i class="fa fa-caret-right"></i> {{committer.message}}
-                  </a>
-                </li>
-              </ul>
-            </li>
-            <li class="treeview">
-              <a href="#">
-                <i class="fa fa-book"></i> <span>Documentation</span>
-                <i class="fa fa-angle-left pull-right"></i>
-              </a>
-              <ul class="treeview-menu">
-                <li>
-                  <a href="#">
-                    <i class="fa fa-caret-right"></i> Code Smells <i class="fa fa-angle-right pull-right"></i>
-                  </a>
-                  <ul ng-repeat="codeSmell in codeSmellsAll | orderBy:'name'" class="treeview-menu">
-                    <li><a href="#"><i class="fa fa-caret-right"></i> {{codeSmell.name}}</a></li>
-                  </ul>
-                </li>
-              </ul>
-            </li>
-            <!-- <li class="header">TD Status</li>
-            <li><a href="#"><i class="fa fa-circle-o text-red"></i> <span>Accepted</span></a></li>
-            <li><a href="#"><i class="fa fa-circle-o text-yellow"></i> <span>Waiting</span></a></li>
-            <li><a href="#"><i class="fa fa-circle-o text-green"></i> <span>Resolved</span></a></li> -->
-          </ul>
-        </section>
-        <!-- /.sidebar -->
-      </aside>
+      
+      <div ng-include="'sidebar.html'"></div>
+      
+      <div ng-include="'navbar.html'"></div>
 
       <!-- Content Wrapper. Contains page content -->
       <div class="content-wrapper">
