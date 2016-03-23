@@ -35,6 +35,7 @@ homeApp.controller('HomeCtrl', function ($scope, $timeout, $http, $sessionStorag
   thisCtrl.repository = null;
   thisCtrl.repositories = [];
   thisCtrl.trees = [];
+  thisCtrl.tags = [];
   thisCtrl.committerEvolution = [];
 
   thisCtrl.filtered = {
@@ -42,7 +43,7 @@ homeApp.controller('HomeCtrl', function ($scope, $timeout, $http, $sessionStorag
   	committers: [],
   }
 
-  // Load all trees
+  // Load all repositories
 	thisCtrl.repositoriesLoad = function() { 
 		console.log('repositoriesLoad');
 		$http.get('RepositoryServlet', {params:{"action": "getAllByRepository"}})
@@ -69,7 +70,19 @@ homeApp.controller('HomeCtrl', function ($scope, $timeout, $http, $sessionStorag
 		.success(function(data) {
 			console.log('found', data.length, 'trees');
 			thisCtrl.trees = data;
+			thisCtrl.tagsLoad(repositoryUid);
 			thisCtrl.commitsLoad();
+		});
+	}
+
+	  // Load all tags (versions)
+	thisCtrl.tagsLoad = function(repositoryUid) { 
+		console.log('tagsLoad', repositoryUid);
+
+		$http.get('TreeServlet', {params:{"action": "getAllTags", "repositoryId": repositoryUid}})
+		.success(function(data) {
+			console.log('found', data.length, 'tags');
+			thisCtrl.tags = data;
 		});
 	}
 
