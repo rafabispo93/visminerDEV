@@ -1,30 +1,4 @@
-
 var homeApp = angular.module('homeApp', ['ngStorage', 'ui.bootstrap', 'checklist-model']);
-
-homeApp.controller('committersCtrl', function() {
-  this.committer = {
-    name: 'Spawn'
-  };
-});
-
-var addManagerModal = function($scope, $modal) {
-	$scope.open = function () {
-	  var modalInstance = $modal.open({
-      templateUrl: 'addManager.html',
-      controller: ModalInstanceCtrl
-    });
-	};
-};
-
-var ModalInstanceCtrl = function ($scope, $modalInstance) {
-  $scope.ok = function () {
-    $modalInstance.close();
-  };
-  $scope.cancel = function () {
-    $modalInstance.dismiss('cancel');
-  };
-};
-
 
 homeApp.controller('HomeCtrl', function ($scope, $timeout, $http, $sessionStorage) {
 	// This controller instance
@@ -52,7 +26,6 @@ homeApp.controller('HomeCtrl', function ($scope, $timeout, $http, $sessionStorag
 		.success(function(data) {
 			console.log('found', data.length, 'repositories');
 			thisCtrl.repositories = data;
-
 		});
 	}
   
@@ -258,7 +231,7 @@ homeApp.controller('HomeCtrl', function ($scope, $timeout, $http, $sessionStorag
 		return codeSmells;
 	}
 
-	$scope.getCommitersAll = function() {
+	$scope.getCommittersAll = function() {
 		var committers = [];
 		for (i in $scope.data.projects) {
 			for (x in $scope.data.projects[i].committers) {
@@ -286,10 +259,10 @@ homeApp.controller('HomeCtrl', function ($scope, $timeout, $http, $sessionStorag
 					$scope.commits.push(commit);
 			}
 		}
-		$scope.getCommiters();
+		$scope.getCommitters();
 	}
 
-	$scope.getCommiters = function() {
+	$scope.getCommitters = function() {
 		var committers = [];
 		for (i in $scope.commits) {
 			var memberExist = false;
@@ -422,7 +395,7 @@ homeApp.controller('HomeCtrl', function ($scope, $timeout, $http, $sessionStorag
 	// $http.get('public/js/data.json').success(function(data) {
 	// 	$scope.data = data;
 	// 	$scope.codeSmellsAll = $scope.getCodeSmellsAll();
-	// 	$scope.committersAll = $scope.getCommitersAll();
+	// 	$scope.committersAll = $scope.getCommittersAll();
 	// 	$scope.refreshValues();
 	// });
 
