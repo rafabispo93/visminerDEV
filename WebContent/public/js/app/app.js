@@ -10,23 +10,23 @@ homeApp.controller('HomeCtrl', function ($scope, $timeout, $http, $sessionStorag
   thisCtrl.repositories = [];
   thisCtrl.trees = [];
   thisCtrl.tags = [];
-  thisCtrl.selectedTags = [];
-  thisCtrl.selectedDebts = ["CODE", "DESIGN"];
   thisCtrl.committerEvolution = [];
 
   thisCtrl.filtered = {
   	commits: [],
   	committers: [],
+  	tags: [],
+  	debts: ["CODE", "DESIGN"],
   }
   thisCtrl.page = "tdevolution";
 
   thisCtrl.selectDebt = function(debt) {
   	console.log('debt '+debt+ 'selected');
-  	var index = $.inArray(debt, thisCtrl.selectedDebts);
+  	var index = $.inArray(debt, thisCtrl.filtered.debts);
   	if (index > -1) {
-      thisCtrl.selectedDebts.splice(index, 1);
+      thisCtrl.filtered.debts.splice(index, 1);
   	} else {
-      thisCtrl.selectedDebts.push(debt);
+      thisCtrl.filtered.debts.push(debt);
   	}
   }
 

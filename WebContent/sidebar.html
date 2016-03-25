@@ -45,7 +45,7 @@
         <ul class="treeview-menu">
           <li ng-repeat="tag in ctrl.tags | orderBy:'name'">
             <label class="control-sidebar-subheading filter-version-sub-item">
-              <input type="checkbox" checklist-model="ctrl.selectedTags" checklist-value="tag.uid">  {{tag.name}}
+              <input type="checkbox" checklist-model="ctrl.filtered.tags" checklist-value="tag.uid">  {{tag.name}}
             </label>
           </li>
         </ul>
