@@ -87,19 +87,19 @@
         </a>
         <ul class="treeview-menu">
           <li>
-              <div class="row" style="padding: 10px; margin-left: 0;">                
+              <div class="row" style="padding-top: 10px; padding-bottom: 10px">                
                 <div class="col-md-6 col-sm-6 col-xs-12">
                     <div id="filter_code" style="height: 10px;">
-                        <a href="javascript:void(0)" onclick="setOpacity('filter_code')">
-                          <span class="info-box-icon info-box-smaller bg-red">
+                        <a href="javascript:void(0)" ng-click="ctrl.selectDebt('CODE')" onclick="setOpacity('filter_code')">
+                          <span class="info-box-icon info-box-smaller bg-red" style="margin-left: 15px;">
                               CODE
                           </span>
                         </a>
                     </div>
                 </div><!-- /.col -->
-                <div class="col-md-6 col-sm-6 col-xs-12">
+                <div class="col-md-6 col-sm-6 col-xs-12" style="padding-left: 5px;">
                     <div id="filter_design" style="height: 10px;">
-                        <a a href="javascript:void(0)" onclick="setOpacity('filter_design')">
+                        <a a href="javascript:void(0)" ng-click="ctrl.selectDebt('DESIGN')" onclick="setOpacity('filter_design')">
                           <span class="info-box-icon info-box-smaller bg-yellow">
                               DESIGN
                           </span>

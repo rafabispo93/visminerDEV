@@ -11,6 +11,7 @@ homeApp.controller('HomeCtrl', function ($scope, $timeout, $http, $sessionStorag
   thisCtrl.trees = [];
   thisCtrl.tags = [];
   thisCtrl.selectedTags = [];
+  thisCtrl.selectedDebts = ["CODE", "DESIGN"];
   thisCtrl.committerEvolution = [];
 
   thisCtrl.filtered = {
@@ -18,6 +19,16 @@ homeApp.controller('HomeCtrl', function ($scope, $timeout, $http, $sessionStorag
   	committers: [],
   }
   thisCtrl.page = "tdevolution";
+
+  thisCtrl.selectDebt = function(debt) {
+  	console.log('debt '+debt+ 'selected');
+  	var index = $.inArray(debt, thisCtrl.selectedDebts);
+  	if (index > -1) {
+      thisCtrl.selectedDebts.splice(index, 1);
+  	} else {
+      thisCtrl.selectedDebts.push(debt);
+  	}
+  }
 
   // Load all repositories
 	thisCtrl.repositoriesLoad = function() { 
