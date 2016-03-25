@@ -37,6 +37,8 @@
           </li>
         </ul>
       </li>
+      
+
       <li class="treeview">
         <a href="#">
           <i class="fa fa-tags"></i> <span>Versions</span>
@@ -44,12 +46,16 @@
         </a>
         <ul class="treeview-menu">
           <li ng-repeat="tag in ctrl.tags | orderBy:'name'">
-          <a href="javascript:void(0)">
-              <i class="fa fa-caret-right"></i> {{tag.name}}
-          </a>              
+            <label class="control-sidebar-subheading filter-version-sub-item">
+              <input type="checkbox" checked>
+              {{tag.name}}
+            </label>
           </li>
         </ul>
       </li>
+      
+
+
       <li class="treeview" ng-show="ctrl.page == 'commiters'">
         <a href="#">
           <i class="fa fa-users"></i>

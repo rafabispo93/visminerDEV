@@ -10,3 +10,9 @@
     color: #BDBDBD !important;
     font-weight: bold;
 }
+
+.filter-version-sub-item{
+	color: rgb(138, 164, 175);
+	padding: 5px 5px 5px 15px;
+	font-weight: 500;
+}
