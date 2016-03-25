@@ -1,4 +1,30 @@
+
 var homeApp = angular.module('homeApp', ['ngStorage', 'ui.bootstrap']);
+
+homeApp.controller('committersCtrl', function() {
+  this.committer = {
+    name: 'Spawn'
+  };
+});
+
+var addManagerModal = function($scope, $modal) {
+	$scope.open = function () {
+	  var modalInstance = $modal.open({
+      templateUrl: 'addManager.html',
+      controller: ModalInstanceCtrl
+    });
+	};
+};
+
+var ModalInstanceCtrl = function ($scope, $modalInstance) {
+  $scope.ok = function () {
+    $modalInstance.close();
+  };
+  $scope.cancel = function () {
+    $modalInstance.dismiss('cancel');
+  };
+};
+
 
 homeApp.controller('HomeCtrl', function ($scope, $timeout, $http, $sessionStorage) {
 	// This controller instance
@@ -15,7 +41,6 @@ homeApp.controller('HomeCtrl', function ($scope, $timeout, $http, $sessionStorag
   thisCtrl.filtered = {
   	commits: [],
   	committers: [],
-  	tags: [],
   }
   thisCtrl.page = "tdevolution";
 
@@ -41,6 +66,7 @@ homeApp.controller('HomeCtrl', function ($scope, $timeout, $http, $sessionStorag
 				continue;
 			}
 		}
+
 		$http.get('TreeServlet', {params:{"action": "getAllByRepository", "repositoryId": repositoryUid}})
 		.success(function(data) {
 			console.log('found', data.length, 'trees');
@@ -53,11 +79,11 @@ homeApp.controller('HomeCtrl', function ($scope, $timeout, $http, $sessionStorag
 	  // Load all tags (versions)
 	thisCtrl.tagsLoad = function(repositoryUid) { 
 		console.log('tagsLoad', repositoryUid);
+
 		$http.get('TreeServlet', {params:{"action": "getAllTags", "repositoryId": repositoryUid}})
 		.success(function(data) {
 			console.log('found', data.length, 'tags');
 			thisCtrl.tags = data;
-			thisCtrl.filtered.tags = thisCtrl.tags;
 		});
 	}
 
@@ -93,29 +119,6 @@ homeApp.controller('HomeCtrl', function ($scope, $timeout, $http, $sessionStorag
 			$scope.initSlider();
 			thisCtrl.typesLoad();
 		});
-  }
-
-  thisCtrl.tagsFilter = function(tagName) {
-  	var index = -1;
-  	var tagsNew = [];
-  	for (i in thisCtrl.filtered.tags) {
-  		if (thisCtrl.filtered.tags[i].name == tagName) {
-  			index = i;
-  		} else {
-  			tagsNew.push(thisCtrl.filtered.tags[i]);
-  		}
-  	}
-  	if (index > -1) {
-      thisCtrl.filtered.tags = tagsNew;
-    }
-    else {
-    	for (i in thisCtrl.tags) {
-				if (thisCtrl.tags[i].name == tagName) {
-  				thisCtrl.filtered.tags.push(thisCtrl.tags[i]);
-	  			continue;
-	  		}
-    	}
-    }
   }
 
   thisCtrl.commitsSearch = function(dateIni, dateEnd) {

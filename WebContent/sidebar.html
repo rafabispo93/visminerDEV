@@ -37,24 +37,25 @@
           </li>
         </ul>
       </li>
+      
 
       <li class="treeview">
         <a href="#">
           <i class="fa fa-tags"></i> <span>Versions</span>
-          <small class="label pull-right bg-green">{{ctrl.filtered.tags.length}}/{{ctrl.tags.length}}</small>
+          <small class="label pull-right bg-green">{{ctrl.tags.length}}</small>
         </a>
         <ul class="treeview-menu">
           <li ng-repeat="tag in ctrl.tags | orderBy:'name'">
-            <div class="version-option">
-              <label class="control-sidebar-subheading filter-version-sub-item">
-                <input type="checkbox" value="{{tag.name}}" ng-click="ctrl.tagsFilter(tag.name)" checked="checked">
-                {{tag.name}}
-              </label>
-            </div>
+            <label class="control-sidebar-subheading filter-version-sub-item">
+              <input type="checkbox" checked>
+              {{tag.name}}
+            </label>
           </li>
         </ul>
       </li>
       
+
+
       <li class="treeview" ng-show="ctrl.page == 'commiters'">
         <a href="#">
           <i class="fa fa-users"></i>
