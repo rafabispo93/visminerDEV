@@ -18,3 +18,9 @@
 #slider .ui-rangeSlider-rightHandle {
 	border-radius: 0 5px 5px 0;
 }
+.version-option {
+	padding-left: 15px;
+}
+.version-option label {
+	color: #8aa4af;
+}
