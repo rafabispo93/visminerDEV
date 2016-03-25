@@ -4,3 +4,9 @@
 	color: white;
 	font-size: 18px;
 }
+
+.filter-header{
+	text-align: center;
+    color: #BDBDBD !important;
+    font-weight: bold;
+}
