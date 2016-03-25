@@ -16,3 +16,13 @@
 	padding: 5px 5px 5px 15px;
 	font-weight: 500;
 }
+
+.info-box-smaller{
+    height: 30px;
+    width: 70px;
+    line-height: 30px;
+    min-height: 30px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #ffffff;
+}

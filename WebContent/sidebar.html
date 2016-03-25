@@ -80,7 +80,47 @@
           </li>
         </ul>
       </li>
+      <li class="treeview">
+        <a href="#">
+          <i class="fa fa-usd"></i> <span>Technical Debt</span>
+          <i class="fa fa-angle-left pull-right"></i>
+        </a>
+        <ul class="treeview-menu">
+          <li>
+              <div class="row" style="padding: 10px; margin-left: 0;">                
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                    <div id="filter_code" style="height: 10px;">
+                        <a href="javascript:void(0)" onclick="setOpacity('filter_code')">
+                          <span class="info-box-icon info-box-smaller bg-red">
+                              CODE
+                          </span>
+                        </a>
+                    </div>
+                </div><!-- /.col -->
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                    <div id="filter_design" style="height: 10px;">
+                        <a a href="javascript:void(0)" onclick="setOpacity('filter_design')">
+                          <span class="info-box-icon info-box-smaller bg-yellow">
+                              DESIGN
+                          </span>
+                        </a>
+                    </div>
+                </div><!-- /.col -->
+            </div><!-- /.row -->
+          </li>
+        </ul>
+      </li>
     </ul>
   </section>
   <!-- /.sidebar -->
 </aside>
+
+<script type="text/javascript">
+  function setOpacity(id){
+        var opacity = document.getElementById(id).style.opacity;
+        if(opacity=="1" || opacity=="")
+            document.getElementById(id).style.opacity = "0.2";
+        else
+            document.getElementById(id).style.opacity = "1";
+  }
+</script>
