@@ -42,6 +42,7 @@ homeApp.controller('HomeCtrl', function ($scope, $timeout, $http, $sessionStorag
   	commits: [],
   	committers: [],
   }
+  thisCtrl.page = "tdevolution";
 
   // Load all repositories
 	thisCtrl.repositoriesLoad = function() { 
