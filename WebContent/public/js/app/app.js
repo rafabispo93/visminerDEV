@@ -1,5 +1,5 @@
 
-var homeApp = angular.module('homeApp', ['ngStorage', 'ui.bootstrap']);
+var homeApp = angular.module('homeApp', ['ngStorage', 'ui.bootstrap', 'checklist-model']);
 
 homeApp.controller('committersCtrl', function() {
   this.committer = {
@@ -36,6 +36,7 @@ homeApp.controller('HomeCtrl', function ($scope, $timeout, $http, $sessionStorag
   thisCtrl.repositories = [];
   thisCtrl.trees = [];
   thisCtrl.tags = [];
+  thisCtrl.selectedTags = [];
   thisCtrl.committerEvolution = [];
 
   thisCtrl.filtered = {
