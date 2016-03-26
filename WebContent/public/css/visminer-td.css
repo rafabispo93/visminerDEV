@@ -60,3 +60,14 @@
     overflow: hidden;
     text-overflow: clip;
 }
+
+.modal-header-info {
+    background-color: rgb(51, 122, 183);
+    color: white;
+}
+
+.modal-open .modal {
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+  overflow-y: scroll;
+}

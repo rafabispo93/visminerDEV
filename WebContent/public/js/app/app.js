@@ -20,7 +20,7 @@ homeApp.controller('HomeCtrl', function ($scope, $timeout, $http, $sessionStorag
   	debts: ["CODE", "DESIGN"],
   }
   thisCtrl.page = "tdevolution";
-  thisCtrl.message = "bla";
+  thisCtrl.alertMessage = "";
 
   thisCtrl.selectDebt = function(debt) {
   	console.log('debt '+debt+ 'selected');
@@ -80,8 +80,24 @@ homeApp.controller('HomeCtrl', function ($scope, $timeout, $http, $sessionStorag
 	}
 
 	thisCtrl.analyzeDebts = function() {
+		var analyze = true;
 		if (thisCtrl.filtered.repository == null) {
+		  thisCtrl.alertMessage = "Please Select a Repository!";
+		  analyze = false;
+		} 
+		else if (thisCtrl.filtered.tags.length == 0) {
+		  thisCtrl.alertMessage = "Please Select What Versions Will be Analyzed!";
+          analyze = false;
+		} 
+		else if (thisCtrl.filtered.debts.length == 0) {
+		  thisCtrl.alertMessage = "Please Select What Technical Debts Will be Analyzed!";
+		  analyze = false;
+		}
 
+		if (analyze) {
+			alert("Come analyze");
+		} else {
+			$('#alertModal').modal('show');
 		}
 	}
 

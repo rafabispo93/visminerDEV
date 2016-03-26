@@ -51,6 +51,20 @@
 
     </div><!-- ./wrapper -->
 
+    <div id="alertModal" class="modal fade bs-example-modal-sm" role="dialog">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header modal-header-info">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title"><i class="fa fa-info"></i>  Information</h4>
+          </div>
+          <div class="modal-body" style="font-size: 20px">
+            <p>{{ctrl.alertMessage}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <script src="public/plugins/jQuery/jQuery-2.1.4.min.js"></script>
     <script src="public/js/jquery-ui.min.js"></script>
     <script>
@@ -79,6 +93,15 @@
     <script src="public/js/checklist-model.js"></script>
     <script src="public/js/app/components/commits/overview.js"></script>
     <script src="public/js/app/components/trees/overview.js"></script>
+    <script src="public/js/center-modal.js"></script>
+
+    <script type="text/javascript">
+      var modalVerticalCenterClass = ".modal";
+      $(modalVerticalCenterClass).on('show.bs.modal', function(e) {
+          centerModals($(this));
+      });
+      $(window).on('resize', centerModals);
+    </script>
 
   </body>
 </html>
