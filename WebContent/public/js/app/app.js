@@ -13,12 +13,14 @@ homeApp.controller('HomeCtrl', function ($scope, $timeout, $http, $sessionStorag
   thisCtrl.committerEvolution = [];
 
   thisCtrl.filtered = {
+  	repository: null,
   	commits: [],
   	committers: [],
   	tags: [],
   	debts: ["CODE", "DESIGN"],
   }
   thisCtrl.page = "tdevolution";
+  thisCtrl.message = "bla";
 
   thisCtrl.selectDebt = function(debt) {
   	console.log('debt '+debt+ 'selected');
@@ -38,6 +40,11 @@ homeApp.controller('HomeCtrl', function ($scope, $timeout, $http, $sessionStorag
 			console.log('found', data.length, 'repositories');
 			thisCtrl.repositories = data;
 		});
+	}
+
+	thisCtrl.selectRepository = function(repositoryUid) {
+		thisCtrl.filtered.repository = repositoryUid;
+		thisCtrl.treesLoad(repositoryUid);
 	}
   
   // Load all trees
@@ -61,7 +68,7 @@ homeApp.controller('HomeCtrl', function ($scope, $timeout, $http, $sessionStorag
 		});
 	}
 
-	  // Load all tags (versions)
+	// Load all tags (versions)
 	thisCtrl.tagsLoad = function(repositoryUid) { 
 		console.log('tagsLoad', repositoryUid);
 
@@ -70,6 +77,12 @@ homeApp.controller('HomeCtrl', function ($scope, $timeout, $http, $sessionStorag
 			console.log('found', data.length, 'tags');
 			thisCtrl.tags = data;
 		});
+	}
+
+	thisCtrl.analyzeDebts = function() {
+		if (thisCtrl.filtered.repository == null) {
+
+		}
 	}
 
 	// Load all commits from all trees
@@ -402,12 +415,5 @@ homeApp.controller('HomeCtrl', function ($scope, $timeout, $http, $sessionStorag
 	$scope.testChangeSliderBounds = function(){
 		$scope.changeSliderBounds(new Date(2012, 1, 1), new Date(2012, 2, 28));
 	};
-
-	// $http.get('public/js/data.json').success(function(data) {
-	// 	$scope.data = data;
-	// 	$scope.codeSmellsAll = $scope.getCodeSmellsAll();
-	// 	$scope.committersAll = $scope.getCommittersAll();
-	// 	$scope.refreshValues();
-	// });
 
 });
