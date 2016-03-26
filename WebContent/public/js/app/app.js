@@ -23,7 +23,7 @@ homeApp.controller('HomeCtrl', function ($scope, $timeout, $http, $sessionStorag
   thisCtrl.alertMessage = "";
 
   thisCtrl.selectDebt = function(debt) {
-  	console.log('debt '+debt+ 'selected');
+  	console.log('TD '+debt+ ' Selected');
   	var index = $.inArray(debt, thisCtrl.filtered.debts);
   	if (index > -1) {
       thisCtrl.filtered.debts.splice(index, 1);
@@ -95,7 +95,7 @@ homeApp.controller('HomeCtrl', function ($scope, $timeout, $http, $sessionStorag
 		}
 
 		if (analyze) {
-			alert("Come analyze");
+			thisCtrl.page = ""
 		} else {
 			$('#alertModal').modal('show');
 		}
