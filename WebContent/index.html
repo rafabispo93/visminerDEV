@@ -6,25 +6,25 @@
     <title>Visminer Dashboard</title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-    <link rel="stylesheet" href="public/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="public/css/ionicons.min.css">
-    <link rel="stylesheet" href="public/css/AdminLTE.css">
-    <link rel="stylesheet" href="public/css/skins/skin-blue.min.css">
-    <link rel="stylesheet" href="public/plugins/iCheck/flat/blue.css">
-    <link rel="stylesheet" href="public/plugins/datepicker/datepicker3.css">
-    <link rel="stylesheet" href="public/plugins/daterangepicker/daterangepicker-bs3.css">
-    <link rel="stylesheet" href="public/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
-    <link rel="stylesheet" href="public/plugins/jQDateRangeSlider/css/classic-min.css">
-    <link rel="stylesheet" href="public/css/visminer-td.css">
+    <link rel="stylesheet" href="assets/css/ionicons.min.css">
+    <link rel="stylesheet" href="assets/css/AdminLTE.css">
+    <link rel="stylesheet" href="assets/css/skins/skin-blue.min.css">
+    <link rel="stylesheet" href="assets/plugins/iCheck/flat/blue.css">
+    <link rel="stylesheet" href="assets/plugins/datepicker/datepicker3.css">
+    <link rel="stylesheet" href="assets/plugins/daterangepicker/daterangepicker-bs3.css">
+    <link rel="stylesheet" href="assets/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
+    <link rel="stylesheet" href="assets/plugins/jQDateRangeSlider/css/classic-min.css">
+    <link rel="stylesheet" href="assets/css/visminer-td.css">
   </head>
 
   <body class="hold-transition skin-blue sidebar-mini" ng-controller="HomeCtrl as ctrl">
     <div class="wrapper">
 
-      <div ng-include="'navbar.html'"></div>
+      <div ng-include="'app/shared/navbar/navbar.html'"></div>
 	  
-	    <div ng-include="'sidebar.html'"></div>  
+	    <div ng-include="'app/shared/sidebar/sidebar.html'"></div>  
 	  
       <!-- Content Wrapper. Contains page content -->
       <div class="content-wrapper">
@@ -38,8 +38,8 @@
           </section>
         </div>
 
-        <div ng-include="'committers.html'"></div>
-        <div ng-include="'tdevolution.html'"></div>
+        <div ng-include="'app/committers/committers.html'"></div>
+        <div ng-include="'app/tdevolution/tdevolution.html'"></div>
 
       </div><!-- /.content-wrapper -->
 
@@ -63,32 +63,32 @@
       </div>
     </div>
 
-    <script src="public/plugins/jQuery/jQuery-2.1.4.min.js"></script>
-    <script src="public/js/jquery-ui.min.js"></script>
+    <script src="assets/plugins/jQuery/jQuery-2.1.4.min.js"></script>
+    <script src="assets/js/jquery-ui.min.js"></script>
     <script>
       $.widget.bridge('uibutton', $.ui.button);
     </script>
-    <script src="public/js/bootstrap.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
-    <script src="public/plugins/sparkline/jquery.sparkline.min.js"></script>
-    <script src="public/plugins/knob/jquery.knob.js"></script>
+    <script src="assets/plugins/sparkline/jquery.sparkline.min.js"></script>
+    <script src="assets/plugins/knob/jquery.knob.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.2/moment.min.js"></script>
-    <script src="public/plugins/daterangepicker/daterangepicker.js"></script>
-    <script src="public/plugins/datepicker/bootstrap-datepicker.js"></script>
-    <script src="public/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js"></script>
-    <script src="public/plugins/slimScroll/jquery.slimscroll.min.js"></script>
-    <script src="public/plugins/fastclick/fastclick.min.js"></script>
-    <script src="public/js/app.min.js"></script>
-    <script src="public/bower_components/angular/angular.js"></script>
-    <script src="public/bower_components/ngstorage/ngStorage.js"></script>
+    <script src="assets/plugins/daterangepicker/daterangepicker.js"></script>
+    <script src="assets/plugins/datepicker/bootstrap-datepicker.js"></script>
+    <script src="assets/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js"></script>
+    <script src="assets/plugins/slimScroll/jquery.slimscroll.min.js"></script>
+    <script src="assets/plugins/fastclick/fastclick.min.js"></script>
+    <script src="assets/js/app.min.js"></script>
+    <script src="app/bower_components/angular/angular.js"></script>
+    <script src="app/bower_components/ngstorage/ngStorage.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-route.min.js"></script>
-    <script src="public/plugins/jQDateRangeSlider/jQDateRangeSlider-min.js"></script>
-    <script src="public/js/ui-bootstrap-1.0.0.min.js"></script>
-    <script src="public/js/app/app.js"></script>
-    <script src="public/js/checklist-model.js"></script>
-    <script src="public/js/app/components/commits/overview.js"></script>
-    <script src="public/js/app/components/trees/overview.js"></script>
-    <script src="public/js/center-modal.js"></script>
+    <script src="assets/plugins/jQDateRangeSlider/jQDateRangeSlider-min.js"></script>
+    <script src="assets/js/ui-bootstrap-1.0.0.min.js"></script>
+    <script src="app/app.js"></script>
+    <script src="assets/js/checklist-model.js"></script>
+    <script src="app/components/commits/overview.js"></script>
+    <script src="app/components/trees/overview.js"></script>
+    <script src="assets/js/center-modal.js"></script>
 
     <script type="text/javascript">
       var modalVerticalCenterClass = ".modal";

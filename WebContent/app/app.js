@@ -163,7 +163,7 @@ homeApp.controller('HomeCtrl', function ($scope, $timeout, $http, $sessionStorag
 		var resumo = [];
 		console.log('typesLoad');
 		
-		$http.get('public/js/types.json')
+		$http.get('assets/js/types.json')
 		.success(function(data) {
 			console.log('found', data.length, 'types');
 			for (i in thisCtrl.committerEvolution) { 
