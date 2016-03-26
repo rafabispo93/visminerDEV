@@ -44,10 +44,19 @@
 
 .info-box-smaller{
     height: 30px;
-    width: 70px;
+    width: 75px;
     line-height: 30px;
     min-height: 30px;
     font-size: 12px;
     font-weight: bold;
     color: #ffffff;
+}
+
+.btn-filter-analyze{
+    margin: 20px 0px 0px !important;
+    width: 100%;
+    font-weight: bold;
+    font-size: 18px;
+    overflow: hidden;
+    text-overflow: clip;
 }
