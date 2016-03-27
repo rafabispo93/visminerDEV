@@ -1,4 +1,28 @@
-var homeApp = angular.module('homeApp', ['ngStorage', 'ui.bootstrap', 'checklist-model']);
+var homeApp = angular.module('homeApp', ['ngStorage', 'ngRoute', 'ui.bootstrap', 'checklist-model']);
+
+homeApp.config(['$routeProvider', '$locationProvider',
+  function($routeProvider, $locationProvider) {
+ 	
+    $routeProvider.
+    when('/', {
+        templateUrl: 'app/tdevolution/tdevolution.html',
+        controller: 'HomeCtrl'
+      }).
+			when('/tdevolution', {
+		    templateUrl: 'app/tdevolution/tdevolution.html',
+		    controller: 'HomeCtrl'
+		      }).
+			when('/tdanalyzer', {
+		    templateUrl: 'app/tdanalyzer/tdanalyzer.html',
+		    controller: 'HomeCtrl'
+		      }).
+			when('/committers', {
+		    templateUrl: 'app/committers/committers.html',
+		    controller: 'HomeCtrl'
+		      }).
+			otherwise({ redirectTo: '/tdevolution' });
+			$locationProvider.html5Mode(true);
+  }]);
 
 homeApp.controller('HomeCtrl', function ($scope, $timeout, $http, $sessionStorage) {
 	// This controller instance

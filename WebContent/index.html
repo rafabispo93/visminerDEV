@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Visminer Dashboard</title>
+    <base href="/visminer-dashboard/"></base>
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
@@ -38,9 +39,7 @@
           </section>
         </div>
 
-        <div ng-include="'app/committers/committers.html'"></div>
-        <div ng-include="'app/tdevolution/tdevolution.html'"></div>
-        <div ng-include="'app/tdanalyzer/tdanalyzer.html'"></div>
+        <div ng-view></div>
 
       </div><!-- /.content-wrapper -->
 
