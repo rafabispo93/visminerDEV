@@ -1,9 +1,9 @@
 angular.module('homeApp').component('progressbar', {
-  controller: function() {
+  controller: function($location) {
   	 var progressBarModal = "#progressBarModal";
-	 $(progressBarModal).on('show.bs.modal', function(e) {
-	    loadBar();
-	 });
+  	 $(progressBarModal).on('show.bs.modal', function(e) {
+  	    loadBar($location);
+  	 });
    },
   bindings: {
     durationProgress: '='
@@ -12,7 +12,7 @@ angular.module('homeApp').component('progressbar', {
 });
 
 
-function loadBar(){
+function loadBar($location){
     var $bar = $('.progress-bar');
     $bar.width(0);
     var progress = setInterval(function() {
@@ -20,6 +20,8 @@ function loadBar(){
         $bar.width(0);
         $('.progress').removeClass('active');
         $(progressBarModal).modal("hide");
+        $location.path("/tdanalyzer");
+        $("#sidebar-tdfilter").click();
     } else {
         $bar.width($bar.width()+120);
     }

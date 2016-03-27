@@ -24,7 +24,7 @@ homeApp.config(['$routeProvider', '$locationProvider',
 			$locationProvider.html5Mode(true);
   }]);
 
-homeApp.controller('HomeCtrl', function ($scope, $timeout, $http, $sessionStorage) {
+homeApp.controller('HomeCtrl', function ($scope, $timeout, $http, $sessionStorage, $location) {
 	// This controller instance
   var thisCtrl = this;
   // Data collections
@@ -121,9 +121,6 @@ homeApp.controller('HomeCtrl', function ($scope, $timeout, $http, $sessionStorag
 
 		if (analyze) {
 			$('#progressBarModal').modal('show');
-			$(document).on('hide.bs.modal','#progressBarModal', function () {
-              thisCtrl.page = "tdanalyzer";
-			});
 		} else {
 			$('#alertModal').modal('show');
 		}
