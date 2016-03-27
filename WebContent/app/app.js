@@ -21,6 +21,7 @@ homeApp.controller('HomeCtrl', function ($scope, $timeout, $http, $sessionStorag
   }
   thisCtrl.page = "tdevolution";
   thisCtrl.alertMessage = "";
+  thisCtrl.durationProgress = 1000;
 
   thisCtrl.selectDebt = function(debt) {
   	console.log('TD '+debt+ ' Selected');
@@ -95,7 +96,10 @@ homeApp.controller('HomeCtrl', function ($scope, $timeout, $http, $sessionStorag
 		}
 
 		if (analyze) {
-			thisCtrl.page = ""
+			$('#progressBarModal').modal('show');
+			$(document).on('hide.bs.modal','#progressBarModal', function () {
+              thisCtrl.page = "tdanalyzer";
+			});
 		} else {
 			$('#alertModal').modal('show');
 		}
