@@ -52,7 +52,6 @@ homeApp.controller('HomeCtrl', function ($scope, $timeout, $http, $sessionStorag
 			console.log('found', data.length, 'trees');
 			$scope.trees = data;
 			thisCtrl.tagsLoad(repositoryUid);
-			thisCtrl.commitsLoad();
 		});
 	}
 
@@ -64,6 +63,7 @@ homeApp.controller('HomeCtrl', function ($scope, $timeout, $http, $sessionStorag
 		.success(function(data) {
 			console.log('found', data.length, 'tags');
 			$scope.tags = data;
+			thisCtrl.commitsLoad();
 		});
 	}
 
