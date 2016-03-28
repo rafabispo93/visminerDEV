@@ -31,7 +31,7 @@
       </li>
       <li class="treeview">
         <a href="#">
-          <i class="fa fa-files-o"></i> <span>Repositories</span>
+          <i class="fa fa-database"></i> <span>Repositories</span>
           <small class="label pull-right bg-green">{{repositories.length}}</small>
         </a>
         <ul class="treeview-menu">
@@ -51,7 +51,7 @@
         <ul class="treeview-menu">
           <li ng-repeat="tag in tags | orderBy:'name'">
             <label class="control-sidebar-subheading filter-version-sub-item">
-              <input type="checkbox" checklist-model="filtered.tags" checklist-value="tag.uid">  {{tag.name}}
+              <input type="checkbox" checklist-model="filtered.tags" checklist-value="tag">{{tag.name}}
             </label>
           </li>
         </ul>

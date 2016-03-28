@@ -8,6 +8,7 @@ homeApp.controller('TDAnalyzerCtrl', function($scope, sidebarService){
 	$scope.filtered.tags = sidebarService.getTags();
 	$scope.filtered.committers = sidebarService.getCommitters();
 	$scope.filtered.debts = sidebarService.getDebts();
+	$scope.selectedTag = $scope.filtered.tags[0];
 
 	thisCtrl.selectView = function(view) {
 		alert('AQUI');
