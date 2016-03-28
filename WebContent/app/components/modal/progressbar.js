@@ -20,8 +20,6 @@ function loadBar($location){
         $bar.width(0);
         $('.progress').removeClass('active');
         $(progressBarModal).modal("hide");
-        $location.path("/tdanalyzer");
-        $("#sidebar-tdfilter").click();
     } else {
         $bar.width($bar.width()+120);
     }

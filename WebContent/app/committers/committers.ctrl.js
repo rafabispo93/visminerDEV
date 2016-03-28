@@ -1,10 +1,82 @@
 homeApp = angular.module('homeApp');
 
-homeApp.controller('committersCtrl', function ($scope, $timeout, $http, $sessionStorage) {
+homeApp.controller('CommittersCtrl', function ($scope, $timeout, $http, $sessionStorage, sidebarService) {
+	var thisCtrl = this;
 
-	$scope.refreshValues();
+	$scope.currentPage = sidebarService.getCurrentPage();
+	$scope.filtered.repository = sidebarService.getRepository();
+	$scope.filtered.tags = sidebarService.getTags();
+	$scope.filtered.committers = sidebarService.getCommitters();
+	$scope.filtered.debts = sidebarService.getDebts();
+
+	  // Define initial values
+  thisCtrl.refreshValues = function () { 
+  	console.log('refreshValues');
+  	// $sessionStorage.period = '';
+	  if (typeof $sessionStorage.period == 'undefined' || $sessionStorage.period == '') {
+	  	console.log('-- Initial configuration --')
+	  	var dateMin = '';
+	  	var dateMax = '';
+	  	for (i in $scope.committerEvolution) {
+	  		var date = new Date($scope.committerEvolution[i].date);
+	  		if (dateMin == '') {
+	  			dateMin = date;
+	  		}
+	  		if (dateMax == '') {
+	  			dateMax = date;
+	  		}
+	  		if (date < dateMin) {
+	  			dateMin = date;
+	  		}
+	  		else if (date > dateMax) {
+	  			dateMax = date;
+	  		}
+	  	}
+	    $sessionStorage.period = {
+	      min: dateMin,
+	      minSelected: dateMin,
+	      max: dateMax,
+	      maxSelected: dateMax
+	    }
+	  } else {
+	  	$sessionStorage.period.min = new Date($sessionStorage.period.min);
+	  	$sessionStorage.period.minSelected = new Date($sessionStorage.period.minSelected);
+	  	$sessionStorage.period.max = new Date($sessionStorage.period.max);
+	  	$sessionStorage.period.maxSelected = new Date($sessionStorage.period.maxSelected);
+	  }
+	  $scope.dateMin = new Date($sessionStorage.period.min);
+		$scope.dateMax = new Date($sessionStorage.period.max);
+		$scope.dateMinSelected = new Date($sessionStorage.period.minSelected);
+		$scope.dateMaxSelected = new Date($sessionStorage.period.maxSelected);
+		thisCtrl.commitsSearch($scope.dateMinSelected, $scope.dateMaxSelected);
+  }  
+
+	thisCtrl.refreshValues();
+
+	thisCtrl.commitsSearch = function(dateIni, dateEnd) {
+		$scope.filtered.commits = [];
+		$scope.filtered.committers = [];
+		for (i in $scope.commits) {
+			var commitDate = new Date($scope.commits[i].date.$date);
+			// var committerEvolutionDate = new Date(thisCtrl.committerEvolution[i].date);
+			if (commitDate >= dateIni && commitDate <= dateEnd) {
+				$scope.filtered.commits.push($scope.commits[i]);
+				var committerFound = false;
+				for (x in $scope.filtered.committers) {
+					if ($scope.filtered.committers[x].email == $scope.commits[i].committer.email) {
+						committerFound = true;
+						continue;
+					}
+				}
+				if (committerFound == false) {
+					$scope.filtered.committers.push($scope.commits[i].committer);
+				}
+			}
+		}
+  }
+
 	$scope.initSlider();
-	$scope.typesLoad();
+	//$scope.typesLoad();
 
 	$scope.ok = function () {
     $modalInstance.close();
@@ -13,7 +85,6 @@ homeApp.controller('committersCtrl', function ($scope, $timeout, $http, $session
   $scope.cancel = function () {
     $modalInstance.dismiss('cancel');
   };
-
 
 	$scope.dateMin = new Date();
 	$scope.dateMax = new Date();
@@ -204,101 +275,37 @@ homeApp.controller('committersCtrl', function ($scope, $timeout, $http, $session
 		$scope.changeSliderBounds(new Date(2012, 1, 1), new Date(2012, 2, 28));
 	};
 
-	$scope.commitsSearch = function(dateIni, dateEnd) {
-  	thisCtrl.filtered.commits = [];
-  	thisCtrl.filtered.committers = [];
-  	for (i in thisCtrl.commits) {
-  		var commitDate = new Date(thisCtrl.commits[i].date.$date);
-  		// var committerEvolutionDate = new Date(thisCtrl.committerEvolution[i].date);
-  		if (commitDate >= dateIni && commitDate <= dateEnd) {
-  			thisCtrl.filtered.commits.push(thisCtrl.commits[i]);
-  			var committerFound = false;
-				for (x in thisCtrl.filtered.committers) {
-					if (thisCtrl.filtered.committers[x].email == thisCtrl.commits[i].committer.email) {
-						committerFound = true;
-						continue;
-					}
-				}
-				if (committerFound == false) {
-					thisCtrl.filtered.committers.push(thisCtrl.commits[i].committer);
-				}
-  		}
-  	}
-  }
-
-  // Define initial values
-  $scope.refreshValues = function () { 
-  	console.log('refreshValues');
-  	// $sessionStorage.period = '';
-	  if (typeof $sessionStorage.period == 'undefined' || $sessionStorage.period == '') {
-	  	console.log('-- Initial configuration --')
-	  	var dateMin = '';
-	  	var dateMax = '';
-	  	for (i in thisCtrl.committerEvolution) {
-	  		var date = new Date(thisCtrl.committerEvolution[i].date);
-	  		if (dateMin == '') {
-	  			dateMin = date;
-	  		}
-	  		if (dateMax == '') {
-	  			dateMax = date;
-	  		}
-	  		if (date < dateMin) {
-	  			dateMin = date;
-	  		}
-	  		else if (date > dateMax) {
-	  			dateMax = date;
-	  		}
-	  	}
-	    $sessionStorage.period = {
-	      min: dateMin,
-	      minSelected: dateMin,
-	      max: dateMax,
-	      maxSelected: dateMax
-	    }
-	  } else {
-	  	$sessionStorage.period.min = new Date($sessionStorage.period.min);
-	  	$sessionStorage.period.minSelected = new Date($sessionStorage.period.minSelected);
-	  	$sessionStorage.period.max = new Date($sessionStorage.period.max);
-	  	$sessionStorage.period.maxSelected = new Date($sessionStorage.period.maxSelected);
-	  }
-	  $scope.dateMin = new Date($sessionStorage.period.min);
-		$scope.dateMax = new Date($sessionStorage.period.max);
-		$scope.dateMinSelected = new Date($sessionStorage.period.minSelected);
-		$scope.dateMaxSelected = new Date($sessionStorage.period.maxSelected);
-		thisCtrl.commitsSearch($scope.dateMinSelected, $scope.dateMaxSelected);
-  }  
-
-  // Load all types from all commits
-	$scope.typesLoad = function() {
-		var last = null;
-		var resumo = [];
-		console.log('typesLoad');
+ //  // Load all types from all commits
+	// $scope.typesLoad = function() {
+	// 	var last = null;
+	// 	var resumo = [];
+	// 	console.log('typesLoad');
 		
-		$http.get('assets/js/types.json')
-		.success(function(data) {
-			console.log('found', data.length, 'types');
-			for (i in thisCtrl.committerEvolution) { 
-				// console.log(thisCtrl.committerEvolution[i].commit)
-				var last = {
-					CC: 0
-				}
+	// 	$http.get('assets/js/types.json')
+	// 	.success(function(data) {
+	// 		console.log('found', data.length, 'types');
+	// 		for (i in thisCtrl.committerEvolution) { 
+	// 			// console.log(thisCtrl.committerEvolution[i].commit)
+	// 			var last = {
+	// 				CC: 0
+	// 			}
 
-				for (x in data) {
-					if (data[x].commit == thisCtrl.committerEvolution[i].commit) {
-						// console.log('data[x]', data[x])
-						if (typeof data[x].CC != 'undefined' && data[x].CC.accumulated != 0) {
-							// console.log('accumulated', data[x].CC.accumulated, 'last.CC', last.CC, 'cc', (data[x].CC.accumulated - last.CC))
-							thisCtrl.committerEvolution[i].type.CC += (data[x].CC.accumulated - last.CC);
-							last.CC = data[x].CC.accumulated;
-						}
-					}
-				}
-			}
-			// console.log(thisCtrl.committerEvolution[2])
-		})
-		.error(function(dt) {
-			console.log('error')
-		});
-  }
+	// 			for (x in data) {
+	// 				if (data[x].commit == thisCtrl.committerEvolution[i].commit) {
+	// 					// console.log('data[x]', data[x])
+	// 					if (typeof data[x].CC != 'undefined' && data[x].CC.accumulated != 0) {
+	// 						// console.log('accumulated', data[x].CC.accumulated, 'last.CC', last.CC, 'cc', (data[x].CC.accumulated - last.CC))
+	// 						thisCtrl.committerEvolution[i].type.CC += (data[x].CC.accumulated - last.CC);
+	// 						last.CC = data[x].CC.accumulated;
+	// 					}
+	// 				}
+	// 			}
+	// 		}
+	// 		// console.log(thisCtrl.committerEvolution[2])
+	// 	})
+	// 	.error(function(dt) {
+	// 		console.log('error')
+	// 	});
+ //  }
 	
 });
