@@ -29,13 +29,13 @@ public class UrlFilter implements Filter {
 		String url = req.getRequestURI();
 		String test = req.getServletContext().getContextPath();
 		if (url.endsWith("tdevolution")) {
-			resp.sendRedirect(url.replace("tdevolution", "/#tdevolution"));
+			resp.sendRedirect(url.replace("tdevolution", "#tdevolution"));
 		}
 		else if (url.endsWith("tdanalyzer")) {
-			resp.sendRedirect(url.replace("tdanalyzer", "/#tdanalyzer"));
+			resp.sendRedirect(url.replace("tdanalyzer", "#tdanalyzer"));
 		}
 		else if (url.endsWith("committers")) {
-			resp.sendRedirect(url.replace("committers", "/#committers"));
+			resp.sendRedirect(url.replace("committers", "#committers"));
 		} else {
 		chain.doFilter(request, response);	
 		}

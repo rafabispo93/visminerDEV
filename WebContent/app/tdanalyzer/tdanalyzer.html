@@ -1,4 +1,11 @@
-<div ng-show="filtered.repository != null && currentPage == 'tdanalyzer'">
+<section class="content" ng-show="!filtered.tags[0]">
+	<div class="alert alert-warn-vmtd alert-dismissable" >
+	  <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+	    <i class="icon fa fa-hand-o-left"></i>Please, select at least one version in the left menu.
+	</div>
+</section>
+
+<div ng-show="filtered.repository != null && filtered.tags[0] && currentPage == 'tdanalyzer'">
  
   <!-- Content Header (Page header) -->
   <section class="content-header" ng-controller="TDAnalyzerCtrl as ctrl">
@@ -29,12 +36,12 @@
       			<label>Version:</label>
       		</div>
           <div class="col-md-11">
-          	<select class="form-control" style="border-radius: 5px;" ng-options="tag.name for tag in filtered.tags track by tag.name" ng-model="selectedTag" style="width: 100%;">
+          	<select class="form-control" style="border-radius: 5px;" ng-options="tag.name for tag in filtered.tags" ng-model="selectedTag" style="width: 100%;">
          		</select>
           </div>
         </div><!-- /.form-group -->
         <div>
-        	<span>{{selectedTag.name}}</span>
+        	<span>{{selectedTag.commits}}</span>
         </div>
       </div><!-- /.box-body -->
     </div><!-- /.box -->
