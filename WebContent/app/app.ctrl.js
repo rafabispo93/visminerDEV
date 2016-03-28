@@ -63,15 +63,15 @@ homeApp.controller('HomeCtrl', function ($scope, $timeout, $http, $sessionStorag
 		.success(function(data) {
 			console.log('found', data.length, 'tags');
 			$scope.tags = data;
-			thisCtrl.commitsLoad();
+			thisCtrl.commitsLoad(repositoryUid);
 		});
 	}
 
 	// Load all commits from all trees
-	thisCtrl.commitsLoad = function() { 
+	thisCtrl.commitsLoad = function(repositoryUid) { 
 		console.log('commitsLoad');
 
-		$http.get('CommitServlet', {params:{"action": "getAllByRepository", "repositoryId": '8a2f05794faef3fa8177707245b4599d473832b6'}})
+		$http.get('CommitServlet', {params:{"action": "getAllByRepository", "repositoryId": repositoryUid}})
 		.success(function(data) {
 			console.log('found', data.length, 'commits');
 			$scope.commits = data;
