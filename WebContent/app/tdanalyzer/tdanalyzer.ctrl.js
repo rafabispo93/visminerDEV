@@ -8,4 +8,10 @@ homeApp.controller('TDAnalyzerCtrl', function($scope, sidebarService){
 	$scope.filtered.tags = sidebarService.getTags();
 	$scope.filtered.committers = sidebarService.getCommitters();
 	$scope.filtered.debts = sidebarService.getDebts();
+
+	thisCtrl.selectView = function(view) {
+		alert('AQUI');
+		$scope.currentPage = view;
+		sidebarService.setCurrentPage(view);
+	}
 });
