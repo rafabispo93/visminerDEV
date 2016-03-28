@@ -97,10 +97,8 @@ homeApp.controller('HomeCtrl', function ($scope, $timeout, $http, $sessionStorag
   	var index = $.inArray(debt, $scope.filtered.debts);
   	if (index > -1) {
       $scope.filtered.debts.splice(index, 1);
-      sidebarService.removeDebt(index);
   	} else {
       $scope.filtered.debts.push(debt);
-      sidebarService.addDebt(debt);
   	}
   }
 
