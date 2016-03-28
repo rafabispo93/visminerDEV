@@ -87,7 +87,7 @@ homeApp.controller('HomeCtrl', function ($scope, $timeout, $http, $sessionStorag
 				var index = $.inArray(data[i].committer, $scope.committers);
   			if (index == -1) {
   				$scope.committers.push(data[i].committer);
-  				sidebarService.addCommitters(data[i].committer);
+  				sidebarService.addCommitter(data[i].committer);
 		  	}
 			}
 		});
