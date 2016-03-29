@@ -8,13 +8,13 @@
 <div ng-show="filtered.repository != null && filtered.tags[0] && currentPage == 'tdanalyzer'">
  
   <!-- Content Header (Page header) -->
-  <section class="content-header" ng-controller="TDAnalyzerCtrl as ctrl">
+  <section class="content-header">
     <h1>
       TD Analyzer
       <small>Identify which classes have Technical Debt</small>
     </h1>
     <ol class="breadcrumb">
-      <li><a href="tdevolution" ng-click="ctrl.selectView('tdevolution')"><i class="fa fa-line-chart"></i> TD Evolution</a></li>
+      <li><a href="tdevolution" ng-click="TDAnalyzerCtrl.selectView('tdevolution')"><i class="fa fa-line-chart"></i> TD Evolution</a></li>
       <li class="active">TD Analyzer</li>
     </ol>
   </section>
@@ -40,9 +40,30 @@
          		</select>
           </div>
         </div><!-- /.form-group -->
-        <div>
-        	<span>{{selectedTag.commits}}</span>
+
+        <div class="form-group" style="padding-top: 40px;">
+          <div class="box-analyzer-item col-lg-3 col-md-3 col-sm-4 col-xs-6 box box-default" ng-repeat="type in types2">
+            <div class="box-header with-border" style="border-bottom-color: rgba(38, 28, 92, 0.21);">
+              <a href="#" class="box-title">{{type.type.name}}</a>   
+              <div class="box-tools pull-right">
+              <button class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+          </div><!-- /.box-tools -->           
+            </div><!-- /.box-header -->
+            <div class="box-body">
+              <span class="label bg-blue" style="font-size: 12px; margin-right: 5px;">
+                CODE 
+                <button class="btn btn-span-tool" onclick="this.parentElement.style.display='none';"><i class="fa fa-times"></i></button>
+                <button class="btn btn-span-tool" onclick="this.style.display='none'; this.previousElementSibling.style.display='none'"><i class="fa fa-plus"></i></button>
+              </span>
+              <span class="label bg-yellow" style="font-size: 12px">
+                DEBT
+                <button class="btn btn-span-tool" onclick="this.parentElement.style.display='none';"><i class="fa fa-times"></i></button>
+                <button class="btn btn-span-tool" onclick="this.style.display='none'; this.previousElementSibling.style.display='none'"><i class="fa fa-plus"></i></button>
+              </span>
+            </div><!-- /.box-body -->
+          </div><!-- /.box -->
         </div>
+
       </div><!-- /.box-body -->
     </div><!-- /.box -->
 

@@ -71,3 +71,18 @@
   padding-right: 0px !important;
   overflow-y: scroll;
 }
+
+.box-analyzer-item {
+    max-width: 32% !important;
+    margin: 5px !important;
+    background-color: rgba(233, 234, 236, 0.54) !important;
+    border-color: #0073B7 !important;
+}
+
+.btn-span-tool {
+    padding: 3px;
+    font-size: 12px;
+    background: transparent;
+    box-shadow: none!important;
+    color: #ffffff;
+}

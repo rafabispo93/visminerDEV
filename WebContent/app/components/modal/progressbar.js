@@ -2,7 +2,7 @@ angular.module('homeApp').component('progressbar', {
   controller: function($location) {
   	 var progressBarModal = "#progressBarModal";
   	 $(progressBarModal).on('show.bs.modal', function(e) {
-  	    loadBar($location);
+  	    loadBar();
   	 });
    },
   bindings: {
@@ -12,7 +12,7 @@ angular.module('homeApp').component('progressbar', {
 });
 
 
-function loadBar($location){
+function loadBar(){
     var $bar = $('.progress-bar');
     $bar.width(0);
     var progress = setInterval(function() {

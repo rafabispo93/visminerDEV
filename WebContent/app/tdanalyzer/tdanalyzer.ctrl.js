@@ -9,19 +9,21 @@ homeApp.controller('TDAnalyzerCtrl', function($scope, $http, sidebarService){
 	$scope.filtered.committers = sidebarService.getCommitters();
 	$scope.filtered.debts = sidebarService.getDebts();
 	$scope.selectedTag = $scope.filtered.tags[0];
+	$scope.types2 = [];
 
 	thisCtrl.selectView = function(view) {
 		$scope.currentPage = view;
 		sidebarService.setCurrentPage(view);
 	}
 
-	// thisCtrl.loadCommits = function(tagId) {
-	// 	$http.get('CommitServlet', {params:{"action": "getAllByRepository", "repositoryId": '8a2f05794faef3fa8177707245b4599d473832b6'}})
-	// 	.success(function(data) {
-	// 		console.log('found', data.length, ' commits');
-	// 		$scope.commits = data;
-	// 	});
-	// }
+	thisCtrl.loadTypes = function(tagId) {
+		$http.get('TypeServlet', {params:{"action": "getAllByTree", "treeId": tagId}})
+		.success(function(data) {
+			console.log('found', data.length, ' types');
+			console.log(data);
+			$scope.types2 = data;
+		});
+	}
 
-	// $scope.commits = thisCtrl.loadCommits(selectedTag);
+	thisCtrl.loadTypes($scope.selectedTag.uid);
 });
