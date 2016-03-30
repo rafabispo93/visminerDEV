@@ -75,7 +75,7 @@ homeApp.controller('HomeCtrl', function ($scope, $timeout, $http, $sessionStorag
 		.success(function(data) {
 			console.log('found', data.length, 'commits');
 			$scope.commits = data;
-			for (i in data) {
+			for (var i in data) {
 				$scope.committerEvolution.push({
 					commit: data[i].name,
 					committer: data[i].committer,
