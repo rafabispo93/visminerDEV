@@ -73,7 +73,7 @@
 }
 
 .box-analyzer-item {
-    max-width: 32% !important;
+    width: 32% !important;
     margin: 5px !important;
     background-color: rgba(233, 234, 236, 0.54) !important;
     border-color: #0073B7 !important;
@@ -85,4 +85,14 @@
     background: transparent;
     box-shadow: none!important;
     color: #ffffff;
+}
+
+.btn-confirm-analyze-debt {
+    width: 100%;
+    font-weight: bold;
+}
+
+.span-analyze-debt{
+    font-size: 12px;
+    border-radius: 0px;
 }

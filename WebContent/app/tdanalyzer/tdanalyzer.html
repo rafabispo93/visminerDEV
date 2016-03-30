@@ -35,28 +35,38 @@
       		<div class="col-md-1">
       			<label>Version:</label>
       		</div>
-          <div class="col-md-11">
-          	<select class="form-control" style="border-radius: 5px;" ng-options="tag.name for tag in filtered.tags" ng-model="selectedTag" style="width: 100%;">
+          <div class="col-md-5">
+          	<select class="form-control" ng-options="tag.name for tag in filtered.tags" ng-model="selectedTag" style="width: 100%;">
          		</select>
+          </div>
+          <div class="col-md-3">
+            <button class="btn bg-olive btn-flat btn-confirm-analyze-debt">
+              Confirm All from Version
+            </button>
+          </div>
+          <div class="col-md-3">
+            <button class="btn bg-olive btn-flat btn-confirm-analyze-debt">
+              Confirm All From Repository
+            </button>
           </div>
         </div><!-- /.form-group -->
 
         <div class="form-group" style="padding-top: 40px;">
-          <div class="box-analyzer-item col-lg-3 col-md-3 col-sm-4 col-xs-6 box box-default" ng-repeat="type in types2">
+          <div class="box-analyzer-item col-lg-3 col-md-3 box box-default" style="border-radius: 0px;" ng-repeat="type in types2">
             <div class="box-header with-border" style="border-bottom-color: rgba(38, 28, 92, 0.21);">
-              <a href="#" class="box-title">{{type.type.name}}</a>   
+              <a href="#" class="box-title" style="font-weight: bold;">{{type.type.name}}</a>   
               <div class="box-tools pull-right">
               <button class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
           </div><!-- /.box-tools -->           
             </div><!-- /.box-header -->
             <div class="box-body">
-              <span class="label bg-blue" style="font-size: 14px; margin-right: 5px;">
+              <span class="label bg-red span-analyze-debt" style="margin-right: 5px;">
                 CODE 
                 <button class="btn btn-span-tool" onclick="this.parentElement.style.display='none';"><i class="fa fa-times"></i></button>
                 <button class="btn btn-span-tool" onclick="this.style.display='none'; this.previousElementSibling.style.display='none'"><i class="fa fa-plus"></i></button>
               </span>
-              <span class="label bg-yellow" style="font-size: 14px">
-                DEBT
+              <span class="label bg-yellow span-analyze-debt">
+                DESIGN
                 <button class="btn btn-span-tool" onclick="this.parentElement.style.display='none';"><i class="fa fa-times"></i></button>
                 <button class="btn btn-span-tool" onclick="this.style.display='none'; this.previousElementSibling.style.display='none'"><i class="fa fa-plus"></i></button>
               </span>
