@@ -1,6 +1,6 @@
 homeApp = angular.module('homeApp');
 
-homeApp.controller('TDAnalyzerCtrl', function($scope, $http, sidebarService){
+homeApp.controller('TDAnalyzerCtrl', function($scope, $http, $location, $route, sidebarService){
 	var thisCtrl = this;
 
 	$scope.currentPage = sidebarService.getCurrentPage();
@@ -49,7 +49,6 @@ homeApp.controller('TDAnalyzerCtrl', function($scope, $http, sidebarService){
 	thisCtrl.loadTypes($scope.selectedTag.uid);
 
 	$scope.loadCurrentDebts = function(type) {
-		console.log('Entrou no currentTD: ', type);
 		var tdList = type.technicaldebts;
 		for (var i = 0; i < tdList.length; i++) {
 			if (tdList[i].name == 'Code Debt') {
@@ -78,9 +77,10 @@ homeApp.controller('TDAnalyzerCtrl', function($scope, $http, sidebarService){
 	}
 
 	$scope.confirmAllDebtsByTag = function(treeId) {
-		alert(treeId);
 		$http.get('TypeServlet', {params:{"action": "confirmAllDebtsByTag", "treeId": treeId}})
 		.success(function() {
+			$route.reload();			
+			$scope.showSuccessModal();
 			console.log('All debts from tree ', treeId,' have been Confirmed.'); 			
 		});
 	}
@@ -88,7 +88,15 @@ homeApp.controller('TDAnalyzerCtrl', function($scope, $http, sidebarService){
 	$scope.confirmAllDebtsByRepository = function(repositoryId) {
 		$http.get('TypeServlet', {params:{"action": "confirmAllDebtsByRepository", "repositoryId": repositoryId}})
 		.success(function() {
+			$route.reload();
+			$scope.showSuccessModal();
 			console.log('All debts from repository ', repositoryId,' have been Confirmed.'); 			
 		});
+	}
+
+	$scope.showSuccessModal = function() {
+		$scope.alertMessage = "All the Debts Were Confirmed Sucessfully!";
+		$('#alertModal').modal('show');
+		$('.modal-body').show().html($scope.alertMessage);
 	}
 });
