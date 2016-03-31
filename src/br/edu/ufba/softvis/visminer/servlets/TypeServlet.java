@@ -45,6 +45,14 @@ public class TypeServlet extends HttpServlet {
 			case "getAllByTree":
 				getAllByTree(request.getParameter("treeId"));	
 				break;
+			case "confirmSingleDebt":
+				clickSingleDebt(request.getParameter("commitId"), 
+						request.getParameter("fileId"), request.getParameter("debt"), 1);	
+				break;
+			case "removeSingleDebt":
+				clickSingleDebt(request.getParameter("commitId"), 
+						request.getParameter("fileId"), request.getParameter("debt"), 0);	
+				break;
 			default:
 				break;
 		}
@@ -57,17 +65,7 @@ public class TypeServlet extends HttpServlet {
 		out.println(typeList);
 	}
 
-	private void getAllByTree2(String treeId) {
-		List<String> typeList = new ArrayList<>();
-		Document tree = treeHandler.getOneById(treeId);
-		ArrayList<Document> commits = (ArrayList<Document>)tree.get("commits");
-		for (Document commit : commits) {
-			List<Document> types = typeHandler.getAllByCommit(commit.getString("ui"));
-			for (Document type : types) {
-				typeList.add(type.toJson());
-			}		
-		}	
-		out.println(typeList.toString());
+	private void clickSingleDebt(String commitId, String fileId, String debt, int status) {
+		typeHandler.updateDebtStatus(commitId, fileId, debt, status);
 	}
-
 }

@@ -61,12 +61,22 @@ homeApp.controller('TDAnalyzerCtrl', function($scope, $http, sidebarService){
 		}
 	}
 
-	// thisCtrl.confirmSingleDebt(commitId, fileId, debt) {
-	// 	$http.get('TypeServlet', {params:{"action": "confirmDebt",
-	// 	 "commitId": commitId, "fileId": fileId, "debt": debt}})
-	// 	.success(function() {
-	// 		console.log('Confirm Debt: ', debt); 			
-	// 	});
-	// }
+	$scope.confirmSingleDebt = function(commitId, fileId, debt) {
+		console.log('Debt Confirmed: ', debt); 		
+		$http.get('TypeServlet', {params:{"action": "confirmSingleDebt",
+		 "commitId": commitId, "fileId": fileId, "debt": debt}})
+		.success(function() {
+			console.log('Debt Confirmed: ', debt); 			
+		});
+	}
+
+		$scope.removeSingleDebt = function(commitId, fileId, debt) {
+		console.log('Debt Confirmed: ', debt); 		
+		$http.get('TypeServlet', {params:{"action": "removeSingleDebt",
+		 "commitId": commitId, "fileId": fileId, "debt": debt}})
+		.success(function() {
+			console.log('Debt Confirmed: ', debt); 			
+		});
+	}
 
 });
