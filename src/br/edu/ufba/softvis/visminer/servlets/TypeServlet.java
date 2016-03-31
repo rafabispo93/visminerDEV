@@ -53,6 +53,12 @@ public class TypeServlet extends HttpServlet {
 				clickSingleDebt(request.getParameter("commitId"), 
 						request.getParameter("fileId"), request.getParameter("debt"), 0);	
 				break;
+			case "confirmAllDebtsByTag":
+				confirmAllDebtsByTag(request.getParameter("treeId"));	
+				break;
+			case "confirmAllDebtsByRepository":
+				confirmAllDebtsByRepository(request.getParameter("repositoryId"));	
+				break;
 			default:
 				break;
 		}
@@ -67,5 +73,13 @@ public class TypeServlet extends HttpServlet {
 
 	private void clickSingleDebt(String commitId, String fileId, String debt, int status) {
 		typeHandler.updateDebtStatus(commitId, fileId, debt, status);
+	}
+	
+	private void confirmAllDebtsByTag(String treeId) {
+		typeHandler.confirmAllDebtsByTag(treeId);		
+	}
+	
+	private void confirmAllDebtsByRepository(String repositoryId) {
+		typeHandler.confirmAllDebtsByRepository(repositoryId);		
 	}
 }

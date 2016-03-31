@@ -40,12 +40,12 @@
          		</select>
           </div>
           <div class="col-md-3">
-            <button class="btn bg-olive btn-flat btn-confirm-analyze-debt">
+            <button class="btn bg-olive btn-flat btn-confirm-analyze-debt" ng-click="confirmAllDebtsByTag(selectedTag.uid)">
               Confirm All from Version
             </button>
           </div>
           <div class="col-md-3">
-            <button class="btn bg-olive btn-flat btn-confirm-analyze-debt">
+            <button class="btn bg-olive btn-flat btn-confirm-analyze-debt" ng-click="confirmAllDebtsByRepository(filtered.repository.uid)">
               Confirm All From Repository
             </button>
           </div>

@@ -25,8 +25,8 @@ homeApp.controller('TDAnalyzerCtrl', function($scope, $http, sidebarService){
 			for (var i = 0; i < data.length; i++) {
 				var hasDebt = thisCtrl.hasDebt(data[i].technicaldebts);
 				if (hasDebt) {
-					$scope.types.push(data[i]);
-				}				
+					$scope.types.push(data[i])
+;				}				
 			}
 		});
 	}
@@ -62,7 +62,6 @@ homeApp.controller('TDAnalyzerCtrl', function($scope, $http, sidebarService){
 	}
 
 	$scope.confirmSingleDebt = function(commitId, fileId, debt) {
-		console.log('Debt Confirmed: ', debt); 		
 		$http.get('TypeServlet', {params:{"action": "confirmSingleDebt",
 		 "commitId": commitId, "fileId": fileId, "debt": debt}})
 		.success(function() {
@@ -70,8 +69,7 @@ homeApp.controller('TDAnalyzerCtrl', function($scope, $http, sidebarService){
 		});
 	}
 
-		$scope.removeSingleDebt = function(commitId, fileId, debt) {
-		console.log('Debt Confirmed: ', debt); 		
+	$scope.removeSingleDebt = function(commitId, fileId, debt) {
 		$http.get('TypeServlet', {params:{"action": "removeSingleDebt",
 		 "commitId": commitId, "fileId": fileId, "debt": debt}})
 		.success(function() {
@@ -79,4 +77,18 @@ homeApp.controller('TDAnalyzerCtrl', function($scope, $http, sidebarService){
 		});
 	}
 
+	$scope.confirmAllDebtsByTag = function(treeId) {
+		alert(treeId);
+		$http.get('TypeServlet', {params:{"action": "confirmAllDebtsByTag", "treeId": treeId}})
+		.success(function() {
+			console.log('All debts from tree ', treeId,' have been Confirmed.'); 			
+		});
+	}
+
+	$scope.confirmAllDebtsByRepository = function(repositoryId) {
+		$http.get('TypeServlet', {params:{"action": "confirmAllDebtsByRepository", "repositoryId": repositoryId}})
+		.success(function() {
+			console.log('All debts from repository ', repositoryId,' have been Confirmed.'); 			
+		});
+	}
 });
