@@ -1,6 +1,7 @@
 homeApp = angular.module('homeApp');
 
-homeApp.controller('TDAnalyzerCtrl', function($scope, $http, $location, $route, sidebarService){
+homeApp.controller('TDAnalyzerCtrl', function($scope, $http, $location, $route,
+ sidebarService, alertModalService){
 	var thisCtrl = this;
 
 	$scope.currentPage = sidebarService.getCurrentPage();
@@ -95,8 +96,7 @@ homeApp.controller('TDAnalyzerCtrl', function($scope, $http, $location, $route, 
 	}
 
 	$scope.showSuccessModal = function() {
-		$scope.alertMessage = "All the Debts Were Confirmed Sucessfully!";
+		alertModalService.setMessage("All the Debts Were Confirmed Sucessfully!");
 		$('#alertModal').modal('show');
-		$('.modal-body').show().html($scope.alertMessage);
 	}
 });

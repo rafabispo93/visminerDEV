@@ -1,4 +1,5 @@
-homeApp.controller('HomeCtrl', function ($scope, $timeout, $http, $sessionStorage, $location, sidebarService) {
+homeApp.controller('HomeCtrl', function ($scope, $timeout, $http,
+ $sessionStorage, $location, $route, sidebarService, alertModalService) {
   // This controller instance
   var thisCtrl = this;
   // Data collections
@@ -9,7 +10,6 @@ homeApp.controller('HomeCtrl', function ($scope, $timeout, $http, $sessionStorag
   $scope.tags = [];
   $scope.committerEvolution = [];
   $scope.currentPage = "tdevolution";
-  $scope.alertMessage = "";
   $scope.durationProgress = 1000;
 
   $scope.filtered = {
@@ -105,15 +105,15 @@ homeApp.controller('HomeCtrl', function ($scope, $timeout, $http, $sessionStorag
 	thisCtrl.analyzeDebts = function() {
 		var analyze = true;
 		if ($scope.filtered.repository == null) {
-		  $scope.alertMessage = "Please Select a Repository!";
+		  alertModalService.setMessage("Please Select a Repository!");
 		  analyze = false;
 		} 
 		else if ($scope.filtered.tags.length == 0) {
-		  $scope.alertMessage = "Please Select What Versions Will be Analyzed!";
-          analyze = false;
+		  alertModalService.setMessage("Please Select What Versions Will be Analyzed!");
+      analyze = false;
 		} 
 		else if ($scope.filtered.debts.length == 0) {
-		  $scope.alertMessage = "Please Select What Technical Debts Will be Analyzed!";
+		  alertModalService.setMessage("Please Select What Technical Debts Will be Analyzed!");
 		  analyze = false;
 		}
 
@@ -122,7 +122,7 @@ homeApp.controller('HomeCtrl', function ($scope, $timeout, $http, $sessionStorag
 			$('#progressBarModal').on('hidden.bs.modal', function(e) {
 				thisCtrl.selectView('tdanalyzer');
   	   	$location.path("/tdanalyzer");
-        $("#sidebar-tdfilter").click(); 
+        $route.reload();
   		});
 		} else {
 			$('#alertModal').modal('show');
