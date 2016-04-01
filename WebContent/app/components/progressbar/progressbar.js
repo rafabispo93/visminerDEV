@@ -4,11 +4,14 @@ angular.module('homeApp').component('progressbar', {
      var modalVerticalCenterClass = ".modal";
      $scope.$on('setProgressbarDuration', function(event, duration){
         $scope.duration = duration;
-      });   
-  	 $(progressBarModal).on('show.bs.modal', function(e) {
+      });  
+     $(modalVerticalCenterClass).on('show.bs.modal', function(e) {
         centerModals($(this));
+     }); 
+  	 $(progressBarModal).on('show.bs.modal', function(e) {
   	    loadBar();
   	 });
+
      $(window).on('resize', centerModals);
    },
   templateUrl: 'app/components/progressbar/progressbar.html',

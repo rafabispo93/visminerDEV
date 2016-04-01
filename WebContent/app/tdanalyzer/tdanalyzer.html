@@ -36,7 +36,8 @@
       			<label>Version:</label>
       		</div>
           <div class="col-md-5">
-          	<select class="form-control" ng-options="tag.name for tag in filtered.tags" ng-model="selectedTag" style="width: 100%;">
+          	<select class="form-control" ng-model="selectedTag" ng-options="tag.name for tag in filtered.tags" ng-change="updateViewByTag()" style="width: 100%;">
+
          		</select>
           </div>
           <div class="col-md-3">

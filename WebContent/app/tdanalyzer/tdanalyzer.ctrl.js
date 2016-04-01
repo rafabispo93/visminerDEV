@@ -99,4 +99,9 @@ homeApp.controller('TDAnalyzerCtrl', function($scope, $http, $location, $route,
 		alertModalService.setMessage("All the Debts Were Confirmed Sucessfully!");
 		$('#alertModal').modal('show');
 	}
+
+	$scope.updateViewByTag = function() {
+		$scope.types = [];
+		thisCtrl.loadTypes($scope.selectedTag.uid);
+	}
 });
