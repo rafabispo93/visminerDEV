@@ -1,4 +1,4 @@
-angular.module('homeApp').component('progressbar', {
+angular.module('homeApp').component('progressBar', {
   controller: function($scope) {
   	 var progressBarModal = "#progressBarModal";
      var modalVerticalCenterClass = ".modal";

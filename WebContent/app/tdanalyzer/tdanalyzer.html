@@ -55,7 +55,7 @@
         <div class="form-group" style="padding-top: 40px;">
           <div class="box-analyzer-item col-lg-3 col-md-3 box box-default" style="border-radius: 0px;" ng-repeat="type in types">
             <div class="box-header with-border" style="border-bottom-color: rgba(38, 28, 92, 0.21);">
-              <a href="#" class="box-title" style="font-weight: bold;">{{type.type.name}}</a>   
+              <a href="#" class="box-title" ng-click="showTypeSmellsDetails(type)" style="font-weight: bold;">{{type.type.name}}</a>   
               <div class="box-tools pull-right">
               <button class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
           </div><!-- /.box-tools -->           

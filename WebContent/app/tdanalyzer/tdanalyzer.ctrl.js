@@ -1,7 +1,7 @@
 homeApp = angular.module('homeApp');
 
 homeApp.controller('TDAnalyzerCtrl', function($scope, $http, $location, $route,
- sidebarService, alertModalService){
+ sidebarService, alertModalService, typeSmellsDetailsService){
 	var thisCtrl = this;
 
 	$scope.currentPage = sidebarService.getCurrentPage();
@@ -103,5 +103,10 @@ homeApp.controller('TDAnalyzerCtrl', function($scope, $http, $location, $route,
 	$scope.updateViewByTag = function() {
 		$scope.types = [];
 		thisCtrl.loadTypes($scope.selectedTag.uid);
+	}
+
+	$scope.showTypeSmellsDetails = function(type) {
+		typeSmellsDetailsService.setType(type);
+		$('#typeSmellsDetails').modal('show');
 	}
 });

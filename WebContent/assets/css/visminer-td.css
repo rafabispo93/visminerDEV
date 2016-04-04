@@ -92,7 +92,32 @@
     font-weight: bold;
 }
 
-.span-analyze-debt{
+.span-analyze-debt {
     font-size: 12px;
     border-radius: 0px;
+}
+
+.info-box-metric {
+    height: 20px;
+    min-height: 20px;
+    width: 100px;
+    margin-bottom: 5px;
+    background-color: rgb(193, 193, 197);
+}
+
+.info-box-metric-icon {
+    width: 50px;
+    font-size: 20px;
+    line-height: 18px;
+    height: 20px;
+}
+
+.info-box-metric-number {
+    line-height: 18px;
+    text-align: center;
+}
+
+.box-metric-header {
+    color: #464648;
+    padding: 15px;
 }
