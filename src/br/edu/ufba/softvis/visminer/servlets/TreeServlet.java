@@ -36,6 +36,9 @@ public class TreeServlet extends HttpServlet {
 			case "getAllTags":
 				getAllTags(request.getParameter("repositoryId"));				
 				break;
+			case "getLatestTag":
+				getLatestTag(request.getParameter("repositoryId"));				
+				break;
 			default:
 				break;
 		}
@@ -59,5 +62,16 @@ public class TreeServlet extends HttpServlet {
 			.forEach(tag->tagsList.add(tag.toJson()));		
 		
 		out.println(tagsList.toString());		
+	}
+	
+	private void getLatestTag(String repositoryId) {
+		List<String> tagsList = new ArrayList<>();
+		treeHandler.getTagsByRepository(repositoryId)
+			.forEach(tag->tagsList.add(tag.toJson()));	
+		
+		if (!tagsList.isEmpty()) {
+			String lastestTag = tagsList.get(tagsList.size()-1);
+			out.println(lastestTag.toString());
+		}
 	}
 }

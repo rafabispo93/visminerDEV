@@ -6,7 +6,6 @@ homeApp.controller('HomeCtrl', function ($scope, $timeout, $http,
   $scope.commits = [];
   $scope.committers = [];
   $scope.repositories = [];
-  $scope.trees = [];
   $scope.tags = [];
   $scope.committerEvolution = [];
   $scope.currentPage = "tdevolution";
@@ -40,19 +39,8 @@ homeApp.controller('HomeCtrl', function ($scope, $timeout, $http,
 	thisCtrl.selectRepository = function(repository) {
 		$scope.filtered.repository = repository;
 		sidebarService.setRepository(repository);
-		thisCtrl.treesLoad(repository.uid);
-	}
-
-	// Load all trees
-	thisCtrl.treesLoad = function(repositoryUid) { 
-		console.log('treesLoad=', repositoryUid);
-		
-		$http.get('TreeServlet', {params:{"action": "getAllByRepository", "repositoryId": repositoryUid}})
-		.success(function(data) {
-			console.log('found', data.length, 'trees');
-			$scope.trees = data;
-			thisCtrl.tagsLoad(repositoryUid);
-		});
+		$route.reload();
+		thisCtrl.tagsLoad(repository.uid);
 	}
 
 	// Load all tags (versions)

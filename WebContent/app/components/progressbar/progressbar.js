@@ -1,11 +1,10 @@
 angular.module('homeApp').component('progressBar', {
   controller: function($scope) {
   	 var progressBarModal = "#progressBarModal";
-     var modalVerticalCenterClass = ".modal";
      $scope.$on('setProgressbarDuration', function(event, duration){
         $scope.duration = duration;
       });  
-     $(modalVerticalCenterClass).on('show.bs.modal', function(e) {
+     $('.modal').on('show.bs.modal', function(e) {
         centerModals($(this));
      }); 
   	 $(progressBarModal).on('show.bs.modal', function(e) {

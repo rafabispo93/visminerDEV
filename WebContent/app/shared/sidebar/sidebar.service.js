@@ -1,4 +1,4 @@
-homeApp.service('sidebarService', function(){
+homeApp.service('sidebarService', function($rootScope){
 
 	this.data = {currentPage : "tdevolution"};
 	this.data.repository = null;
@@ -16,6 +16,7 @@ homeApp.service('sidebarService', function(){
 	}
 
 	this.setRepository = function(repository) {
+		$rootScope.$broadcast("selectRepository", repository);
 		this.data.repository = repository;
 	}
 

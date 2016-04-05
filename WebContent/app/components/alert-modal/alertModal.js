@@ -1,6 +1,5 @@
 angular.module('homeApp').component('alertModal', {
   controller: function ($scope, alertModalService) {
-  		var modalVerticalCenterClass = ".modal";
 			$(".modal").on('show.bs.modal', function(e) {
 			  centerModals($(this));
 			});

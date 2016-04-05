@@ -1,3 +1,22 @@
 <div ng-show="filtered.repository != null && currentPage == 'tdevolution'">
-    <span>EVOLUTION</span>
+    
+    <!-- Content Header (Page header) -->
+  <section class="content-header">
+    <div style="font-size: 30px">
+    	<i class="fa fa-database" style="font-size: 24px"></i>
+      {{filtered.repository.name}}
+    </div>
+
+    <ol class="breadcrumb">
+      <li class="active"><i class="fa fa-line-chart"></i> TD Evolution</li>
+    </ol>
+  </section>
+
+  <!-- Main content -->
+  <section class="content">
+
+    <div ng-include="'app/tdevolution/small-boxes.html'"></div>  
+   
+  </section><!-- /.content -->
+
 </div>
