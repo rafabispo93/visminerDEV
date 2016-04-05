@@ -121,3 +121,12 @@
     color: #464648;
     padding: 15px;
 }
+
+.sb-inner-evolution {
+    height: 70px;
+}
+
+.sb-footer-evolution {
+    font-size: 18px;
+    color: white!important;
+}
