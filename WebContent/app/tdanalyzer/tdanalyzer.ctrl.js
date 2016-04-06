@@ -26,8 +26,8 @@ homeApp.controller('TDAnalyzerCtrl', function($scope, $http, $location, $route,
 			for (var i = 0; i < data.length; i++) {
 				var hasDebt = thisCtrl.hasDebt(data[i].technicaldebts);
 				if (hasDebt) {
-					$scope.types.push(data[i])
-;				}				
+					$scope.types.push(data[i]);				
+				}				
 			}
 		});
 	}

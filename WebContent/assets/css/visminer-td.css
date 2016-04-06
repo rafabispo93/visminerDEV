@@ -135,3 +135,11 @@
     font-size: 35px !important;
     padding-top: 10px !important;
 }
+
+.bg-code-debt {
+    background-color: #1B93A7!important;
+}
+
+.bg-design-debt {
+    background-color: #91A28B!important;
+}

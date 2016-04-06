@@ -5,6 +5,7 @@ homeApp.controller('TDEvolutionCtrl', function($scope, $http, $q, sidebarService
 
 	$scope.currentPage = sidebarService.getCurrentPage();
 	$scope.tags = [];
+	$scope.tagsNames = [];
 
 	$scope.latestTag = {
 		tag: null,
@@ -19,6 +20,76 @@ homeApp.controller('TDEvolutionCtrl', function($scope, $http, $q, sidebarService
 		totalSmells: 0,
 		totalDebts: 0
 	};
+
+	$scope.chartConfig = {
+      title: {
+          text: 'Technical Debt X Versions'
+      },
+      xAxis: {
+          categories: $scope.tagsNames
+      },
+      yAxis: {
+          min: 0,
+          allowDecimals: false,
+          title: {
+              text: 'Total of classes having Technical Debt'
+          },
+          stackLabels: {
+              enabled: true,
+              style: {
+                  fontWeight: 'bold',
+                  color: (Highcharts.theme && Highcharts.theme.textColor) || 'gray'
+              }
+          }
+      },
+      options: {
+        chart: {
+          type: 'column'
+      },
+        legend: {
+          align: 'right',
+          x: -70,
+          verticalAlign: 'top',
+          y: 20,
+          floating: true,
+          backgroundColor: (Highcharts.theme && Highcharts.theme.background2) || 'white',
+          borderColor: '#CCC',
+          borderWidth: 1,
+          shadow: false
+      },
+      tooltip: {
+          formatter: function() {
+              return '<b>'+ this.x +'</b><br/>'+
+                  this.series.name +': '+ this.y +'<br/>'+
+                  'Total: '+ this.point.stackTotal;
+          }
+      },
+      plotOptions: {
+          column: {
+              stacking: 'normal',
+              dataLabels: {
+                  enabled: true,
+                  color: (Highcharts.theme && Highcharts.theme.dataLabelsColor) || 'white',
+                  style: {
+                      textShadow: '0 0 3px black, 0 0 3px black'
+                  }
+              }
+          }
+      }},
+      series: [{
+      		color: '#1B93A7',
+          name: 'Code Debt',
+          data: [2, 2, 3]
+      },
+      {
+      		color: '#91A28B',
+          name: 'Design Debt',
+          data: [5, 3, 4]
+      }],
+	 		size: {
+			   height: 350
+			 }
+  };
 	
 	$scope.filtered.repository = sidebarService.getRepository();
 	$scope.filtered.tags = sidebarService.getTags();
@@ -42,12 +113,20 @@ homeApp.controller('TDEvolutionCtrl', function($scope, $http, $q, sidebarService
 		.success(function(data) {
 			console.log('found', data.length, 'tags');
 			$scope.tags = data;
+			thisCtrl.getTagsNames();
+
 			var latestRequest = thisCtrl.setLatestTag($scope.latestTag, $scope.tags.length-1);
 			$q.all([latestRequest]).then(function() { 
         thisCtrl.setEarliestTag($scope.earliestTag, 0);
     	});
 			thisCtrl.loadSlider();
 		});
+	}
+
+	thisCtrl.getTagsNames = function() {
+		for (var i = 0; i < $scope.tags.length; i++) {
+				$scope.tagsNames.push($scope.tags[i].name);
+			}	
 	}
 
 	thisCtrl.setLatestTag = function(tag, position) {
