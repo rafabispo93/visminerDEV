@@ -12,6 +12,10 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import org.bson.Document;
+import org.bson.json.JsonReader;
+import org.json.JSONArray;
+
+import com.mongodb.util.JSON;
 
 import br.edu.ufba.softvis.visminer.persistence.handler.CommitDocumentHandler;
 import br.edu.ufba.softvis.visminer.persistence.handler.TreeDocumentHandler;
@@ -59,6 +63,9 @@ public class TypeServlet extends HttpServlet {
 			case "confirmAllDebtsByRepository":
 				confirmAllDebtsByRepository(request.getParameter("repositoryId"));	
 				break;
+			case "getListOfTypesByListOfTags":
+				getListOfTypesByListOfTags(request.getParameter("ids"));
+				break;
 			default:
 				break;
 		}
@@ -69,6 +76,18 @@ public class TypeServlet extends HttpServlet {
 		typeHandler.getAllByTree(treeId)
 			.forEach(type->typeList.add(type.toJson()));
 		out.println(typeList);
+	}
+	
+	private void getListOfTypesByListOfTags(String tagsId) {
+		JSONArray array = new JSONArray(tagsId);
+		List<ArrayList<String>> typeLists = new ArrayList<>();
+		for (Object id : array) {
+			ArrayList<String> typeList = new ArrayList<String>();
+			typeHandler.getAllByTree(id.toString())
+				.forEach(type->typeList.add(type.toJson()));
+			typeLists.add(typeList);
+		}	
+		out.println(typeLists);
 	}
 
 	private void clickSingleDebt(String commitId, String fileId, String debt, int status) {

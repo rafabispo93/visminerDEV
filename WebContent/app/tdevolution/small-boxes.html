@@ -5,9 +5,9 @@
     <div class="small-box bg-aqua">
 		  <div class="inner sb-inner-evolution">
 		    <h3 class="sb-number">
-        {{earliestTag.tag.commits.length}}
+        {{sliderTags[0].tag.commits.length}}
         <i>➞</i>
-        {{latestTag.tag.commits.length}}</h3>
+        {{sliderTags[sliderTags.length-1].tag.commits.length}}</h3>
 		  </div>
 		  <div class="icon" style="font-size:70px">
 		    <i class="ion ion-pull-request"></i>
@@ -21,7 +21,7 @@
     <div class="small-box bg-green">
       <div class="inner sb-inner-evolution">
         <h3 class="sb-number">
-        {{earliestTag.types.length}} ➞ {{latestTag.types.length}}</h3>
+          {{sliderTags[0].types.length}} ➞ {{sliderTags[sliderTags.length-1].types.length}}</h3>
       </div>
       <div class="icon" style="font-size:70px">
         <i class="ion ion-document"></i>
@@ -34,7 +34,7 @@
     <div class="small-box bg-yellow">
       <div class="inner sb-inner-evolution">
         <h3 class="sb-number">
-        {{earliestTag.totalSmells}} ➞ {{latestTag.totalSmells}}</h3>
+        {{sliderTags[0].totalSmells}} ➞ {{sliderTags[sliderTags.length-1].totalSmells}}</h3>
       </div>
       <div class="icon" style="font-size:70px">
         <i class="ion ion-bug"></i>
@@ -47,7 +47,7 @@
     <div class="small-box bg-red">
       <div class="inner sb-inner-evolution">
         <h3 class="sb-number">
-        {{earliestTag.totalDebts}} ➞ {{latestTag.totalDebts}}</h3>
+        {{sliderTags[0].totalDebts}} ➞ {{sliderTags[sliderTags.length-1].totalDebts}}</h3>
       </div>
       <div class="icon" style="font-size:70px">
         <i class="ion ion-social-usd"></i>
