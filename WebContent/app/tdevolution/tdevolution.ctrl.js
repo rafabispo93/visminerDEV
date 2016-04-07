@@ -64,7 +64,7 @@ homeApp.controller('TDEvolutionCtrl', function($scope, $http, $q, sidebarService
 			$scope.chartCodeDebtSeries = [];
 			$scope.chartDesignDebtSeries = []; 
 			var j = 0;
-			
+
 			for (var i = $scope.slider.minValue-1; i < $scope.slider.maxValue; i++) {
 					$scope.tagsNames.push($scope.tags[i].name);
 
@@ -100,16 +100,6 @@ homeApp.controller('TDEvolutionCtrl', function($scope, $http, $q, sidebarService
 		.success(function(data) {
 			for (var j = 0; j < data.length; j++) 
 				list.push(data[j]);
-		});
-	}
-
-	thisCtrl.getAllTypesByTag = function(tag, treeId) {
-		return $http.get('TypeServlet', {params:{"action": "getAllByTree", "treeId": treeId}})
-		.success(function(data) {
-			console.log('Types from Latest tag found:', data); 																													
-			tag.types = data;
-			thisCtrl.getTotalOfCodeSmells(tag, tag.types);
-			thisCtrl.getTotalOfDebts(tag, tag.types);
 		});
 	}
 
@@ -157,6 +147,19 @@ homeApp.controller('TDEvolutionCtrl', function($scope, $http, $q, sidebarService
 	}
 
 	thisCtrl.loadColumnChart = function() {
+		var seriesArray = [];
+		if ($.inArray('CODE', $scope.filtered.debts) > -1) {
+			seriesArray.push({
+    		color: '#1B93A7',
+        name: 'Code Debt',
+        data: $scope.chartCodeDebtSeries });
+		}
+		if ($.inArray('DESIGN', $scope.filtered.debts) > -1) {
+			seriesArray.push({
+    		color: '#91A28B',
+        name: 'Design Debt',
+        data: $scope.chartDesignDebtSeries });
+		}
 		$scope.chartConfig = {
       title: {
           text: 'Technical Debt X Versions'
@@ -212,16 +215,7 @@ homeApp.controller('TDEvolutionCtrl', function($scope, $http, $q, sidebarService
               }
           }
       }},
-      series: [{
-      		color: '#1B93A7',
-          name: 'Code Debt',
-          data: $scope.chartCodeDebtSeries
-      },
-      {
-      		color: '#91A28B',
-          name: 'Design Debt',
-          data: $scope.chartDesignDebtSeries
-      }],
+      series: seriesArray,
 	 		size: {
 			   height: 350
 			 }

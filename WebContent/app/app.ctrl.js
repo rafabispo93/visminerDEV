@@ -88,6 +88,7 @@ homeApp.controller('HomeCtrl', function ($scope, $timeout, $http,
   	} else {
       $scope.filtered.debts.push(debt);
   	}
+  	$route.reload();
   }
 
 	thisCtrl.analyzeDebts = function() {
