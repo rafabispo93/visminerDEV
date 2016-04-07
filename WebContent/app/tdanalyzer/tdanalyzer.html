@@ -62,12 +62,12 @@
             </div><!-- /.box-header -->
             <div class="box-body">
               {{loadCurrentDebts(type)}}
-              <span class="label bg-red span-analyze-debt" ng-show="currentCodeDebt.value" style="margin-right: 5px;">
+              <span class="label bg-code-debt span-analyze-debt" ng-show="currentCodeDebt.value" style="margin-right: 5px;">
                 CODE 
                 <button class="btn btn-span-tool" ng-click="removeSingleDebt(type.commit, type.file, 'Code Debt')" onclick="this.parentElement.style.display='none';"><i class="fa fa-times"></i></button>
                 <button class="btn btn-span-tool" ng-hide="currentCodeDebt.status" onclick="this.style.display='none'; this.previousElementSibling.style.display='none'" ng-click="confirmSingleDebt(type.commit, type.file, 'Code Debt')"><i class="fa fa-plus"></i></button>
               </span>
-              <span class="label bg-yellow span-analyze-debt" ng-show="currentDesignDebt.value">
+              <span class="label bg-design-debt span-analyze-debt" ng-show="currentDesignDebt.value">
                 DESIGN
                 <button class="btn btn-span-tool" ng-click="removeSingleDebt(type.commit, type.file, 'Design Debt')" onclick="this.parentElement.style.display='none';"><i class="fa fa-times"></i></button>
                 <button class="btn btn-span-tool" ng-hide="currentDesignDebt.status" onclick="this.style.display='none'; this.previousElementSibling.style.display='none'" ng-click="confirmSingleDebt(type.commit, type.file, 'Design Debt')"><i class="fa fa-plus"></i></button>
