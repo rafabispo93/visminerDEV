@@ -52,29 +52,31 @@
           </div>
         </div><!-- /.form-group -->
 
-        <div class="form-group" style="padding-top: 40px;">
-          <div class="box-analyzer-item col-lg-3 col-md-3 box box-default" style="border-radius: 0px;" ng-repeat="type in types">
-            <div class="box-header with-border" style="border-bottom-color: rgba(38, 28, 92, 0.21);">
-              <a href="#" class="box-title" ng-click="showTypeSmellsDetails(type)" style="font-weight: bold;">{{type.type.name}}</a>   
-              <div class="box-tools pull-right">
-              <button class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
-          </div><!-- /.box-tools -->           
-            </div><!-- /.box-header -->
-            <div class="box-body">
-              {{loadCurrentDebts(type)}}
-              <span class="label bg-code-debt span-analyze-debt" ng-show="currentCodeDebt.value" style="margin-right: 5px;">
-                CODE 
-                <button class="btn btn-span-tool" ng-click="removeSingleDebt(type.commit, type.file, 'Code Debt')" onclick="this.parentElement.style.display='none';"><i class="fa fa-times"></i></button>
-                <button class="btn btn-span-tool" ng-hide="currentCodeDebt.status" onclick="this.style.display='none'; this.previousElementSibling.style.display='none'" ng-click="confirmSingleDebt(type.commit, type.file, 'Code Debt')"><i class="fa fa-plus"></i></button>
-              </span>
-              <span class="label bg-design-debt span-analyze-debt" ng-show="currentDesignDebt.value">
-                DESIGN
-                <button class="btn btn-span-tool" ng-click="removeSingleDebt(type.commit, type.file, 'Design Debt')" onclick="this.parentElement.style.display='none';"><i class="fa fa-times"></i></button>
-                <button class="btn btn-span-tool" ng-hide="currentDesignDebt.status" onclick="this.style.display='none'; this.previousElementSibling.style.display='none'" ng-click="confirmSingleDebt(type.commit, type.file, 'Design Debt')"><i class="fa fa-plus"></i></button>
-              </span>
-            </div><!-- /.box-body -->
-          </div><!-- /.box -->
-        </div>
+        <form class="form-inline" style="padding-top: 40px;">
+          <div class="form-group col-lg-4 col-xs-6 col-md-4" style="padding-top: 10px; padding-bottom: 10px;" ng-repeat="type in types">
+              <div class="box-analyzer-item">
+                <div class="box-header with-border" style="border-bottom-color: rgba(38, 28, 92, 0.21);">
+                  <a href="#" class="box-title" ng-click="showTypeSmellsDetails(type)" style="font-weight: bold;">{{type.type.name}}</a>   
+                  <div class="box-tools pull-right">
+                  <button class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+              </div><!-- /.box-tools -->           
+                </div><!-- /.box-header -->
+                <div class="box-body">
+                  {{loadCurrentDebts(type)}}
+                  <span class="label bg-code-debt span-analyze-debt" ng-show="currentCodeDebt.value" style="margin-right: 5px;">
+                    CODE 
+                    <button class="btn btn-span-tool" ng-click="removeSingleDebt(type.commit, type.file, 'Code Debt')" onclick="this.parentElement.style.display='none';"><i class="fa fa-times"></i></button>
+                    <button class="btn btn-span-tool" ng-hide="currentCodeDebt.status" onclick="this.style.display='none'; this.previousElementSibling.style.display='none'" ng-click="confirmSingleDebt(type.commit, type.file, 'Code Debt')"><i class="fa fa-plus"></i></button>
+                  </span>
+                  <span class="label bg-design-debt span-analyze-debt" ng-show="currentDesignDebt.value">
+                    DESIGN
+                    <button class="btn btn-span-tool" ng-click="removeSingleDebt(type.commit, type.file, 'Design Debt')" onclick="this.parentElement.style.display='none';"><i class="fa fa-times"></i></button>
+                    <button class="btn btn-span-tool" ng-hide="currentDesignDebt.status" onclick="this.style.display='none'; this.previousElementSibling.style.display='none'" ng-click="confirmSingleDebt(type.commit, type.file, 'Design Debt')"><i class="fa fa-plus"></i></button>
+                  </span>
+                </div><!-- /.box-body -->
+              </div><!-- /.box -->
+          </div>
+        </form>
 
       </div><!-- /.box-body -->
     </div><!-- /.box -->
