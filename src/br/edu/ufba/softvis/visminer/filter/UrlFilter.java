@@ -34,8 +34,8 @@ public class UrlFilter implements Filter {
 		else if (url.endsWith("tdanalyzer")) {
 			resp.sendRedirect(url.replace("tdanalyzer", "#tdanalyzer"));
 		}
-		else if (url.endsWith("committers")) {
-			resp.sendRedirect(url.replace("committers", "#committers"));
+		else if (url.endsWith("tdcommitters")) {
+			resp.sendRedirect(url.replace("tdcommitters", "#tdcommitters"));
 		} else {
 		chain.doFilter(request, response);	
 		}

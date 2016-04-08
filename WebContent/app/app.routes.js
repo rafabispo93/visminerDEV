@@ -13,9 +13,9 @@ homeApp.config(['$routeProvider', '$locationProvider',
 		    templateUrl: 'app/tdanalyzer/tdanalyzer.html',
 		    controller: 'TDAnalyzerCtrl'
 		      }).
-			when('/committers', {
-		    templateUrl: 'app/committers/committers.html',
-		    controller: 'CommittersCtrl'
+			when('/tdcommitters', {
+		    templateUrl: 'app/tdcommitters/tdcommitters.html',
+		    controller: 'TDCommittersCtrl'
 		      }).
 			otherwise({ redirectTo: '/tdevolution' });
 			$locationProvider.html5Mode(true);
