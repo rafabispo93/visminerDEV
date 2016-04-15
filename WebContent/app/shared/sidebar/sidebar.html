@@ -54,7 +54,7 @@
           <small class="label pull-right bg-green" ng-show="tags.length==0">{{tags.length}}</small>
         </a>
         <ul class="treeview-menu">
-          <li ng-repeat="tag in tags | orderBy:'name'">
+          <li ng-repeat="tag in tags">
             <label class="control-sidebar-subheading filter-version-sub-item">
               <input type="checkbox" checklist-model="filtered.tags" checklist-value="tag">{{tag.name}}
             </label>

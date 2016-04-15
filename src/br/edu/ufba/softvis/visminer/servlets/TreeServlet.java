@@ -11,6 +11,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.bson.Document;
+
 import br.edu.ufba.softvis.visminer.persistence.handler.TreeDocumentHandler;
 
 @WebServlet("/TreeServlet")
@@ -36,6 +38,9 @@ public class TreeServlet extends HttpServlet {
 			case "getAllTags":
 				getAllTags(request.getParameter("repositoryId"));				
 				break;
+			case "getAllTagsAndMaster":
+				getAllTagsAndMaster(request.getParameter("repositoryId"));				
+				break;	
 			case "getLatestTag":
 				getLatestTag(request.getParameter("repositoryId"));				
 				break;
@@ -62,6 +67,37 @@ public class TreeServlet extends HttpServlet {
 			.forEach(tag->tagsList.add(tag.toJson()));		
 		
 		out.println(tagsList.toString());		
+	}
+	
+	private void getAllTagsAndMaster(String repositoryId) {
+		List<String> tagsList = new ArrayList<>();
+		treeHandler.getTagsByRepository(repositoryId)
+			.forEach(tag->tagsList.add(tag.toJson()));		
+		
+		String master = getMaster(repositoryId);
+		if (master != null) {
+			tagsList.add(master);
+		}
+		
+		out.println(tagsList.toString());		
+	}
+	
+	private String getMaster(String repositoryId) {
+		List<Document> branches = treeHandler.getBranchesByRepository(repositoryId);
+		for (Document branch : branches) {
+			if (branch.getString("name").equals("master")) {
+				return branch.toJson();
+			}
+		}
+		return null;
+	}
+	
+	private void getAllBranches(String repositoryId) {
+		List<String> branchesList = new ArrayList<>();
+		treeHandler.getBranchesByRepository(repositoryId)
+			.forEach(branch->branchesList.add(branch.toJson()));		
+		
+		out.println(branchesList.toString());		
 	}
 	
 	private void getLatestTag(String repositoryId) {

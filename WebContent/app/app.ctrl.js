@@ -47,7 +47,7 @@ homeApp.controller('HomeCtrl', function ($scope, $timeout, $http,
 	thisCtrl.tagsLoad = function(repositoryUid) { 
 		console.log('tagsLoad=', repositoryUid);
 
-		$http.get('TreeServlet', {params:{"action": "getAllTags", "repositoryId": repositoryUid}})
+		$http.get('TreeServlet', {params:{"action": "getAllTagsAndMaster", "repositoryId": repositoryUid}})
 		.success(function(data) {
 			console.log('found', data.length, 'tags');
 			$scope.tags = data;
