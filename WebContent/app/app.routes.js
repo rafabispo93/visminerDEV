@@ -13,6 +13,10 @@ homeApp.config(['$routeProvider', '$locationProvider',
 		    templateUrl: 'app/tdanalyzer/tdanalyzer.html',
 		    controller: 'TDAnalyzerCtrl'
 		      }).
+			when('/tdmanagement', {
+		    templateUrl: 'app/tdmanagement/tdmanagement.html',
+		    controller: 'TDManagementCtrl'
+		      }).
 			when('/tdcommitters', {
 		    templateUrl: 'app/tdcommitters/tdcommitters.html',
 		    controller: 'TDCommittersCtrl'

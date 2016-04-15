@@ -27,12 +27,15 @@ public class UrlFilter implements Filter {
 		HttpServletRequest req = (HttpServletRequest) request;
 		HttpServletResponse resp = (HttpServletResponse) response;		
 		String url = req.getRequestURI();
-		String test = req.getServletContext().getContextPath();
+		
 		if (url.endsWith("tdevolution")) {
 			resp.sendRedirect(url.replace("tdevolution", "#tdevolution"));
 		}
 		else if (url.endsWith("tdanalyzer")) {
 			resp.sendRedirect(url.replace("tdanalyzer", "#tdanalyzer"));
+		}
+		else if (url.endsWith("tdmanagement")) {
+			resp.sendRedirect(url.replace("tdmanagement", "#tdmanagement"));
 		}
 		else if (url.endsWith("tdcommitters")) {
 			resp.sendRedirect(url.replace("tdcommitters", "#tdcommitters"));

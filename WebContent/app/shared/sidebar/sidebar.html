@@ -12,14 +12,19 @@
           <i class="fa fa-angle-left pull-right"></i>
         </a>
         <ul class="treeview-menu">
+          <li>
+            <a href="#" ng-click="ctrl.analyzeDebts()">
+              <i class="fa fa-circle-o"></i> TD Analyzer
+            </a>
+          </li>
           <li class="active">
             <a href="tdevolution" ng-click="ctrl.selectView('tdevolution')">
               <i class="fa fa-circle-o"></i> TD Evolution
             </a>
           </li>
-           <li>
-            <a href="#" ng-click="ctrl.analyzeDebts()">
-              <i class="fa fa-circle-o"></i> TD Analyzer
+          <li class="active">
+            <a href="tdmanagement" ng-click="ctrl.selectView('tdmanagement')">
+              <i class="fa fa-circle-o"></i> TD Management
             </a>
           </li>
           <li>
