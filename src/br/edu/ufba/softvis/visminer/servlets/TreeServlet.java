@@ -44,6 +44,9 @@ public class TreeServlet extends HttpServlet {
 			case "getLatestTag":
 				getLatestTag(request.getParameter("repositoryId"));				
 				break;
+			case "getMaster":
+				getMasterBranch(request.getParameter("repositoryId"));				
+				break;
 			default:
 				break;
 		}
@@ -90,6 +93,10 @@ public class TreeServlet extends HttpServlet {
 			}
 		}
 		return null;
+	}
+
+	private void getMasterBranch(String repositoryId) {
+		out.println(getMaster(repositoryId));
 	}
 	
 	private void getAllBranches(String repositoryId) {

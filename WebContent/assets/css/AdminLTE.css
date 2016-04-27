@@ -2600,6 +2600,7 @@ a:focus {
   box-shadow: none;
   border-radius: 0;
   border-bottom: 1px solid #f4f4f4;
+  font-size: 16px;
 }
 .product-list-in-box > .item:last-of-type {
   border-bottom-width: 0;
