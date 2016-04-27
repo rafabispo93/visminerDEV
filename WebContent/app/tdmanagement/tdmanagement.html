@@ -26,7 +26,7 @@
 
         <div class="box-body" style="padding: 0 10px 0 10px;">
           <div class="board-management">
-            <ul class="products-list product-list-in-box">
+            <ul id="todo_sortable" class="products-list product-list-in-box">
               <li class="item" ng-repeat="type in todoCode">
                 <div>
                   <a href="" class="product-title">{{type.type.name}}</a>
@@ -77,7 +77,7 @@
 
         <div class="box-body" style="padding: 0 10px 0 10px;">
           <div class="board-management">
-            <ul class="products-list product-list-in-box">
+            <ul id="doing_sortable" class="products-list product-list-in-box">
               <li class="item" ng-repeat="type in doingCode">
                 <div>
                   <a href="" class="product-title">{{type.type.name}}</a>
@@ -166,3 +166,14 @@
   </section><!-- /.content -->
 
 </div>
+
+<script type="text/javascript">
+  $(document).ready(function() {
+        $( "#todo_sortable" ).sortable({
+            revert: true
+        });
+        $( "#doing_sortable" ).sortable({
+            revert: true
+        });
+    });  
+</script>

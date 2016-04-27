@@ -149,6 +149,7 @@
   transform: translate(0, 0);
   max-height: 400px;
   overflow: auto;
+  overflow-x: hidden;
 }
 
 .bg-code-debt {
