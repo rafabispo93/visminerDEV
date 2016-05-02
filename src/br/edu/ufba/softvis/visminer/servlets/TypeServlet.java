@@ -11,11 +11,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import org.bson.Document;
-import org.bson.json.JsonReader;
 import org.json.JSONArray;
-
-import com.mongodb.util.JSON;
 
 import br.edu.ufba.softvis.visminer.persistence.handler.CommitDocumentHandler;
 import br.edu.ufba.softvis.visminer.persistence.handler.TreeDocumentHandler;
@@ -50,11 +46,11 @@ public class TypeServlet extends HttpServlet {
 				getAllByTree(request.getParameter("treeId"));	
 				break;
 			case "confirmSingleDebt":
-				clickSingleDebt(request.getParameter("commitId"), 
+				updateDebtStatus(request.getParameter("commitId"), 
 						request.getParameter("fileId"), request.getParameter("debt"), 1);	
 				break;
 			case "removeSingleDebt":
-				clickSingleDebt(request.getParameter("commitId"), 
+				updateDebtStatus(request.getParameter("commitId"), 
 						request.getParameter("fileId"), request.getParameter("debt"), 0);	
 				break;
 			case "confirmAllDebtsByTag":
@@ -66,6 +62,15 @@ public class TypeServlet extends HttpServlet {
 			case "getListOfTypesByListOfTags":
 				getListOfTypesByListOfTags(request.getParameter("ids"));
 				break;
+			case "updateDebtStatus":
+				String status = request.getParameter("status");
+				if (status != null) {
+					updateDebtStatus(request.getParameter("commitId")
+							, request.getParameter("fileId")
+							, request.getParameter("debt")
+							, Integer.parseInt(status));
+				}	
+				break;	
 			default:
 				break;
 		}
@@ -90,7 +95,7 @@ public class TypeServlet extends HttpServlet {
 		out.println(typeLists);
 	}
 
-	private void clickSingleDebt(String commitId, String fileId, String debt, int status) {
+	private void updateDebtStatus(String commitId, String fileId, String debt, int status) {
 		typeHandler.updateDebtStatus(commitId, fileId, debt, status);
 	}
 	
@@ -101,4 +106,5 @@ public class TypeServlet extends HttpServlet {
 	private void confirmAllDebtsByRepository(String repositoryId) {
 		typeHandler.confirmAllDebtsByRepository(repositoryId);		
 	}
+
 }

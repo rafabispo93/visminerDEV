@@ -1,6 +1,6 @@
 homeApp = angular.module('homeApp');
 
-homeApp.controller('TDManagementCtrl', function($scope, $http, sidebarService){
+homeApp.controller('TDManagementCtrl', function($scope, $http, $route, sidebarService){
 	var thisCtrl = this;
 	var DebtStatus = Object.freeze({UNEVALUATED: 0, TODO: 1, DOING: 2, DONE: 3});
 
@@ -84,6 +84,14 @@ homeApp.controller('TDManagementCtrl', function($scope, $http, sidebarService){
 			}			
 		}
 		return hasDebt;
+	}
+
+	$scope.updateDebtStatus = function(type, debt, status) {
+		$http.get('TypeServlet', {params:{"action": "updateDebtStatus",
+		 "commitId": type.commit, "fileId": type.file, "debt": debt, "status": status}})
+		.success(function() {
+			$route.reload();					
+		});
 	}
 
 });
