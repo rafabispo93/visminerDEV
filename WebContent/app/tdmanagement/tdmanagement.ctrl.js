@@ -94,4 +94,8 @@ homeApp.controller('TDManagementCtrl', function($scope, $http, $route, sidebarSe
 		});
 	}
 
+	$scope.convertDate = function(lastUpdate) {
+		return moment(new Date(lastUpdate.$date)).format('DD/MM/YYYY');
+	}
+
 });
