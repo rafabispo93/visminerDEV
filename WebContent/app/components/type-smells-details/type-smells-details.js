@@ -1,10 +1,11 @@
 angular.module('homeApp').component('typeSmells', {
   controller: function ($scope) {
-			$scope.hasAntiPattern = function(type, antipattern) {
+			$scope.hasCodeSmell = function(type, codeSmell) {
 				if (type) {
-					var antiPatternList = type.antipatterns;
-					for (var i = 0; i < antiPatternList.length; i++) {
-						if (antiPatternList[i].name == antipattern && antiPatternList[i].value) {
+					var codeSmellList = type.abstract_types[0].codesmells;
+					for (var i = 0; i < codeSmellList.length; i++) {
+						if (codeSmellList[i].name == codeSmell && codeSmellList[i].value) {
+							$scope.metrics = type.abstract_types[0].metrics;
 							return true;
 						}
 					}

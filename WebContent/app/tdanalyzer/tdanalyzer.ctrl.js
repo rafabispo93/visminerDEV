@@ -24,7 +24,7 @@ homeApp.controller('TDAnalyzerCtrl', function($scope, $http, $location, $route,
 		.success(function(data) {
 			console.log('found', data.length, ' types'); 
 			for (var i = 0; i < data.length; i++) {
-				var hasDebt = thisCtrl.hasDebt(data[i].technicaldebts);
+				var hasDebt = thisCtrl.hasDebt(data[i].abstract_types[0].technicaldebts);
 				if (hasDebt) {
 					$scope.types.push(data[i]);				
 				}				
@@ -47,10 +47,10 @@ homeApp.controller('TDAnalyzerCtrl', function($scope, $http, $location, $route,
 		return hasDebt;
 	}
 
-	thisCtrl.loadTypes($scope.selectedTag.uid);
+	thisCtrl.loadTypes($scope.selectedTag._id);
 
 	$scope.loadCurrentDebts = function(type) {
-		var tdList = type.technicaldebts;
+		var tdList = type.abstract_types[0].technicaldebts;
 		for (var i = 0; i < tdList.length; i++) {
 			if (tdList[i].name == 'Code Debt') {
 				$scope.currentCodeDebt = tdList[i];
@@ -102,7 +102,7 @@ homeApp.controller('TDAnalyzerCtrl', function($scope, $http, $location, $route,
 
 	$scope.updateViewByTag = function() {
 		$scope.types = [];
-		thisCtrl.loadTypes($scope.selectedTag.uid);
+		thisCtrl.loadTypes($scope.selectedTag._id);
 	}
 
 	$scope.showTypeSmellsDetails = function(type) {

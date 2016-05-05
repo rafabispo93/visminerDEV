@@ -4,11 +4,11 @@
 	    <div class="modal-header modal-header-info">
 	      <button type="button" class="close" data-dismiss="modal">&times;</button>
 	      <h3 class="modal-title">
-	      	<i class="fa fa-file-code-o"></i> {{type.type.name}}
+	      	<i class="fa fa-file-code-o"></i> {{type.abstract_types[0].name}}
 	      </h3>
 	    </div>
 	    <div class="modal-body" style="font-size: 20px; padding-top: 0px">
-	      <div ng-show="hasAntiPattern(type, 'God Class')">
+	      <div ng-show="hasCodeSmell(type, 'God Class')">
 		    	<div class="row box-metric-header">
 						God Class Detected
 		    	</div>
@@ -18,7 +18,7 @@
 				        <span class="info-box-icon info-box-metric-icon bg-aqua">
 				        	ATFD
 				        </span>	
-			          <span class="info-box-number info-box-metric-number">{{type.ATFD.accumulated}}</span>
+			          <span class="info-box-number info-box-metric-number">{{metrics.ATFD.accumulated}}</span>
 				      </div><!-- /.info-box -->
 				    </div><!-- /.col -->
 				    <div class="col-md-3 col-sm-6 col-xs-12">
@@ -48,7 +48,7 @@
 				  </div><!-- /.row -->
 				</div>  
 
-				<div ng-show="hasAntiPattern(type, 'Long Method')">
+				<div ng-show="hasCodeSmell(type, 'Long Method')">
 					<div class="row box-metric-header">
 						Long Method Detected
 					</div>
