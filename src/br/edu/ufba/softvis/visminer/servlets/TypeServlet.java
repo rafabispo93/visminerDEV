@@ -12,25 +12,14 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import org.json.JSONArray;
+import org.repositoryminer.persistence.handler.CommitAnalysisDocumentHandler;
 
-import br.edu.ufba.softvis.visminer.persistence.handler.CommitDocumentHandler;
-import br.edu.ufba.softvis.visminer.persistence.handler.TreeDocumentHandler;
-import br.edu.ufba.softvis.visminer.persistence.handler.TypeDocumentHandler;
-
-/**
- * Servlet implementation class TypeServlet
- */
 @WebServlet("/TypeServlet")
 public class TypeServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	private TypeDocumentHandler typeHandler = new TypeDocumentHandler();
-	private CommitDocumentHandler commitHandler = new CommitDocumentHandler();
-	private TreeDocumentHandler treeHandler = new TreeDocumentHandler();
+	private CommitAnalysisDocumentHandler typeHandler = new CommitAnalysisDocumentHandler();
 	private PrintWriter out;
        
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
     public TypeServlet() {
         super();
         // TODO Auto-generated constructor stub
@@ -96,7 +85,13 @@ public class TypeServlet extends HttpServlet {
 	}
 
 	private void updateDebtStatus(String commitId, String fileId, String debt, int status) {
-		typeHandler.updateDebtStatus(commitId, fileId, debt, status);
+		if (debt.equals("Code Debt")) {
+			typeHandler.updateCodeDebtStatus(fileId, commitId, status);
+		}
+		else if (debt.equals("Design Debt")){
+			typeHandler.updateDesignDebtStatus(fileId, commitId, status);
+		}
+		
 	}
 	
 	private void confirmAllDebtsByTag(String treeId) {

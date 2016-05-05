@@ -13,12 +13,12 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.bson.Document;
 
-import br.edu.ufba.softvis.visminer.persistence.handler.TreeDocumentHandler;
+import org.repositoryminer.persistence.handler.ReferenceDocumentHandler;
 
 @WebServlet("/TreeServlet")
 public class TreeServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	private TreeDocumentHandler treeHandler = new TreeDocumentHandler();
+	private ReferenceDocumentHandler treeHandler = new ReferenceDocumentHandler();
 	private PrintWriter out;
        
     public TreeServlet() {
@@ -97,14 +97,6 @@ public class TreeServlet extends HttpServlet {
 
 	private void getMasterBranch(String repositoryId) {
 		out.println(getMaster(repositoryId));
-	}
-	
-	private void getAllBranches(String repositoryId) {
-		List<String> branchesList = new ArrayList<>();
-		treeHandler.getBranchesByRepository(repositoryId)
-			.forEach(branch->branchesList.add(branch.toJson()));		
-		
-		out.println(branchesList.toString());		
 	}
 	
 	private void getLatestTag(String repositoryId) {

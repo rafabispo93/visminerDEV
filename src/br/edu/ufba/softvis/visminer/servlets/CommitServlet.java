@@ -11,7 +11,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import br.edu.ufba.softvis.visminer.persistence.handler.CommitDocumentHandler;
+import org.repositoryminer.persistence.handler.CommitDocumentHandler;
+
 
 @WebServlet("/CommitServlet")
 public class CommitServlet extends HttpServlet {

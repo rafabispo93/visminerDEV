@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import br.edu.ufba.softvis.visminer.persistence.handler.RepositoryDocumentHandler;
+import org.repositoryminer.persistence.handler.RepositoryDocumentHandler;
 
 @WebServlet("/RepositoryServlet")
 public class RepositoryServlet extends HttpServlet {
@@ -39,7 +39,7 @@ public class RepositoryServlet extends HttpServlet {
 	
 	private void getAllByRepository() {
 		List<String> repositoryList = new ArrayList<>();
-		repositoryHandler.getAll()
+		repositoryHandler.findAll(null)
 			.forEach(repository->repositoryList.add(repository.toJson()));
 		out.println(repositoryList.toString());		
 	}
