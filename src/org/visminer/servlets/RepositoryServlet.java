@@ -29,15 +29,15 @@ public class RepositoryServlet extends HttpServlet {
 		String action = request.getParameter("action");
 		
 		switch (action) {
-			case "getAllByRepository":
-				getAllByRepository();				
+			case "getAll":
+				getAll();				
 				break;
 			default:
 				break;
 		}
 	}
 	
-	private void getAllByRepository() {
+	private void getAll() {
 		List<String> repositoryList = new ArrayList<>();
 		repositoryHandler.findAll(null)
 			.forEach(repository->repositoryList.add(repository.toJson()));

@@ -18,15 +18,15 @@ homeApp.controller('TDEvolutionCtrl', function($scope, $http, $q, sidebarService
 
 	thisCtrl.loadEvolutionInformation = function(repository) {
 		if (repository) {
-			thisCtrl.tagsLoad(repository.uid);
+			thisCtrl.tagsLoad(repository._id);
 		}	
 	}
 
 	// Load all tags (versions)
-	thisCtrl.tagsLoad = function(repositoryUid) { 
-		console.log('tagsLoad=', repositoryUid);
+	thisCtrl.tagsLoad = function(repositoryId) { 
+		console.log('tagsLoad=', repositoryId);
 
-		 $http.get('TreeServlet', {params:{"action": "getAllTagsAndMaster", "repositoryId": repositoryUid}})
+		 $http.get('TreeServlet', {params:{"action": "getAllTagsAndMaster", "repositoryId": repositoryId}})
 		.success(function(data) {
 			console.log('found', data.length, 'tags');
 			$scope.tags = data;
@@ -78,8 +78,8 @@ homeApp.controller('TDEvolutionCtrl', function($scope, $http, $q, sidebarService
 					tag.types = listTypesByTags[j];
 					j++;
 
-					var totalCodeDebt = thisCtrl.getTotalOfCodeDebts(tag, tag.types);
-					var totalDesignDebt = thisCtrl.getTotalOfDesignDebts(tag, tag.types)
+					var totalCodeDebt = thisCtrl.getTotalOfCodeDebts(tag.types);
+					var totalDesignDebt = thisCtrl.getTotalOfDesignDebts(tag.types)
 					$scope.chartCodeDebtSeries.push(totalCodeDebt);
 					$scope.chartDesignDebtSeries.push(totalDesignDebt);
 
@@ -94,7 +94,7 @@ homeApp.controller('TDEvolutionCtrl', function($scope, $http, $q, sidebarService
 	thisCtrl.getListOfTypesByListOfTags = function(list) {
 		var ids = [];
 		for (var i = $scope.slider.minValue-1; i < $scope.slider.maxValue; i++) {
-			ids.push($scope.tags[i].uid);
+			ids.push($scope.tags[i]._id);
 		}
 		return $http.get('TypeServlet', {params:{"action": "getListOfTypesByListOfTags", "ids": JSON.stringify(ids)}})
 		.success(function(data) {
@@ -106,8 +106,9 @@ homeApp.controller('TDEvolutionCtrl', function($scope, $http, $q, sidebarService
 	thisCtrl.getTotalOfCodeSmells = function(tag, types) {
 		var total = 0;
 		for (var i = 0; i < types.length; i++) {
-			for (var j = 0; j < types[i].antipatterns.length; j++) {
-				if (types[i].antipatterns[j].value) {
+			var smells = types[i].abstract_types[0].codesmells;
+			for (var j = 0; j < smells.length; j++) {
+				if (smells[j].value) {
 					total++;
 				}
 			}
@@ -115,33 +116,22 @@ homeApp.controller('TDEvolutionCtrl', function($scope, $http, $q, sidebarService
 		tag.totalSmells = total;
 	}
 
-	thisCtrl.getTotalOfDebts = function(tag, types) {
-		var total = thisCtrl.getTotalOfCodeDebts(tag, types);
-		total += thisCtrl.getTotalOfDesignDebts(tag, types);
-	
-		tag.totalDebts = total;
-	}
-
-	thisCtrl.getTotalOfCodeDebts = function(tag, types) {
+	thisCtrl.getTotalOfDesignDebts = function(types) {
 		var total = 0;
 		for (var i = 0; i < types.length; i++) {
-			for (var j = 0; j < types[i].technicaldebts.length; j++) {
-				if (types[i].technicaldebts[j].name == 'Code Debt' && types[i].technicaldebts[j].value) {
+				if (types[i].abstract_types[0].technicaldebts[0].value) {
 					total++;
 				}
-			}
 		}	
 		return total;
 	}
 
-		thisCtrl.getTotalOfDesignDebts = function(tag, types) {
+	thisCtrl.getTotalOfCodeDebts = function(types) {
 		var total = 0;
 		for (var i = 0; i < types.length; i++) {
-			for (var j = 0; j < types[i].technicaldebts.length; j++) {
-				if (types[i].technicaldebts[j].name == 'Design Debt' && types[i].technicaldebts[j].value) {
+				if (types[i].abstract_types[0].technicaldebts[1].value) {
 					total++;
 				}
-			}
 		}	
 		return total;
 	}

@@ -22,7 +22,7 @@ homeApp.controller('HomeCtrl', function ($scope, $timeout, $http,
   // Load all repositories
 	thisCtrl.repositoriesLoad = function() { 
 		console.log('repositoriesLoad');
-		$http.get('RepositoryServlet', {params:{"action": "getAllByRepository"}})
+		$http.get('RepositoryServlet', {params:{"action": "getAll"}})
 		.success(function(data) {
 			console.log('found', data.length, 'repositories');
 			$scope.repositories = data;
@@ -40,37 +40,35 @@ homeApp.controller('HomeCtrl', function ($scope, $timeout, $http,
 		$scope.filtered.repository = repository;
 		sidebarService.setRepository(repository);
 		$route.reload();
-		thisCtrl.tagsLoad(repository.uid);
+		thisCtrl.tagsLoad(repository._id);
 	}
 
 	// Load all tags (versions)
-	thisCtrl.tagsLoad = function(repositoryUid) { 
-		console.log('tagsLoad=', repositoryUid);
+	thisCtrl.tagsLoad = function(repositoryId) { 
+		console.log('tagsLoad=', repositoryId);
 
-		$http.get('TreeServlet', {params:{"action": "getAllTagsAndMaster", "repositoryId": repositoryUid}})
+		$http.get('TreeServlet', {params:{"action": "getAllTagsAndMaster", "repositoryId": repositoryId}})
 		.success(function(data) {
 			console.log('found', data.length, 'tags');
 			$scope.tags = data;
-			thisCtrl.commitsLoad(repositoryUid);
+			thisCtrl.commitsLoad(repositoryId);
 		});
 	}
 
 	// Load all commits from all trees
-	thisCtrl.commitsLoad = function(repositoryUid) { 
+	thisCtrl.commitsLoad = function(repositoryId) { 
 		console.log('commitsLoad');
 
-		$http.get('CommitServlet', {params:{"action": "getAllByRepository", "repositoryId": repositoryUid}})
+		$http.get('CommitServlet', {params:{"action": "getAllByRepository", "repositoryId": repositoryId}})
 		.success(function(data) {
 			console.log('found', data.length, 'commits');
 			$scope.commits = data;
 			for (var i in data) {
 				$scope.committerEvolution.push({
-					commit: data[i].name,
+					commit: data[i]._id,
 					committer: data[i].committer,
-					date: new Date(data[i].date.$date),
-					type: {
-						CC: 0
-					}
+					date: new Date(data[i].commit_date.$date),
+					diffs: data[i].diffs	
 				})
 				var index = $.inArray(data[i].committer, $scope.committers);
   			if (index == -1) {
