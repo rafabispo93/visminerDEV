@@ -8,7 +8,7 @@
 	      </h3>
 	    </div>
 	    <div class="modal-body" style="font-size: 20px; padding-top: 0px">
-	      <div ng-show="hasCodeSmell(type, 'God Class')">
+	      <div ng-show="hasGodClass(type)">
 		    	<div class="row box-metric-header">
 						God Class Detected
 		    	</div>
@@ -18,7 +18,7 @@
 				        <span class="info-box-icon info-box-metric-icon bg-aqua">
 				        	ATFD
 				        </span>	
-			          <span class="info-box-number info-box-metric-number">{{metrics.ATFD.accumulated}}</span>
+			          <span class="info-box-number info-box-metric-number">{{ATFD}}</span>
 				      </div><!-- /.info-box -->
 				    </div><!-- /.col -->
 				    <div class="col-md-3 col-sm-6 col-xs-12">
@@ -26,7 +26,7 @@
 				        <span class="info-box-icon info-box-metric-icon bg-green">
 				        	TCC
 				        </span>	
-			          <span class="info-box-number info-box-metric-number">{{type.TCC.accumulated | number:2}}</span>
+			          <span class="info-box-number info-box-metric-number">{{TCC | number:2}}</span>
 				      </div><!-- /.info-box -->
 				    </div><!-- /.col -->
 				    <div class="col-md-3 col-sm-6 col-xs-12">
@@ -34,55 +34,20 @@
 				        <span class="info-box-icon info-box-metric-icon bg-yellow">
 				        	WMC
 				        </span>	
-			          <span class="info-box-number info-box-metric-number">{{type.WMC.accumulated}}</span>
-				      </div><!-- /.info-box -->
-				    </div><!-- /.col -->
-				    <div class="col-md-3 col-sm-6 col-xs-12">
-				      <div class="info-box info-box-metric">
-				        <span class="info-box-icon info-box-metric-icon bg-red">
-				        	NOA
-				        </span>	
-			          <span class="info-box-number info-box-metric-number">{{type.NOA.accumulated}}</span>
+			          <span class="info-box-number info-box-metric-number">{{WMC}}</span>
 				      </div><!-- /.info-box -->
 				    </div><!-- /.col -->
 				  </div><!-- /.row -->
 				</div>  
 
-				<div ng-show="hasCodeSmell(type, 'Long Method')">
+				<div ng-show="hasLongMethod(type).length">
 					<div class="row box-metric-header">
 						Long Method Detected
 					</div>
 				  <div class="row">
-				    <div class="col-md-3 col-sm-6 col-xs-12">
-				      <div class="info-box info-box-metric">
-				        <span class="info-box-icon info-box-metric-icon bg-aqua">
-				        	CC
-				        </span>	
-			          <span class="info-box-number info-box-metric-number">{{type.CC.accumulated}}</span>
-				      </div><!-- /.info-box -->
-				    </div><!-- /.col -->
-				    <div class="col-md-3 col-sm-6 col-xs-12">
-				      <div class="info-box info-box-metric">
-				        <span class="info-box-icon info-box-metric-icon bg-green">
-				        	MLOC
-				        </span>	
-			          <span class="info-box-number info-box-metric-number">{{type.MLOC.accumulated}}</span>
-				      </div><!-- /.info-box -->
-				    </div><!-- /.col -->
-				    <div class="col-md-3 col-sm-6 col-xs-12">
-				      <div class="info-box info-box-metric">
-				        <span class="info-box-icon info-box-metric-icon bg-yellow">
-				        	PAR
-				        </span>	
-			          <span class="info-box-number info-box-metric-number">{{type.PAR.accumulated}}</span>
-				      </div><!-- /.info-box -->
-				    </div><!-- /.col -->
-				    <div class="col-md-3 col-sm-6 col-xs-12">
-				      <div class="info-box info-box-metric">
-				        <span class="info-box-icon info-box-metric-icon bg-red">
-				        	LVAR
-				        </span>	
-			          <span class="info-box-number info-box-metric-number">{{type.LVAR.accumulated}}</span>
+				    <div class="col-md-6 col-sm-6 col-xs-12" ng-repeat="method in longMethods">
+				      <div class="info-box info-box-metric" style="width: 100%;">
+				      	<span class="info-box-number info-box-metric-number">{{method}}</span>
 				      </div><!-- /.info-box -->
 				    </div><!-- /.col -->
 				  </div><!-- /.row -->
