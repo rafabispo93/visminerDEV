@@ -3,15 +3,7 @@
   <display-name>visminer-dashboard</display-name>
   <servlet>
     <servlet-name>Visminer Loader</servlet-name>
-    <servlet-class>br.edu.ufba.softvis.visminer.servlets.VisminerLoader</servlet-class>
-    <init-param>
-      <param-name>com.sun.jersey.config.property.packages</param-name>
-      <param-value>br.edu.ufba.softvis.visminer</param-value>
-    </init-param>
-    <init-param>
-      <param-name>com.sun.jersey.api.json.POJOMappingFeature</param-name>
-      <param-value>true</param-value>
-    </init-param>
+    <servlet-class>br.edu.ufba.softvis.visminer.servlets.RepositoryMinerLoader</servlet-class>
     <load-on-startup>1</load-on-startup>
   </servlet>
   <welcome-file-list>
