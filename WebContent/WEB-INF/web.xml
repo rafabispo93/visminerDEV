@@ -3,7 +3,7 @@
   <display-name>visminer-dashboard</display-name>
   <servlet>
     <servlet-name>Visminer Loader</servlet-name>
-    <servlet-class>br.edu.ufba.softvis.visminer.servlets.RepositoryMinerLoader</servlet-class>
+    <servlet-class>org.visminer.servlets.RepositoryMinerLoader</servlet-class>
     <load-on-startup>1</load-on-startup>
   </servlet>
   <welcome-file-list>
@@ -11,7 +11,7 @@
   </welcome-file-list>
   <filter>
     <filter-name>UrlFilter</filter-name>
-    <filter-class>br.edu.ufba.softvis.visminer.filter.UrlFilter</filter-class>
+    <filter-class>org.visminer.filter.UrlFilter</filter-class>
   </filter>
   <filter-mapping>
     <filter-name>UrlFilter</filter-name>

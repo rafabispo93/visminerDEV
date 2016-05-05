@@ -1,4 +1,4 @@
-package br.edu.ufba.softvis.visminer.servlets;
+package org.visminer.servlets;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;

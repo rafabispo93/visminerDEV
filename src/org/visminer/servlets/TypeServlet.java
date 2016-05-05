@@ -1,4 +1,4 @@
-package br.edu.ufba.softvis.visminer.servlets;
+package org.visminer.servlets;
 
 import java.io.IOException;
 import java.io.PrintWriter;

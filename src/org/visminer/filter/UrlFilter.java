@@ -1,4 +1,4 @@
-package br.edu.ufba.softvis.visminer.filter;
+package org.visminer.filter;
 
 import java.io.IOException;
 
