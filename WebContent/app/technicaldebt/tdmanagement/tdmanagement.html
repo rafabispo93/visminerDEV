@@ -31,7 +31,7 @@
             <ul id="todo_sortable" class="products-list product-list-in-box">
               <li class="item" ng-repeat="type in todoCode">
                 <div>
-                  <a href="" class="product-title">{{type.abstract_types[0].name}}</a>
+                  <a href="" ng-click="showTdTimeline(type)" class="product-title">{{type.abstract_types[0].name}}</a>
                   <span class="product-description pull-right" style="font-size: 14px;">
                      <i class="fa fa-calendar"></i> {{convertDate(type.commit_date)}}
                   </span>
@@ -47,7 +47,7 @@
               </li><!-- /.item -->
               <li class="item" ng-repeat="type in todoDesign">
                 <div>
-                  <a href="" class="product-title">{{type.abstract_types[0].name}}</a>
+                  <a href="" ng-click="showTdTimeline(type)" class="product-title">{{type.abstract_types[0].name}}</a>
                   <span class="product-description pull-right" style="font-size: 14px;">
                      <i class="fa fa-calendar"></i> {{convertDate(type.commit_date)}}
                   </span>
@@ -85,7 +85,7 @@
             <ul id="doing_sortable" class="products-list product-list-in-box">
               <li class="item" ng-repeat="type in doingCode">
                 <div>
-                  <a href="" class="product-title">{{type.abstract_types[0].name}}</a>
+                  <a href="" ng-click="showTdTimeline(type)" class="product-title">{{type.abstract_types[0].name}}</a>
                   <span class="product-description pull-right" style="font-size: 14px;">
                     <i class="fa fa-calendar"></i> {{convertDate(type.commit_date)}}
                   </span>
@@ -101,7 +101,7 @@
               </li><!-- /.item -->
               <li class="item" ng-repeat="type in doingDesign">
                 <div>
-                  <a href="" class="product-title">{{type.abstract_types[0].name}}</a>
+                  <a href="" ng-click="showTdTimeline(type)" class="product-title">{{type.abstract_types[0].name}}</a>
                   <span class="product-description pull-right" style="font-size: 14px;">
                     <i class="fa fa-calendar"></i> {{convertDate(type.commit_date)}}
                   </span>
@@ -140,7 +140,7 @@
             <ul class="products-list product-list-in-box">
               <li class="item" ng-repeat="type in doneCode">
                 <div>
-                  <a href="" class="product-title">{{type.abstract_types[0].name}}</a>
+                  <a href="" ng-click="showTdTimeline(type)" class="product-title">{{type.abstract_types[0].name}}</a>
                   <span class="product-description pull-right" style="font-size: 14px;">
                     <i class="fa fa-calendar"></i> {{convertDate(type.commit_date)}}
                   </span>
@@ -153,7 +153,7 @@
               </li><!-- /.item -->
               <li class="item" ng-repeat="type in doneDesign">
                 <div>
-                  <a href="" class="product-title">{{type.abstract_types[0].name}}</a>
+                  <a href="" ng-click="showTdTimeline(type)" class="product-title">{{type.abstract_types[0].name}}</a>
                   <span class="product-description pull-right" style="font-size: 14px;">
                     <i class="fa fa-calendar"></i> {{convertDate(type.commit_date)}}
                   </span>

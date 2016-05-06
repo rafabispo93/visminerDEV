@@ -3,6 +3,7 @@ package org.visminer.servlets;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 import javax.servlet.ServletException;
@@ -11,6 +12,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.bson.Document;
 import org.json.JSONArray;
 import org.repositoryminer.persistence.handler.CommitAnalysisDocumentHandler;
 
@@ -60,6 +62,8 @@ public class TypeServlet extends HttpServlet {
 							, Integer.parseInt(status));
 				}	
 				break;	
+			case "getTypeTimeline":
+				getTypeTimeline(request.getParameter("idRepository"), request.getParameter("fileHash"));
 			default:
 				break;
 		}
@@ -101,5 +105,22 @@ public class TypeServlet extends HttpServlet {
 	private void confirmAllDebtsByRepository(String repositoryId) {
 		typeHandler.confirmAllDebtsByRepository(repositoryId);		
 	}
-
+	
+	private void getTypeTimeline(String idRepository, String fileHash) {
+		HashMap<Document, Document> timelineHash = typeHandler.getTypeTimeline(idRepository, fileHash);
+		out.println(createTimelineList(timelineHash));
+		
+	}
+	
+	private List<String> createTimelineList(HashMap<Document, Document> timelineHash) {
+		List<String> timeline = new ArrayList<>();
+		for(Document tag : timelineHash.keySet()) {
+			Document type = timelineHash.get(tag);
+			Document document = new Document();
+			document.append("tag", tag).append("type", type);
+			timeline.add(document.toJson());
+		}
+		
+		return timeline;
+	}
 }

@@ -1,6 +1,7 @@
 homeApp = angular.module('homeApp');
 
-homeApp.controller('TDManagementCtrl', function($scope, $http, $route, sidebarService){
+homeApp.controller('TDManagementCtrl', function($scope, $http,
+ $route, sidebarService, tdTimelineService){
 	var thisCtrl = this;
 	var DebtStatus = Object.freeze({UNEVALUATED: 0, TODO: 1, DOING: 2, DONE: 3});
 
@@ -98,4 +99,8 @@ homeApp.controller('TDManagementCtrl', function($scope, $http, $route, sidebarSe
 		return moment(new Date(commitDate.$date)).format('DD/MM/YYYY');
 	}
 
+	$scope.showTdTimeline = function(type) {
+		tdTimelineService.setType(type);
+		$('#tdTimelineModal').modal('show');
+	}
 });

@@ -174,3 +174,42 @@
     margin-left: 5px;
     font-size: 12px;
 }
+
+.ul-timeline {
+    padding-top: 10px;
+    padding-left: 20px;
+    list-style: none;
+}
+
+.icon-timeline {
+    padding: 10px;
+    border-radius: 50%;
+    font-size: 12px;
+}
+
+.timeline-content {
+    max-width: 450px; 
+    margin-left: 15%;
+}
+
+.modal-footer-timeline {
+    background-color: rgb(51, 122, 183);
+}
+
+.btn-footer-timeline {
+    width: 100%;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.version-timeline {
+    text-align: center;
+    min-width: 62px;
+    font-size: 16px;
+}
+
+.timeline-item {
+    background-color: rgba(242, 242, 242, 0.89);
+    margin-left: 30px;
+    padding: 0px 200px 8px 10px;
+}
