@@ -23,12 +23,12 @@ homeApp.controller('TDManagementCtrl', function($scope, $http, $route, sidebarSe
 
 	thisCtrl.loadMaster = function() {
 		if ($scope.filtered.repository) {
-			var repositoryId = $scope.filtered.repository.uid;
+			var repositoryId = $scope.filtered.repository._id;
 			$http.get('TreeServlet', {params:{"action": "getMaster", "repositoryId": repositoryId}})
 			.success(function(data) {
-				console.log('loading master: ', data); 
+				console.log('loading master: ', data);	 
 				$scope.master = data;
-				thisCtrl.loadTypes($scope.master.uid);
+				thisCtrl.loadTypes($scope.master._id);
 			});
 		}	
 	}
@@ -49,7 +49,7 @@ homeApp.controller('TDManagementCtrl', function($scope, $http, $route, sidebarSe
 	}
 
 	thisCtrl.loadCards = function(type) {
-		var debtsList = type.technicaldebts;
+		var debtsList = type.abstract_types[0].technicaldebts;
 		var hasDebt = false;
 		if (debtsList.length > 0) {
 			for (var j = 0; j < debtsList.length; j++) {
@@ -88,14 +88,14 @@ homeApp.controller('TDManagementCtrl', function($scope, $http, $route, sidebarSe
 
 	$scope.updateDebtStatus = function(type, debt, status) {
 		$http.get('TypeServlet', {params:{"action": "updateDebtStatus",
-		 "commitId": type.commit, "fileId": type.file, "debt": debt, "status": status}})
+		 "commitId": type.commit, "fileId": type.file_hash, "debt": debt, "status": status}})
 		.success(function() {
 			$route.reload();					
 		});
 	}
 
-	$scope.convertDate = function(lastUpdate) {
-		return moment(new Date(lastUpdate.$date)).format('DD/MM/YYYY');
+	$scope.convertDate = function(commitDate) {
+		return moment(new Date(commitDate.$date)).format('DD/MM/YYYY');
 	}
 
 });
