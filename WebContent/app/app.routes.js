@@ -5,22 +5,22 @@ homeApp.config(['$routeProvider', '$locationProvider',
         templateUrl: 'app/technicaldebt/tdevolution/tdevolution.html',
         controller: 'TDEvolutionCtrl'
       }).
-			when('tdevolution', {
+			when('/tdevolution', {
 		    templateUrl: 'app/technicaldebt/tdevolution/tdevolution.html',
 		    controller: 'TDEvolutionCtrl'
 		      }).
-			when('tdanalyzer', {
+			when('/tdanalyzer', {
 		    templateUrl: 'app/technicaldebt/tdanalyzer/tdanalyzer.html',
 		    controller: 'TDAnalyzerCtrl'
 		      }).
-			when('tdmanagement', {
+			when('/tdmanagement', {
 		    templateUrl: 'app/technicaldebt/tdmanagement/tdmanagement.html',
 		    controller: 'TDManagementCtrl'
 		      }).
-			when('tdcommitters', {
+			when('/tdcommitters', {
 		    templateUrl: 'app/technicaldebt/tdcommitters/tdcommitters.html',
 		    controller: 'TDCommittersCtrl'
 		      }).
-			otherwise({ redirectTo: 'tdevolution' });
+			otherwise({ redirectTo: '/tdevolution' });
 			$locationProvider.html5Mode(true);
  }]);
