@@ -1,0 +1,98 @@
+<!-- Left side column. contains the logo and sidebar -->
+<aside class="main-sidebar">
+  <!-- sidebar: style can be found in sidebar.less -->
+  <section class="sidebar">
+    <!-- sidebar menu: : style can be found in sidebar.less -->
+    <ul class="sidebar-menu">
+      <li class="header filter-header">FILTER</li>
+      <li class="treeview">
+        <a href="#">
+          <i class="fa fa-archive"></i>
+          <span>Strategies</span> 
+        </a>
+        <ul class="treeview-menu">
+          <li>
+            <a href="#" ng-click="ctrl.analyzeDebts()">
+              <i class="fa fa-circle-o"></i> Temporal
+            </a>
+          </li>
+          <li class="active">
+            <a href="tdevolution" ng-click="ctrl.selectView('tdevolution')">
+              <i class="fa fa-circle-o"></i> Differential
+            </a>
+          </li>
+        </ul>
+      </li>
+      <li class="treeview">
+      	<a href="#">
+      		<i class="fa fa-dashboard"></i>
+      		<span> Metrics</span>
+      	</a>
+      	<ul class="treeview-menu">
+      		<li>
+	            <a href="#" ng-click="ctrl.analyzeDebts()">
+	              <i class="fa fa-circle-o"></i> Cyclomatic Complexity - CC
+	            </a>
+          	</li>
+          	<li>
+	            <a href="#" ng-click="ctrl.analyzeDebts()">
+	              <i class="fa fa-circle-o"></i> Source lines of code - SLOC
+	            </a>
+          	</li>
+      	</ul>
+      </li>
+      <li class="treeview">
+      	<a href="#">
+      		<i class="fa fa-arrows-h"></i>
+      		<span> Snapshot</span>
+      	</a>
+      	<ul class="treeview-menu">
+      		<li>
+              <rzslider id="slider-versions" rz-slider-model="0" rz-slider-high="100" rz-slider-options="slider.options">
+       		  </rzslider>
+          	</li>
+      	</ul>
+      </li>
+      <li class="treeview">
+      	<a href="#">
+      		<i class="fa fa-area-chart"></i>
+      		<span> Visualization</span>
+      	</a>
+      	<ul class="treeview-menu">
+      		<li>
+	            <a href="#" ng-click="ctrl.analyzeDebts()">
+	              <i class="fa fa-circle-o"></i> TreeMap
+	            </a>
+          	</li>
+      	</ul>
+      </li>
+      
+      <li class="treeview">
+        <a href="#">
+          <i class="fa fa-database"></i> <span>Repositories</span>
+          <small class="label pull-right bg-green">{{repositories.length}}</small>
+        </a>
+        <ul class="treeview-menu">
+          <li ng-repeat="repository in repositories | orderBy:'name'">
+            <a href="javascript:void(0)" ng-click="ctrl.selectRepository(repository)">
+              <i class="fa fa-caret-right"></i> {{repository.name}}
+            </a>
+          </li>
+        </ul>
+      </li>
+     <div class="form-group" style="padding:10px; padding-top: 0px;">
+        <button class="btn bg-olive btn-flat btn-filter-analyze sidebar-form" ng-click="ctrl.analyzeDebts()">ANALYZE</button>
+      </div>
+  </section>
+  <!-- /.sidebar -->
+</aside>
+
+<script type="text/javascript">
+  function setOpacity(id){
+        var opacity = document.getElementById(id).style.opacity;
+        if(opacity=="1" || opacity=="")
+            document.getElementById(id).style.opacity = "0.2";
+        else
+            document.getElementById(id).style.opacity = "1";
+  }
+</script>
