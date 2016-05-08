@@ -8,7 +8,7 @@ homeApp.controller('HomeCtrl', function ($scope, $timeout, $http,
   $scope.repositories = [];
   $scope.tags = [];
   $scope.committerEvolution = [];
-  $scope.currentPage = "tdevolution";
+  $scope.currentPage;
   $scope.durationProgress = 1000;
   $scope.metric;
   $scope.snap;
