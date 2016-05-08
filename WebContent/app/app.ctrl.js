@@ -10,6 +10,8 @@ homeApp.controller('HomeCtrl', function ($scope, $timeout, $http,
   $scope.committerEvolution = [];
   $scope.currentPage = "tdevolution";
   $scope.durationProgress = 1000;
+  $scope.metric;
+  $scope.snap;
 
   $scope.filtered = {
   	repository: null,
@@ -62,6 +64,7 @@ homeApp.controller('HomeCtrl', function ($scope, $timeout, $http,
 		$http.get('CommitServlet', {params:{"action": "getAllByRepository", "repositoryId": repositoryId}})
 		.success(function(data) {
 			console.log('found', data.length, 'commits');
+			$scope.snap = data.length;
 			$scope.commits = data;
 			for (var i in data) {
 				$scope.committerEvolution.push({
@@ -115,6 +118,19 @@ homeApp.controller('HomeCtrl', function ($scope, $timeout, $http,
 		} else {
 			$('#alertModal').modal('show');
 		}
+	}
+	
+	
+	thisCtrl.selectCC = function() {
+		$scope.metric = 'CC';
+	}
+	
+	thisCtrl.selectSLOC = function() {
+		$scope.metric = 'SLOC';
+	}
+	
+	thisCtrl.selectSnapshot = function(){
+		return $scope.snap;
 	}
 
 });

@@ -12,7 +12,7 @@
         </a>
         <ul class="treeview-menu">
           <li>
-            <a href="#" ng-click="ctrl.analyzeDebts()">
+            <a href="#" ng-click="ctrl.test()">
               <i class="fa fa-circle-o"></i> Temporal
             </a>
           </li>
@@ -30,12 +30,12 @@
       	</a>
       	<ul class="treeview-menu">
       		<li>
-	            <a href="#" ng-click="ctrl.analyzeDebts()">
+	            <a href="#" ng-click="ctrl.selectCC()">
 	              <i class="fa fa-circle-o"></i> Cyclomatic Complexity - CC
 	            </a>
           	</li>
           	<li>
-	            <a href="#" ng-click="ctrl.analyzeDebts()">
+	            <a href="#" ng-click="ctrl.selectSLOC()">
 	              <i class="fa fa-circle-o"></i> Source lines of code - SLOC
 	            </a>
           	</li>
@@ -48,7 +48,7 @@
       	</a>
       	<ul class="treeview-menu">
       		<li>
-              <rzslider id="slider-versions" rz-slider-model="0" rz-slider-high="100" rz-slider-options="slider.options">
+              <rzslider id="slider-versions" rz-slider-model="0" rz-slider-high="ctrl.selectSnapshot()" rz-slider-options="slider.options">
        		  </rzslider>
           	</li>
       	</ul>
