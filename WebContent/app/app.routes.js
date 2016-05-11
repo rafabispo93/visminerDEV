@@ -2,7 +2,7 @@ homeApp.config(['$routeProvider', '$locationProvider',
   function($routeProvider, $locationProvider) {
     $routeProvider.
     when('/', {
-        templateUrl: './index.html'
+    		templateUrl: './index.html'
       }).
 			when('/tdevolution', {
 		    templateUrl: 'app/technicaldebt/tdevolution/tdevolution.html',
@@ -20,6 +20,10 @@ homeApp.config(['$routeProvider', '$locationProvider',
 		    templateUrl: 'app/technicaldebt/tdcommitters/tdcommitters.html',
 		    controller: 'TDCommittersCtrl'
 		      }).
+		    when('/visualization', {
+		    templateUrl: 'app/devVisualize/visualization/visualization.html',
+		    controller: 'devVisualizationCtrl'
+		      }).  
 			otherwise({ redirectTo: './index.html' });
 			$locationProvider.html5Mode(true);
  }]);

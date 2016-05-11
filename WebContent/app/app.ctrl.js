@@ -132,5 +132,24 @@ homeApp.controller('HomeCtrl', function ($scope, $timeout, $http,
 	thisCtrl.selectSnapshot = function(){
 		return $scope.snap;
 	}
+	
+	thisCtrl.generateVisualization = function(){
+		var analyze = true;
+		if ($scope.filtered.repository == null) {
+			  alertModalService.setMessage("Please Select a Repository!");
+			  analyze = false;
+		}
+		if (analyze) {
+			
+			$('#progressBarModal').modal('show');
+			$('#progressBarModal').on('hidden.bs.modal', function(e) {
+				thisCtrl.selectView('visualization');
+  	   	$location.path("/visualization");
+        $route.reload();
+  		});
+		} else {
+			$('#alertModal').modal('show');
+		}
+	}
 
 });
