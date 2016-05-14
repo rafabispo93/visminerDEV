@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import org.repositoryminer.persistence.handler.RepositoryDocumentHandler;
 
-@WebServlet("/RepositoryServlet")
+@WebServlet("/MetricsServlet")
 public class MetricsServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	private RepositoryDocumentHandler repositoryHandler = new RepositoryDocumentHandler();
