@@ -133,6 +133,11 @@ homeApp.controller('HomeCtrl', function ($scope, $timeout, $http,
 		return $scope.snap;
 	}
 	
+	thisCtrl.selectVisualization = function(){
+		console.log("FUNFOUS");
+		document.getElementById("treeMap").innerHTML='<object type="text/html" data="./app/devVisualize/visualization/visualization.html" ></object>';
+	}
+	
 	thisCtrl.generateVisualization = function(){
 		var analyze = true;
 		if ($scope.filtered.repository == null) {

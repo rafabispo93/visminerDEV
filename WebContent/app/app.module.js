@@ -1,4 +1,4 @@
 var homeApp = angular.module('homeApp',
- ['ngStorage', 'ngRoute', 'ui.bootstrap', 'checklist-model', 'rzModule', 'highcharts-ng','pvtlD3Treemap']
+ ['ngStorage', 'ngRoute', 'ui.bootstrap', 'checklist-model', 'rzModule', 'highcharts-ng']
  );
 

@@ -33,15 +33,18 @@
       <div class="content-wrapper">
         <div ng-show="filtered.repository==null">
           <section class="content">
-            <div class="alert alert-warn-vmtd alert-dismissable">
+        	<div class="alert alert-warn-vmtd alert-dismissable">
               <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
               <h4>Welcome</h4>
                 <i class="icon fa fa-hand-o-left"></i>Please, select a repository in the left menu.
             </div>
+            <div id= "treeMap">
+            	
+            </div>
           </section>
         </div>
 
-      <div ng-view></div>
+      <div hidden = true ng-view>TEStando</div>
 
       </div><!-- /.content-wrapper -->
 

@@ -60,7 +60,7 @@
       	</a>
       	<ul class="treeview-menu">
       		<li>
-	            <a href="#" ng-click="ctrl.analyzeDebts()">
+	            <a href="#" ng-click="ctrl.selectVisualization()">
 	              <i class="fa fa-circle-o"></i> TreeMap
 	            </a>
           	</li>
@@ -95,4 +95,9 @@
         else
             document.getElementById(id).style.opacity = "1";
   }
+</script>
+<script type="text/javascript">
+	function selectVisualization() {
+		document.getElementById("treeMap").innerHTML='<object type="text/html" data="../app/devVisualize/visualization/visualization.html" ></object>';
+	}
 </script>
