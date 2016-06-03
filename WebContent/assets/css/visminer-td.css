@@ -66,6 +66,12 @@
     color: white;
 }
 
+#tree {
+	margin:0px;
+    padding:0px;
+    width:1000px;
+    height:500px;
+}
 .modal-open .modal {
   padding-left: 0px !important;
   padding-right: 0px !important;

@@ -134,7 +134,6 @@ homeApp.controller('HomeCtrl', function ($scope, $timeout, $http,
 	}
 	
 	thisCtrl.selectVisualization = function(){
-		console.log("FUNFOUS");
 		document.getElementById("treeMap").innerHTML='<object type="text/html" data="./app/devVisualize/visualization/visualization.html" ></object>';
 	}
 	

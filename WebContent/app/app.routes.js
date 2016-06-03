@@ -23,7 +23,7 @@ homeApp.config(['$routeProvider', '$locationProvider',
 		    when('/visualization', {
 		    templateUrl: 'app/devVisualize/visualization/visualization.html',
 		    controller: 'devVisualizationCtrl'
-		      }).  
+		      }).
 			otherwise({ redirectTo: './index.html' });
 			$locationProvider.html5Mode(true);
  }]);
