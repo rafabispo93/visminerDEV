@@ -134,7 +134,14 @@ homeApp.controller('HomeCtrl', function ($scope, $timeout, $http,
 	}
 	
 	thisCtrl.selectVisualization = function(){
-		document.getElementById("treeMap").innerHTML='<object type="text/html" data="./app/devVisualize/visualization/visualization.html" ></object>';
+		console.log('Visualization selected');
+		$http.get('MetricsServlet', {params:{"action": "getAll", "metric": $scope.metric}})
+		.success(function(data) {
+			console.log('found', data.length, 'metrics');
+			
+			
+		});
+		document.getElementById("treeMap").innerHTML='<object type="text/html" data="./app/devVisualize/visualization/visualizationNew.html" ></object>';
 	}
 	
 	thisCtrl.generateVisualization = function(){

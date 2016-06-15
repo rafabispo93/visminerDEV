@@ -28,17 +28,21 @@ public class MetricsServlet extends HttpServlet {
 		
 		switch (action) {
 			case "getAll":
-				getAll();				
+				getAll(request.getParameter("metric"));				
 				break;
 			default:
 				break;
 		}
 	}
+    
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+	}
 	
-	private void getAll() {
+	private void getAll(String metric) {
 		List<String> metrics = new ArrayList<>();
 		repositoryHandler.findAll(null)
-			.forEach(metric->metrics.add(metric.toJson()));
+			.forEach(mett->metrics.add(mett.toJson()));
 		out.println(metrics.toString());		
 	}
 
